@@ -38,27 +38,50 @@ function App() {
           </div>
         </section>
 
+        <section className="stats">
+          <div className="stats-container">
+            <div className="stat-item">
+              <p className="stat-number">12yr</p>
+              <p className="stat-label">Industry Experience</p>
+            </div>
+            <div className="stat-item">
+              <p className="stat-number">500+</p>
+              <p className="stat-label">Happy Clients</p>
+            </div>
+            <div className="stat-item">
+              <p className="stat-number">1.2M</p>
+              <p className="stat-label">Units Printed</p>
+            </div>
+            <div className="stat-item">
+              <p className="stat-number">48hr</p>
+              <p className="stat-label">Turnaround Time</p>
+            </div>
+          </div>
+        </section>
+
         <section className="solutions">
           <div className="solutions-header">
-            <h2 className="solutions-label">Our Specialized Solutions</h2>
-            <p>From queue management systems to marketing materials, we deliver precision printing solutions that enhance operational efficiency and brand presence.</p>
+            <p className="solutions-label">Our Specialized Solutions</p>
+            <h2>Engineered for excellence.</h2>
           </div>
 
           <div className="solutions-grid">
-            <div className="solution-card">
-              <div className="solution-icon">
-                <img src="/stanchion-icon.svg" alt="Stanchion" />
+            <div className="solution-card solution-card-featured">
+              <img src="/queue-belt.png" alt="Queue Belt" className="solution-image" />
+              <div className="solution-overlay">
+                <p className="solution-category">queue management</p>
+                <h3>Professional Queue Belts</h3>
+                <p>High-quality printing belts designed for queue management systems. Durable, weather-resistant materials ensure long-lasting performance in high-traffic environments</p>
+                <a href="#" className="learn-more">Learn more <span>›</span></a>
               </div>
-              <h3>Signature Stanchions</h3>
-              <p>Precision engineering for silent crowd control.</p>
-              <a href="#" className="learn-more">Learn more <span>›</span></a>
             </div>
 
             <div className="solution-card solution-card-featured">
-              <img src="/hd-sublimation.jpg" alt="HD Sublimation" className="solution-image" />
+              <img src="/printer.png" alt="Printer" className="solution-image" />
               <div className="solution-overlay">
-                <h3>HD Sublimation</h3>
-                <p>Vibrant colors and precision printing on any surface.</p>
+                <p className="solution-category">Marketing Materials</p>
+                <h3>Marketing Collaterals</h3>
+                <p>Professional printing services for all your marketing needs. From brochures to banners, we deliver high-quality materials that make your brand stand out.</p>
                 <a href="#" className="learn-more">Learn more <span>›</span></a>
               </div>
             </div>
