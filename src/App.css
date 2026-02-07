@@ -25,7 +25,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
+  padding-bottom: 60px;
 }
 
 .hero-background {
@@ -155,10 +156,61 @@ main {
   transform: translateY(-2px);
 }
 
+/* Stats Card Overlay */
+.stats-card-overlay {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  width: 90%;
+  max-width: 925px;
+}
+
+.stats-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 28px 35px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  gap: 0;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  justify-content: center;
+}
+
+.stat-icon {
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.stat-text {
+  font-size: 14px;
+  color: #1d1d1f;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 24px;
+  background-color: #e0e0e0;
+  margin: 0 8px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero {
     min-height: 600px;
+    padding-bottom: 80px;
   }
 
   .hero-content {
@@ -191,11 +243,35 @@ main {
     width: 100%;
     justify-content: center;
   }
+
+  .stats-card-overlay {
+    bottom: -50px;
+    width: 95%;
+  }
+
+  .stats-card {
+    padding: 20px 24px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .stat-item {
+    width: 100%;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+
+  .stat-text {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 480px) {
   .hero {
     min-height: 500px;
+    padding-bottom: 100px;
   }
 
   .hero-content {
@@ -225,6 +301,20 @@ main {
   .btn {
     padding: 12px 24px;
     font-size: 14px;
+  }
+
+  .stats-card-overlay {
+    bottom: -60px;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .stats-card {
+    padding: 16px 20px;
+  }
+
+  .stat-text {
+    font-size: 12px;
   }
 }
 
