@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar'
+import WhyChooseCarousel from './components/WhyChooseCarousel'
 import './App.css'
 
 function App() {
@@ -38,23 +39,34 @@ function App() {
           </div>
         </section>
 
-        <section className="stats">
-          <div className="stats-container">
-            <div className="stat-item">
-              <p className="stat-number">12yr</p>
-              <p className="stat-label">Industry Experience</p>
-            </div>
+        <section className="stats-section">
+          <div className="stats-card">
             <div className="stat-item">
               <p className="stat-number">500+</p>
-              <p className="stat-label">Happy Clients</p>
+              <p className="stat-label">Projects Completed</p>
             </div>
             <div className="stat-item">
-              <p className="stat-number">1.2M</p>
-              <p className="stat-label">Units Printed</p>
+              <p className="stat-number">98%</p>
+              <p className="stat-label">Client Satisfaction</p>
             </div>
             <div className="stat-item">
-              <p className="stat-number">48hr</p>
-              <p className="stat-label">Turnaround Time</p>
+              <p className="stat-number">24hrs</p>
+              <p className="stat-label">Average Turnaround</p>
+            </div>
+          </div>
+
+
+        </section>
+
+        <section className="why-choose">
+          <div className="why-choose-container">
+            <div className="why-choose-header">
+              <h2>Why Businesses Choose Inkflow Creative.</h2>
+              <a href="#" className="why-choose-cta">View Products →</a>
+            </div>
+
+            <div className="why-choose-carousel-wrapper">
+              <WhyChooseCarousel />
             </div>
           </div>
         </section>
@@ -84,6 +96,19 @@ function App() {
                 <p>Professional printing services for all your marketing needs. From brochures to banners, we deliver high-quality materials that make your brand stand out.</p>
                 <a href="#" className="learn-more">Learn more <span>›</span></a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="why-choose">
+          <div className="why-choose-container">
+            <div className="why-choose-header">
+              <h2>Why Businesses Choose Inkflow Creative.</h2>
+              <a href="#" className="why-choose-cta">View Products →</a>
+            </div>
+
+            <div className="why-choose-carousel-wrapper">
+              <WhyChooseCarousel />
             </div>
           </div>
         </section>
