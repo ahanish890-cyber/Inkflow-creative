@@ -1,5 +1,6 @@
 import React from 'react'
 import WhyChooseInkflow from '../components/WhyChooseInkflow'
+import { ContainerScrollAnimation } from '../components/ContainerScrollAnimation'
 
 export default function Home() {
   return (
@@ -59,6 +60,18 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ContainerScrollAnimation
+        titleComponent={
+          <>
+            <h1>Experience the <br />
+              <span>Power of Premium Printing</span>
+            </h1>
+          </>
+        }
+      >
+        <img src="/Hero-section.png" alt="Premium Printing Services" />
+      </ContainerScrollAnimation>
 
       <section className="solutions">
         <div className="solutions-header">
