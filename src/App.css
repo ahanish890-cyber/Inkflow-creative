@@ -1597,3 +1597,14 @@ main {
     padding: 24px;
   }
 }
+
+
+/* Footer Fixes */
+footer {
+  border: none !important;
+  border-top: none !important;
+}
+
+footer .footer {
+  border: none !important;
+}
