@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/AboutUs.css'
+import TextType from './TextType'
 
 export default function AboutUs() {
   const values = [
@@ -38,7 +39,15 @@ export default function AboutUs() {
       <section className="about-hero">
         <div className="about-hero-content">
           <h1>About Inkflow Creative</h1>
-          <p>Where precision printing meets creative excellence</p>
+          <div style={{ fontSize: '1.2rem', color: '#fff' }}>
+            <TextType 
+              text="Where precision printing meets creative excellence"
+              typingSpeed={50}
+              pauseDuration={3000}
+              showCursor={true}
+              cursorCharacter="|"
+            />
+          </div>
         </div>
       </section>
 
@@ -47,7 +56,14 @@ export default function AboutUs() {
         <div className="section-container">
           <div className="intro-layout">
             <div className="intro-text">
-              <h2>Redefining Professional Printing</h2>
+              <h2>
+                <TextType 
+                  text="Redefining Professional Printing"
+                  typingSpeed={60}
+                  pauseDuration={2000}
+                  showCursor={false}
+                />
+              </h2>
               <p className="intro-lead">
                 Since 2009, Inkflow Creative has been the trusted printing partner for businesses across India. We combine traditional craftsmanship with modern technology to deliver printing solutions that elevate brands and drive results.
               </p>

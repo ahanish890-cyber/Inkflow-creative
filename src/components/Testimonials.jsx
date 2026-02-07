@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Testimonials.css'
+import TextType from './TextType'
 
 export default function Testimonials() {
   const testimonials = [
@@ -33,7 +34,14 @@ export default function Testimonials() {
     <section className="testimonials-section">
       <div className="testimonials-container">
         <div className="testimonials-header">
-          <h2>What Our Clients Say</h2>
+          <h2>
+            <TextType 
+              text="What Our Clients Say"
+              typingSpeed={50}
+              pauseDuration={2000}
+              showCursor={false}
+            />
+          </h2>
           <p>Trusted by leading organizations</p>
         </div>
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import '../styles/FAQSection.css'
+import TextType from './TextType'
 
 export default function FAQSection() {
   const [expandedFAQ, setExpandedFAQ] = useState(null)
@@ -57,6 +58,17 @@ export default function FAQSection() {
   return (
     <section className="faq-section">
       <div className="faq-wrapper">
+        <div className="faq-title">
+          <h2>
+            <TextType 
+              text="Frequently Asked Questions"
+              typingSpeed={50}
+              pauseDuration={2000}
+              showCursor={false}
+            />
+          </h2>
+        </div>
+
         <div className="faq-button-container">
           <button className="faq-help-button">See Full Help Center →</button>
         </div>

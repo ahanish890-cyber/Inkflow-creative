@@ -11,6 +11,19 @@
   padding: 0 32px;
 }
 
+.faq-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.faq-title h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
 .faq-button-container {
   display: flex;
   justify-content: center;

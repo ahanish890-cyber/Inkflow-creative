@@ -1,4 +1,5 @@
 import { Layers3, Cpu, ShieldCheck, Maximize2, Sparkles, CheckCircle2, ArrowRight, Zap, Palette } from 'lucide-react'
+import TextType from './TextType'
 
 export default function SolutionsPortfolio() {
   return (
@@ -7,7 +8,14 @@ export default function SolutionsPortfolio() {
         {/* Header */}
         <div className="solutions-header-section">
           <p className="solutions-label">Commercial Systems</p>
-          <h2 className="solutions-title">Solutions for the <br />Modern Enterprise.</h2>
+          <h2 className="solutions-title">
+            <TextType 
+              text="Solutions for the Modern Enterprise."
+              typingSpeed={50}
+              pauseDuration={2500}
+              showCursor={false}
+            />
+          </h2>
           <div className="solutions-divider"></div>
           <p className="solutions-description">We provide specialized infrastructure and branding assets for the world's most high-traffic environments, from airport terminals to financial hubs.</p>
         </div>

@@ -4,6 +4,7 @@ import SolutionsPortfolio from '../components/SolutionsPortfolio'
 import { ContainerScrollAnimation } from '../components/ContainerScrollAnimation'
 import Testimonials from '../components/Testimonials'
 import FAQSection from '../components/FAQSection'
+import TextType from '../components/TextType'
 
 export default function Home() {
   return (
@@ -16,7 +17,17 @@ export default function Home() {
         
         <div className="hero-content">
           <h1>Professional <span className="highlight">Queue Management</span> Solutions</h1>
-          <p className="hero-subtitle">Premium printing belts for queue management systems and high-quality marketing collaterals that streamline operations and enhance customer</p>
+          <div className="hero-subtitle">
+            <TextType 
+              text={['Premium printing belts for queue management systems', 'High-quality marketing collaterals that streamline operations']}
+              typingSpeed={40}
+              pauseDuration={2500}
+              deletingSpeed={25}
+              showCursor={true}
+              cursorCharacter="|"
+              cursorBlinkDuration={0.7}
+            />
+          </div>
           
           <div className="hero-features">
             <div className="feature">
@@ -77,8 +88,14 @@ export default function Home() {
       <ContainerScrollAnimation
         titleComponent={
           <>
-            <h1>Experience the <br />
-              <span>Power of Premium Printing</span>
+            <h1>
+              Experience the <br />
+              <TextType 
+                text="Power of Premium Printing"
+                typingSpeed={45}
+                pauseDuration={2500}
+                showCursor={false}
+              />
             </h1>
           </>
         }
@@ -89,7 +106,14 @@ export default function Home() {
       <section className="solutions">
         <div className="solutions-header">
           <p className="solutions-label">Our Specialized Solutions</p>
-          <h2>Engineered for excellence.</h2>
+          <h2>
+            <TextType 
+              text="Engineered for excellence."
+              typingSpeed={50}
+              pauseDuration={2000}
+              showCursor={false}
+            />
+          </h2>
         </div>
 
         <div className="solutions-grid">
