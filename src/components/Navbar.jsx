@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Navbar.css'
 
 function Navbar() {
@@ -12,14 +13,14 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <img src="/inkflow-logo.png" alt="Inkflow Creative" className="logo-img" />
+          <Link to="/"><img src="/inkflow-logo.png" alt="Inkflow Creative" className="logo-img" /></Link>
         </div>
 
         <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
-          <a href="#about" className="nav-link">About Us</a>
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/about" className="nav-link">About Us</Link>
           <a href="#services" className="nav-link">Products and Services</a>
           <a href="#portfolio" className="nav-link">Portfolio</a>
-          <a href="#faqs" className="nav-link">FAQs</a>
         </div>
 
         <button className="nav-cta">Request a Quote</button>
