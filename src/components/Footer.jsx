@@ -37,18 +37,16 @@ function Footer() {
             </a>
           </div>
         </div>
-
         <div className="footer-section footer-links">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Products and Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">FAQs</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services">Products and Services</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
           </ul>
         </div>
-
         <div className="footer-section footer-contact">
           <h4>Get In Touch</h4>
           <div className="contact-item">
@@ -96,23 +94,6 @@ function Footer() {
           </div>
         </div>
       </div>
-
-     {/* <div className="footer-newsletter">
-        <div className="newsletter-container">
-          <h3>Stay Updated</h3>
-          <p>Subscribe to our newsletter for the latest updates on products, services, and industry insights.</p>
-          <form className="newsletter-form">
-            <input 
-              type="email" 
-              placeholder="Enter your email address" 
-              required 
-              className="email-input"
-            />
-            <button type="submit" className="subscribe-btn">Subscribe</button>
-          </form>
-        </div>
-      </div> */}
-
       <div className="footer-bottom">
         <p>&copy; 2025 Inkflow Creative. All rights reserved. | Designed with precision and passion.</p>
         <div className="footer-bottom-links">
