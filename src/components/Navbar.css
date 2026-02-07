@@ -45,12 +45,29 @@
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
-  transition: color 0.3s ease;
   cursor: pointer;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0052cc;
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #333333;
+  color: #0052cc;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 .nav-cta {
@@ -62,11 +79,19 @@
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 82, 204, 0.2);
 }
 
 .nav-cta:hover {
   background-color: #0041a3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 82, 204, 0.35);
+}
+
+.nav-cta:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 82, 204, 0.25);
 }
 
 .hamburger {
