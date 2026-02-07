@@ -1,4 +1,4 @@
-import React from 'react'
+import { CheckCircle, Zap, Star, Plane, Building2, Hospital, ShoppingBag, Music, Shield } from 'lucide-react'
 import WhyChooseInkflow from '../components/WhyChooseInkflow'
 import { ContainerScrollAnimation } from '../components/ContainerScrollAnimation'
 
@@ -17,15 +17,21 @@ export default function Home() {
           
           <div className="hero-features">
             <div className="feature">
-              <span className="feature-icon">✓</span>
+              <span className="feature-icon">
+                <CheckCircle size={20} strokeWidth={2} />
+              </span>
               <span>Durable Materials</span>
             </div>
             <div className="feature">
-              <span className="feature-icon">⚡</span>
+              <span className="feature-icon">
+                <Zap size={20} strokeWidth={2} />
+              </span>
               <span>Fast Turnaround</span>
             </div>
             <div className="feature">
-              <span className="feature-icon">⭐</span>
+              <span className="feature-icon">
+                <Star size={20} strokeWidth={2} />
+              </span>
               <span>Premium Quality</span>
             </div>
           </div>
@@ -39,23 +45,27 @@ export default function Home() {
         <div className="stats-card-overlay">
           <div className="stats-card">
             <div className="stat-item">
-              <span className="stat-icon">⚡</span>
-              <span className="stat-text">Fast Turnaround</span>
+              <span className="stat-number">12yr</span>
+              <span className="stat-label">Manufacturing</span>
+              <span className="stat-desc">Industry Experience</span>
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
-              <span className="stat-icon">✓</span>
-              <span className="stat-text">Premium Materials</span>
+              <span className="stat-number">500+</span>
+              <span className="stat-label">Global Partners</span>
+              <span className="stat-desc">Trusted Clients</span>
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
-              <span className="stat-icon">🎨</span>
-              <span className="stat-text">Custom Branding</span>
+              <span className="stat-number">1.2M</span>
+              <span className="stat-label">Units Delivered</span>
+              <span className="stat-desc">Products Shipped</span>
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
-              <span className="stat-icon">🤝</span>
-              <span className="stat-text">Trusted by Businesses</span>
+              <span className="stat-number">48hr</span>
+              <span className="stat-label">Rapid Dispatch</span>
+              <span className="stat-desc">Average Turnaround</span>
             </div>
           </div>
         </div>
@@ -115,7 +125,9 @@ export default function Home() {
                 <img src="/airports.jpg" alt="Airports" />
               </div>
               <div className="industry-content">
-                <div className="industry-icon">✈️</div>
+                <div className="industry-icon">
+                  <Plane size={32} strokeWidth={1.5} />
+                </div>
                 <h3>Airports</h3>
                 <p>Seamless passenger flow and navigational branding.</p>
                 <a href="#" className="industry-link">Explore Sector →</a>
@@ -127,7 +139,9 @@ export default function Home() {
                 <img src="/banks.jpg" alt="Banks" />
               </div>
               <div className="industry-content">
-                <div className="industry-icon">🏦</div>
+                <div className="industry-icon">
+                  <Building2 size={32} strokeWidth={1.5} />
+                </div>
                 <h3>Banks</h3>
                 <p>Professional solutions for financial institutions.</p>
                 <a href="#" className="industry-link">Explore Sector →</a>
@@ -139,7 +153,9 @@ export default function Home() {
                 <img src="/hospitals.jpg" alt="Hospitals" />
               </div>
               <div className="industry-content">
-                <div className="industry-icon">🏥</div>
+                <div className="industry-icon">
+                  <Hospital size={32} strokeWidth={1.5} />
+                </div>
                 <h3>Hospitals</h3>
                 <p>Healthcare-grade printing for medical facilities.</p>
                 <a href="#" className="industry-link">Explore Sector →</a>
@@ -151,7 +167,9 @@ export default function Home() {
                 <img src="/retail.jpg" alt="Retail" />
               </div>
               <div className="industry-content">
-                <div className="industry-icon">🛍️</div>
+                <div className="industry-icon">
+                  <ShoppingBag size={32} strokeWidth={1.5} />
+                </div>
                 <h3>Retail</h3>
                 <p>Eye-catching displays and promotional materials.</p>
                 <a href="#" className="industry-link">Explore Sector →</a>
@@ -163,7 +181,9 @@ export default function Home() {
                 <img src="/events.jpg" alt="Events" />
               </div>
               <div className="industry-content">
-                <div className="industry-icon">🎵</div>
+                <div className="industry-icon">
+                  <Music size={32} strokeWidth={1.5} />
+                </div>
                 <h3>Events</h3>
                 <p>Dynamic printing solutions for memorable experiences.</p>
                 <a href="#" className="industry-link">Explore Sector →</a>
@@ -175,7 +195,9 @@ export default function Home() {
                 <img src="/government.jpg" alt="Government" />
               </div>
               <div className="industry-content">
-                <div className="industry-icon">🏛️</div>
+                <div className="industry-icon">
+                  <Shield size={32} strokeWidth={1.5} />
+                </div>
                 <h3>Government</h3>
                 <p>Compliant printing for public sector organizations.</p>
                 <a href="#" className="industry-link">Explore Sector →</a>

@@ -170,7 +170,6 @@ main {
 .stats-card {
   background-color: #ffffff;
   border-radius: 16px;
-  padding: 28px 35px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -180,31 +179,37 @@ main {
 
 .stat-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 0px;
   flex: 1;
   justify-content: center;
 }
 
-.stat-icon {
-  font-size: 20px;
-  display: inline-flex;
-  align-items: center;
-}
-
-.stat-text {
-  font-size: 14px;
+.stat-number {
+  font-size: 48px;
+  font-weight: 700;
   color: #1d1d1f;
-  font-weight: 500;
-  white-space: nowrap;
+  line-height: 1;
+  margin-bottom: 4px;
 }
 
-.stat-divider {
-  width: 1px;
-  height: 24px;
-  background-color: #e0e0e0;
-  margin: 0 8px;
+.stat-label {
+  font-size: 11px;
+  color: #999999;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
 }
+
+.stat-desc {
+  font-size: 12px;
+  color: #666666;
+  font-weight: 400;
+  margin: 0;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -263,8 +268,12 @@ main {
     display: none;
   }
 
-  .stat-text {
-    font-size: 13px;
+  .stat-number {
+    font-size: 24px;
+  }
+
+  .stat-label {
+    font-size: 10px;
   }
 }
 
@@ -313,8 +322,12 @@ main {
     padding: 16px 20px;
   }
 
-  .stat-text {
-    font-size: 12px;
+  .stat-number {
+    font-size: 20px;
+  }
+
+  .stat-label {
+    font-size: 9px;
   }
 }
 
