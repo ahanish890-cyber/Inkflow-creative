@@ -1,5 +1,7 @@
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import WhyChooseInkflow from './components/WhyChooseInkflow'
+import AboutUs from './components/AboutUs'
 import './App.css'
 
 function App() {
@@ -67,7 +69,10 @@ function App() {
             </div>
           </div>
         </section>
+    
+        <WhyChooseInkflow />
       </main>
+        <AboutUs />
       <Footer />
     </>
   )
