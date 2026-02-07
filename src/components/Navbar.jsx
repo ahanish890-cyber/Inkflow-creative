@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import inkflowLogo from '../assets/inkflow-logo.png'
 import './Navbar.css'
 
 function Navbar() {
@@ -13,7 +14,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <Link to="/"><img src="/inkflow-logo.png" alt="Inkflow Creative" className="logo-img" /></Link>
+          <Link to="/"><img src={inkflowLogo} alt="Inkflow Creative" className="logo-img" /></Link>
         </div>
 
         <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>

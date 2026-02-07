@@ -1,4 +1,5 @@
 import React from 'react'
+import inkflowLogo from '../assets/inkflow-logo.png'
 import '../styles/Footer.css'
 
 function Footer() {
@@ -7,7 +8,7 @@ function Footer() {
       <div className="footer-main">
         <div className="footer-section footer-brand">
           <div className="footer-logo">
-            <div className="logo-placeholder"><img src="/inkflow-logo.png" alt="" /></div>
+            <div className="logo-placeholder"><img src={inkflowLogo} alt="" /></div>
           </div>
           <p className="footer-description">
             Leading provider of professional queue management printing solutions and high-quality marketing collaterals, helping businesses streamline operations and enhance customer experiences.
