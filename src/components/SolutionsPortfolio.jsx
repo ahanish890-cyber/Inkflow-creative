@@ -1,6 +1,4 @@
 import { Layers3, Cpu, ShieldCheck, Maximize2, Sparkles, CheckCircle2, ArrowRight, Zap, Palette } from 'lucide-react'
-import queueBeltImg from '../assets/queue-belt.png'
-import printerImg from '../assets/printer.png'
 
 export default function SolutionsPortfolio() {
   return (
@@ -19,7 +17,7 @@ export default function SolutionsPortfolio() {
           {/* Solution 1 */}
           <div className="solution-row">
             <div className="solution-image-wrapper">
-              <img src={queueBeltImg} alt="Queue Management" className="solution-img" />
+              <img src="/Inkflow-creative/queue-belt.png" alt="Queue Management" className="solution-img" />
               <div className="solution-badge">
                 <span>Hardware Engineering</span>
               </div>
@@ -96,7 +94,7 @@ export default function SolutionsPortfolio() {
             </div>
 
             <div className="solution-image-wrapper">
-              <img src={printerImg} alt="Architectural Printing" className="solution-img" />
+              <img src="/Inkflow-creative/printer.png" alt="Architectural Printing" className="solution-img" />
               <div className="solution-badge solution-badge-right">
                 <span>Advanced Print Tech</span>
               </div>

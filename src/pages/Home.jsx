@@ -4,16 +4,13 @@ import SolutionsPortfolio from '../components/SolutionsPortfolio'
 import { ContainerScrollAnimation } from '../components/ContainerScrollAnimation'
 import Testimonials from '../components/Testimonials'
 import FAQSection from '../components/FAQSection'
-import heroImg from '../assets/Hero-section.png'
-import queueBeltImg from '../assets/queue-belt.png'
-import printerImg from '../assets/printer.png'
 
 export default function Home() {
   return (
     <main>
       <section className="hero">
         <div className="hero-background">
-          <img src={heroImg} alt="Printing Services" className="hero-bg-img" />
+          <img src="/Inkflow-creative/Hero-section.png" alt="Printing Services" className="hero-bg-img" />
           <div className="hero-overlay"></div>
         </div>
         
@@ -86,7 +83,7 @@ export default function Home() {
           </>
         }
       >
-        <img src={heroImg} alt="Premium Printing Services" />
+        <img src="/Inkflow-creative/Hero-section.png" alt="Premium Printing Services" />
       </ContainerScrollAnimation>
 
       <section className="solutions">
@@ -97,7 +94,7 @@ export default function Home() {
 
         <div className="solutions-grid">
           <div className="solution-card solution-card-featured">
-            <img src={queueBeltImg} alt="Queue Belt" className="solution-image" />
+            <img src="/Inkflow-creative/queue-belt.png" alt="Queue Belt" className="solution-image" />
             <div className="solution-overlay">
               <p className="solution-category">queue management</p>
               <h3>Professional Queue Belts</h3>
@@ -107,7 +104,7 @@ export default function Home() {
           </div>
 
           <div className="solution-card solution-card-featured">
-            <img src={printerImg} alt="Printer" className="solution-image" />
+            <img src="/Inkflow-creative/printer.png" alt="Printer" className="solution-image" />
             <div className="solution-overlay">
               <p className="solution-category">Marketing Materials</p>
               <h3>Marketing Collaterals</h3>
