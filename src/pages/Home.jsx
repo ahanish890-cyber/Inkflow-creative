@@ -1,6 +1,8 @@
 import React from 'react'
 import WhyChooseInkflow from '../components/WhyChooseInkflow'
 import { ContainerScrollAnimation } from '../components/ContainerScrollAnimation'
+import Testimonials from '../components/Testimonials'
+import FAQSection from '../components/FAQSection'
 
 export default function Home() {
   return (
@@ -162,7 +164,7 @@ export default function Home() {
       </section>
 
       <WhyChooseInkflow />
-
+      <Testimonials />
       <section className="manufacturing">
         <div className="manufacturing-container">
           <div className="manufacturing-header">
@@ -218,6 +220,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <FAQSection />
     </main>
   )
 }
