@@ -73,13 +73,8 @@
   font-weight: 500;
   color: #1d1d1f;
   text-align: left;
-  transition: all 250ms ease;
   letter-spacing: 0.3px;
   line-height: 1.5;
-}
-
-.accordion-trigger:hover {
-  color: #0071e3;
 }
 
 .trigger-text {
@@ -91,14 +86,12 @@
   height: 20px;
   min-width: 20px;
   color: #1d1d1f;
-  transition: transform 250ms ease;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .accordion-trigger.open .trigger-icon {
   transform: rotate(180deg);
-  color: #0071e3;
 }
 
 /* Accordion Content */
