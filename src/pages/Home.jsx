@@ -34,6 +34,30 @@ export default function Home() {
             <button className="btn btn-secondary">Explore Products <span>👁</span></button>
           </div>
         </div>
+
+        <div className="stats-card-overlay">
+          <div className="stats-card">
+            <div className="stat-item">
+              <span className="stat-icon">⚡</span>
+              <span className="stat-text">Fast Turnaround</span>
+            </div>
+            <div className="stat-divider"></div>
+            <div className="stat-item">
+              <span className="stat-icon">✓</span>
+              <span className="stat-text">Premium Materials</span>
+            </div>
+            <div className="stat-divider"></div>
+            <div className="stat-item">
+              <span className="stat-icon">🎨</span>
+              <span className="stat-text">Custom Branding</span>
+            </div>
+            <div className="stat-divider"></div>
+            <div className="stat-item">
+              <span className="stat-icon">🤝</span>
+              <span className="stat-text">Trusted by Businesses</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="solutions">
