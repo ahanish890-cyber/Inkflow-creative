@@ -17,7 +17,7 @@ export default function SolutionsPortfolio() {
           {/* Solution 1 */}
           <div className="solution-row">
             <div className="solution-image-wrapper">
-              <img src="/Inkflow-creative/queue-belt.png" alt="Queue Management" className="solution-img" />
+              <img src="/queue-belt.png" alt="Queue Management" className="solution-img" />
               <div className="solution-badge">
                 <span>Hardware Engineering</span>
               </div>
@@ -94,7 +94,7 @@ export default function SolutionsPortfolio() {
             </div>
 
             <div className="solution-image-wrapper">
-              <img src="/Inkflow-creative/printer.png" alt="Architectural Printing" className="solution-img" />
+              <img src="/printer.png" alt="Architectural Printing" className="solution-img" />
               <div className="solution-badge solution-badge-right">
                 <span>Advanced Print Tech</span>
               </div>

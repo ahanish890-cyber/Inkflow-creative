@@ -10,7 +10,7 @@ export default function Home() {
     <main>
       <section className="hero">
         <div className="hero-background">
-          <img src="/Inkflow-creative/Hero-section.png" alt="Printing Services" className="hero-bg-img" />
+          <img src="/Hero-section.png" alt="Printing Services" className="hero-bg-img" />
           <div className="hero-overlay"></div>
         </div>
         
@@ -83,7 +83,7 @@ export default function Home() {
           </>
         }
       >
-        <img src="/Inkflow-creative/Hero-section.png" alt="Premium Printing Services" />
+        <img src="/Hero-section.png" alt="Premium Printing Services" />
       </ContainerScrollAnimation>
 
       <section className="solutions">
@@ -94,7 +94,7 @@ export default function Home() {
 
         <div className="solutions-grid">
           <div className="solution-card solution-card-featured">
-            <img src="/Inkflow-creative/queue-belt.png" alt="Queue Belt" className="solution-image" />
+            <img src="/queue-belt.png" alt="Queue Belt" className="solution-image" />
             <div className="solution-overlay">
               <p className="solution-category">queue management</p>
               <h3>Professional Queue Belts</h3>
@@ -104,7 +104,7 @@ export default function Home() {
           </div>
 
           <div className="solution-card solution-card-featured">
-            <img src="/Inkflow-creative/printer.png" alt="Printer" className="solution-image" />
+            <img src="/printer.png" alt="Printer" className="solution-image" />
             <div className="solution-overlay">
               <p className="solution-category">Marketing Materials</p>
               <h3>Marketing Collaterals</h3>

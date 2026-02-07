@@ -13,7 +13,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <Link to="/"><img src="/Inkflow-creative/inkflow-logo.png" alt="Inkflow Creative" className="logo-img" /></Link>
+          <Link to="/"><img src="/inkflow-logo.png" alt="Inkflow Creative" className="logo-img" /></Link>
         </div>
 
         <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
