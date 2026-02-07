@@ -1,5 +1,6 @@
 import { CheckCircle, Zap, Star, Plane, Building2, Hospital, ShoppingBag, Music, Shield } from 'lucide-react'
 import WhyChooseInkflow from '../components/WhyChooseInkflow'
+import SolutionsPortfolio from '../components/SolutionsPortfolio'
 import { ContainerScrollAnimation } from '../components/ContainerScrollAnimation'
 import Testimonials from '../components/Testimonials'
 import FAQSection from '../components/FAQSection'
@@ -210,6 +211,7 @@ export default function Home() {
       </section>
 
       <WhyChooseInkflow />
+      <SolutionsPortfolio />
       <Testimonials />
       <section className="manufacturing">
         <div className="manufacturing-container">
