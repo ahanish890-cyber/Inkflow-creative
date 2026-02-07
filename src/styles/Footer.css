@@ -1,0 +1,264 @@
+/* Footer Styles */
+.footer {
+  background-color: #0a1628;
+  color: #e0e0e0;
+  padding: 60px 20px 0;
+}
+
+.footer-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr;
+  gap: 40px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Footer Brand Section */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.logo-placeholder {
+  width: 100%;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-placeholder img {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  display: block;
+}
+
+.footer-description {
+  line-height: 1.6;
+  color: #b0b0b0;
+  font-size: 14px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #ff8c00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.social-icon:hover {
+  background-color: #e67e00;
+  color: #fff;
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* Footer Links Section */
+.footer-links h4,
+.footer-contact h4 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a::before {
+  content: '›';
+  margin-right: 8px;
+  color: #ff8c00;
+}
+
+.footer-links a:hover {
+  color: #ff8c00;
+}
+
+/* Footer Contact Section */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 14px;
+}
+
+.contact-icon {
+  font-size: 18px;
+  min-width: 25px;
+  color: #ff8c00;
+  display: flex;
+  align-items: center;
+}
+
+.contact-item p {
+  color: #b0b0b0;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Newsletter Section */
+.footer-newsletter {
+  padding: 40px 20px;
+  margin: 40px 0;
+  border-radius: 12px;
+}
+
+.newsletter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.newsletter-container h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.newsletter-container p {
+  margin-bottom: 25px;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.email-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  font-size: 14px;
+}
+
+.email-input::placeholder {
+  color: #999;
+}
+
+.email-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.subscribe-btn {
+  padding: 12px 30px;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 13px;
+  color: #878787;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-bottom-links a {
+  color: #878787;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #ff8c00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .email-input {
+    min-width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+  }
+
+  .newsletter-container h3 {
+    font-size: 22px;
+  }
+}
