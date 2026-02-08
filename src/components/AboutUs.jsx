@@ -67,34 +67,11 @@ export default function AboutUs() {
           {/* Right Image */}
           <div className="about-hero-image">
             <img 
-              src="https://images.unsplash.com/photo-1565034946487-077786996e27?auto=format&fit=crop&q=90&w=1200" 
+              src="/aboutus.png" 
               alt="Precision Industrial Detail"
               className="about-image"
             />
             <div className="about-image-overlay"></div>
-            
-            {/* Blueprint Lines */}
-            <div className="blueprint-overlay">
-              <div className="blueprint-line horizontal"></div>
-              <div className="blueprint-line vertical"></div>
-              <div className="blueprint-circle large"></div>
-              <div className="blueprint-circle small"></div>
-            </div>
-
-            {/* Callout Labels */}
-            <div className="callout top-right">
-              <div className="callout-dot"></div>
-              <span className="callout-label">Cap_Tolerance</span>
-              <span className="callout-value">± 0.012 MICRON</span>
-            </div>
-
-            <div className="callout bottom-left">
-              <div className="callout-dot"></div>
-              <span className="callout-label">Structure_Integrity</span>
-              <span className="callout-value">SS-304 / AIRCRAFT GRADE</span>
-            </div>
-
-            <div className="doc-id">DOC_ID: INK_2009_VISUAL</div>
           </div>
         </div>
       </section>
