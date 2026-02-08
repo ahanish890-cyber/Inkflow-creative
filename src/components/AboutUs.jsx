@@ -154,8 +154,8 @@ export default function AboutUs() {
       {/* Hero Section */}
       <section className="about-hero">
         <div className="about-hero-content">
-          <h1>About Inkflow Creative</h1>
-          <div style={{ fontSize: '1.2rem', color: '#fff' }}>
+          <h1>Inkflow Creative</h1>
+          <div className="about-hero-subtitle">
             <TextType 
               text="Enterprise-Grade Printing Solutions for Modern Businesses"
               typingSpeed={50}
