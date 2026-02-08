@@ -56,16 +56,11 @@ export default function FAQSection() {
   }
 
   return (
-    <section className="faq-section">
+    <section className="faq-section scroll-container">
       <div className="faq-wrapper">
         <div className="faq-title">
-          <h2>
-            <TextType 
-              text="Frequently Asked Questions"
-              typingSpeed={50}
-              pauseDuration={2000}
-              showCursor={false}
-            />
+          <h2 data-reveal>
+            <span>Frequently Asked Questions</span>
           </h2>
         </div>
 

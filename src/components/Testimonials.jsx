@@ -31,7 +31,7 @@ export default function Testimonials() {
   ]
 
   return (
-    <section className="testimonials-section">
+    <section className="testimonials-section scroll-container">
       <div className="testimonials-container">
         <div className="testimonials-header">
           <h2>

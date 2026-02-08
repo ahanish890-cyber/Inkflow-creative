@@ -83,3 +83,15 @@ section[data-snap] {
   scroll-snap-stop: always;
 }
 
+/* Premium Scroll Container - Fade + Scale + Move */
+.scroll-container {
+  will-change: opacity, transform;
+  transform: translateZ(0);
+}
+
+/* Blur Reveal Effect - Luxury Touch */
+[data-blur-in] {
+  filter: blur(8px);
+  will-change: filter;
+}
+

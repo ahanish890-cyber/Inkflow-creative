@@ -99,16 +99,11 @@ export default function Home() {
         <img src="/Hero-section.png" alt="Premium Printing Services" />
       </ContainerScrollAnimation>
 
-      <section className="solutions">
+      <section className="solutions scroll-container">
         <div className="solutions-header">
           <p className="solutions-label">Our Specialized Solutions</p>
-          <h2>
-            <TextType
-              text="Engineered for excellence."
-              typingSpeed={50}
-              pauseDuration={2000}
-              showCursor={false}
-            />
+          <h2 data-reveal>
+            <span>Engineered for excellence.</span>
           </h2>
         </div>
 
@@ -135,11 +130,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="industries">
+      <section className="industries scroll-container">
         <div className="industries-container">
           <div className="industries-header">
-            <h2>Industries We Serve</h2>
-            <p>Trusted by leading organizations across diverse sectors</p>
+            <h2 data-reveal>
+              <span>Industries We Serve</span>
+            </h2>
+            <p data-reveal>
+              <span>Trusted by leading organizations across diverse sectors</span>
+            </p>
           </div>
 
           <div className="industries-grid">
@@ -221,12 +220,17 @@ export default function Home() {
       <WhyChooseInkflow />
       <Testimonials />
 
-      <section className="manufacturing">
+      <section className="manufacturing scroll-container">
         <div className="manufacturing-container">
           <div className="manufacturing-header">
             <p className="manufacturing-label">Vertical Integration</p>
-            <h2>State-of-the-Art <span className="manufacturing-highlight">Manufacturing.</span></h2>
-            <p className="manufacturing-description">Our advanced printing facilities and cutting-edge technology ensure precision, consistency, and quality in every product we deliver across all industries.</p>
+            <h2 data-reveal>
+              <span>State-of-the-Art</span>
+              <span className="manufacturing-highlight">Manufacturing.</span>
+            </h2>
+            <p className="manufacturing-description" data-reveal>
+              <span>Our advanced printing facilities and cutting-edge technology ensure precision, consistency, and quality in every product we deliver across all industries.</span>
+            </p>
           </div>
 
           <div className="manufacturing-image-wrapper">

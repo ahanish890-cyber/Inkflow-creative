@@ -168,7 +168,7 @@ export default function AboutUs() {
       </section>
 
       {/* Introduction Section */}
-      <section className="about-section about-intro">
+      <section className="about-section about-intro scroll-container">
         <div className="section-container">
           <div className="intro-layout">
             <div className="intro-text">
@@ -283,7 +283,7 @@ export default function AboutUs() {
       </section>
 
       {/* What We Do Section */}
-      <section className="about-section about-what-we-do">
+      <section className="about-section about-what-we-do scroll-container">
         <div className="section-container">
           <h2 className="section-title">What We Do</h2>
           <p className="section-subtitle-text">Comprehensive printing solutions tailored to your business needs</p>
@@ -306,7 +306,7 @@ export default function AboutUs() {
       </section>
 
       {/* Why Inkflow Section */}
-      <section className="about-section about-why-inkflow">
+      <section className="about-section about-why-inkflow scroll-container">
         <div className="section-container">
           <h2 className="section-title">Why Inkflow Creative?</h2>
           <p className="section-subtitle-text">The numbers tell our story of excellence and trust</p>
@@ -323,7 +323,7 @@ export default function AboutUs() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="about-section about-mission">
+      <section className="about-section about-mission scroll-container">
         <div className="section-container">
           <div className="mission-grid">
             <div className="mission-card mission-card-primary">
@@ -345,7 +345,7 @@ export default function AboutUs() {
       </section>
 
       {/* Values Section */}
-      <section className="about-section about-values">
+      <section className="about-section about-values scroll-container">
         <div className="section-container">
           <h2 className="section-title">Our Core Values</h2>
           <div className="values-grid">
@@ -387,7 +387,7 @@ export default function AboutUs() {
       </section>
 
       {/* Capabilities Section */}
-      <section className="about-section about-capabilities">
+      <section className="about-section about-capabilities scroll-container">
         <div className="section-container">
           <h2 className="section-title">Our Capabilities</h2>
           <div className="capabilities-grid">

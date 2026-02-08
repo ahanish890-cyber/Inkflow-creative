@@ -15,21 +15,18 @@ export default function SolutionsPortfolio() {
   ]
 
   return (
-    <section className="solutions-portfolio">
+    <section className="solutions-portfolio scroll-container">
       <div className="solutions-container">
         {/* Header */}
         <div className="solutions-header-section">
           <p className="solutions-label">Commercial Systems</p>
-          <h2 className="solutions-title">
-            <TextType 
-              text="Solutions for the Modern Enterprise."
-              typingSpeed={50}
-              pauseDuration={2500}
-              showCursor={false}
-            />
+          <h2 className="solutions-title" data-reveal>
+            <span>Solutions for the Modern Enterprise.</span>
           </h2>
           <div className="solutions-divider"></div>
-          <p className="solutions-description">We provide specialized infrastructure and branding assets for the world's most high-traffic environments, from airport terminals to financial hubs.</p>
+          <p className="solutions-description" data-reveal>
+            <span>We provide specialized infrastructure and branding assets for the world's most high-traffic environments, from airport terminals to financial hubs.</span>
+          </p>
         </div>
 
         {/* Solutions Grid */}

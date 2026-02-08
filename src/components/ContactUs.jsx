@@ -82,7 +82,7 @@ export default function ContactUs() {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="contact-section contact-info" data-snap>
+      <section className="contact-section contact-info scroll-container" data-snap>
         <div className="section-container">
           <div className="contact-info-grid">
             {contactInfo.map((info, index) => (
@@ -97,7 +97,7 @@ export default function ContactUs() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="contact-section contact-form-section" data-snap>
+      <section className="contact-section contact-form-section scroll-container" data-snap>
         <div className="section-container">
           <div className="contact-form-wrapper">
             <div className="form-header">
@@ -198,7 +198,7 @@ export default function ContactUs() {
       </section>
 
       {/* Response Time Section */}
-      <section className="contact-section response-time" data-snap>
+      <section className="contact-section response-time scroll-container" data-snap>
         <div className="section-container">
           <div className="response-grid">
             <div className="response-card" data-card-hover>
@@ -226,7 +226,7 @@ export default function ContactUs() {
       </section>
 
       {/* FAQ Section */}
-      <section className="contact-section contact-faq" data-snap>
+      <section className="contact-section contact-faq scroll-container" data-snap>
         <div className="section-container">
           <h2 className="section-title">Frequently Asked Questions</h2>
           <div className="faq-grid">
@@ -259,7 +259,7 @@ export default function ContactUs() {
       </section>
 
       {/* CTA Section */}
-      <section className="contact-section contact-cta" data-snap>
+      <section className="contact-section contact-cta scroll-container" data-snap>
         <div className="section-container">
           <div className="cta-content">
             <h2>Ready to Start Your Project?</h2>

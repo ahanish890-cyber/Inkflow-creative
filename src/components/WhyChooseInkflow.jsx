@@ -50,7 +50,7 @@ export default function WhyChooseInkflow() {
   ]
 
   return (
-    <section className="why-choose-inkflow">
+    <section className="why-choose-inkflow scroll-container">
       <div className="section-container">
         <div className="section-header">
           <h2 className="section-headline">Why Businesses<br />Choose Inkflow Creative.</h2>

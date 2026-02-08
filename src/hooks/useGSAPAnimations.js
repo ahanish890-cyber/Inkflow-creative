@@ -8,17 +8,72 @@ export function useGSAPAnimations() {
   useEffect(() => {
     // Wait for page to be fully loaded
     const timeout = setTimeout(() => {
-      // Universal fade-up for all sections
-      gsap.utils.toArray('section').forEach(section => {
-        if (!section.classList.contains('hero')) {
-          gsap.from(section, {
+      // ✅ PREMIUM SCROLL CONTAINER ANIMATION (Fade + Scale + Y)
+      gsap.utils.toArray('.scroll-container').forEach((container) => {
+        gsap.fromTo(
+          container,
+          {
             opacity: 0,
             y: 80,
-            duration: 1.1,
+            scale: 0.97,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 1.2,
             ease: 'power3.out',
             scrollTrigger: {
-              trigger: section,
+              trigger: container,
               start: 'top 80%',
+              markers: false,
+              toggleActions: 'play none none reverse',
+            },
+          }
+        )
+      })
+
+      // ✅ STAGGER INNER ELEMENTS (Extra Polish)
+      gsap.utils.toArray('.scroll-container').forEach((container) => {
+        gsap.from(container.children, {
+          opacity: 0,
+          y: 30,
+          duration: 0.9,
+          stagger: 0.12,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: container,
+            start: 'top 75%',
+            markers: false,
+          },
+        })
+      })
+
+      // ✅ BLUR REVEAL EFFECT (Luxury Touch)
+      gsap.utils.toArray('[data-blur-in]').forEach((element) => {
+        gsap.to(element, {
+          filter: 'blur(0px)',
+          duration: 1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 80%',
+            markers: false,
+          },
+        })
+      })
+
+      // Universal fade-up for all sections (fallback)
+      gsap.utils.toArray('section:not(.scroll-container)').forEach(section => {
+        if (!section.classList.contains('hero') && !section.classList.contains('scroll-container')) {
+          gsap.from(section, {
+            opacity: 0,
+            y: 40,
+            duration: 0.8,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: section,
+              start: 'top 85%',
               markers: false,
             },
           })
