@@ -1,0 +1,486 @@
+/* Core Values Section */
+
+.core-values-section {
+  padding: 120px 80px;
+  background: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Grid Background */
+.core-values-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(#000 1px, transparent 1px),
+    linear-gradient(90deg, #000 1px, transparent 1px);
+  background-size: 100px 100px;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.core-values-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Mission & Vision Grid */
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-bottom: 120px;
+}
+
+.mission-block,
+.vision-block {
+  position: relative;
+  padding: 48px;
+  border-radius: 56px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.mission-block {
+  background: #ffffff;
+  border: 1px solid #e5e5e7;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.mission-block:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
+}
+
+.vision-block {
+  background: #1d1d1f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.block-tag {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  font-size: 9px;
+  font-weight: 700;
+  color: #999999;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+
+.vision-tag {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.block-content {
+  position: relative;
+  z-index: 10;
+}
+
+.block-icon {
+  width: 64px;
+  height: 64px;
+  background: #0071e3;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin-bottom: 32px;
+  box-shadow: 0 8px 24px rgba(0, 113, 227, 0.3);
+}
+
+.vision-block .block-icon {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.block-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  margin-bottom: 24px;
+  color: #1d1d1f;
+}
+
+.vision-block .block-content h2 {
+  color: #ffffff;
+}
+
+.block-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555555;
+  margin: 0;
+  max-width: 500px;
+}
+
+.vision-block .block-content p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.block-decoration {
+  position: absolute;
+  bottom: -48px;
+  right: -48px;
+  width: 256px;
+  height: 256px;
+  background: #f0f4f8;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+}
+
+/* HUD Overlay */
+.hud-overlay {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+.vision-block:hover .hud-overlay {
+  opacity: 0.4;
+}
+
+.hud-overlay svg {
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.progress-bar {
+  width: 128px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 66%;
+  height: 100%;
+  background: #0071e3;
+}
+
+/* Values Header */
+.values-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.values-label {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #dbeafe;
+  border: 1px solid #bfdbfe;
+  border-radius: 9999px;
+  margin-bottom: 24px;
+}
+
+.values-label span {
+  font-size: 10px;
+  font-weight: 700;
+  color: #0071e3;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+
+.values-title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: #1d1d1f;
+  margin: 0;
+}
+
+.values-title span {
+  color: #d2d2d7;
+}
+
+/* Values Grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.value-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e5e5e7;
+  border-radius: 48px;
+  padding: 40px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  transform: translateZ(0);
+  display: flex;
+  flex-direction: column;
+}
+
+.value-card:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  transform: translateY(-12px);
+}
+
+.card-tag {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  font-size: 8px;
+  font-weight: 700;
+  color: #999999;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-family: monospace;
+  transition: color 0.3s ease;
+}
+
+.value-card:hover .card-tag {
+  color: #0071e3;
+}
+
+.card-icon {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  background: #f0f4f8;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1d1d1f;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.5s ease;
+}
+
+.value-card:hover .card-icon {
+  background: #0071e3;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 113, 227, 0.3);
+}
+
+.laser-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 113, 227, 0.5);
+  transform: translateY(-100%);
+  animation: laserScan 2s ease-linear infinite;
+}
+
+@keyframes laserScan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(56px);
+  }
+}
+
+.value-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+}
+
+.value-card:hover h3 {
+  color: #0071e3;
+}
+
+.value-card p {
+  font-size: 13px;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0 0 auto 0;
+  flex-grow: 1;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #f0f4f8;
+}
+
+.status-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  background: #d2d2d7;
+  border-radius: 50%;
+}
+
+.dot.active {
+  background: #0071e3;
+}
+
+.detail-link {
+  font-size: 9px;
+  font-weight: 700;
+  color: #999999;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+
+.value-card:hover .detail-link {
+  color: #1d1d1f;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .core-values-section {
+    padding: 80px 48px;
+  }
+
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 80px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .values-title {
+    font-size: 48px;
+  }
+
+  .mission-block,
+  .vision-block {
+    padding: 40px;
+  }
+
+  .block-content h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .core-values-section {
+    padding: 60px 24px;
+  }
+
+  .mission-vision-grid {
+    margin-bottom: 60px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .values-title {
+    font-size: 36px;
+  }
+
+  .values-header {
+    margin-bottom: 60px;
+  }
+
+  .mission-block,
+  .vision-block {
+    padding: 32px 24px;
+  }
+
+  .block-content h2 {
+    font-size: 24px;
+  }
+
+  .block-content p {
+    font-size: 14px;
+  }
+
+  .value-card {
+    padding: 32px 24px;
+  }
+
+  .value-card h3 {
+    font-size: 16px;
+  }
+
+  .value-card p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .core-values-section {
+    padding: 40px 16px;
+  }
+
+  .values-title {
+    font-size: 28px;
+  }
+
+  .values-header {
+    margin-bottom: 40px;
+  }
+
+  .mission-vision-grid {
+    margin-bottom: 40px;
+  }
+
+  .mission-block,
+  .vision-block {
+    padding: 24px 16px;
+  }
+
+  .block-content h2 {
+    font-size: 20px;
+  }
+
+  .block-content p {
+    font-size: 13px;
+  }
+
+  .value-card {
+    padding: 24px 16px;
+  }
+
+  .value-card h3 {
+    font-size: 15px;
+  }
+
+  .value-card p {
+    font-size: 11px;
+  }
+
+  .card-footer {
+    margin-top: 24px;
+    padding-top: 16px;
+  }
+}
