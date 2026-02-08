@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export function ScrollAnimator({ 
   children, 
-  animation = 'fadeUp', // fadeUp, scale, slideLeft, slideRight
+  animation = 'fadeUp',
   duration = 0.8,
   delay = 0,
   className = ''
@@ -52,7 +52,7 @@ export function ScrollAnimator({
   }, [animation, duration, delay])
 
   return (
-    <div ref={ref} className={className}>
+    <div ref={ref} className={className} style={{ willChange: 'transform' }}>
       {children}
     </div>
   )

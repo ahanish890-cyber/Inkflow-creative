@@ -245,37 +245,37 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="capabilities-grid">
-            <div className="capability-card">
+          <div className="capabilities-row">
+            <div className="capability-item">
               <div className="capability-icon">
                 <Wrench size={32} strokeWidth={1.5} />
               </div>
-              <h3>Industrial Grade Equipment</h3>
-              <p>We operate state-of-the-art machinery engineered for precision, durability, and consistent output — enabling us to deliver flawless products at scale without compromising on quality.</p>
+              <h3>Precision Machining</h3>
+              <p>Our CNC-controlled milling ensures every stitch cut and laser fit with a 0.1mm tolerance. No rattles, no gaps—just solid engineering.</p>
             </div>
 
-            <div className="capability-card">
+            <div className="capability-item">
               <div className="capability-icon">
                 <ShieldCheck size={32} strokeWidth={1.5} />
               </div>
-              <h3>Quality Assured</h3>
-              <p>Every product undergoes rigorous quality checks and controlled production processes to ensure exceptional performance, reliability, and long-term durability.</p>
+              <h3>HD Sublimation</h3>
+              <p>In-house industrial printing using heat-transfer technology that fuses ink into the fabric fibers, ensuring even fading across every single unit delivered.</p>
             </div>
 
-            <div className="capability-card">
+            <div className="capability-item">
               <div className="capability-icon">
                 <Leaf size={32} strokeWidth={1.5} />
               </div>
-              <h3>Eco-Friendly Materials</h3>
-              <p>Sustainability is built into our workflow. We use responsibly sourced materials and environmentally conscious printing processes to reduce impact while maintaining superior results.</p>
+              <h3>Robotic Assembly</h3>
+              <p>The retraction springs are wound and tested by automated systems to ensure consistency and reliability across every single unit delivered.</p>
             </div>
 
-            <div className="capability-card">
+            <div className="capability-item">
               <div className="capability-icon">
                 <Clock size={32} strokeWidth={1.5} />
               </div>
-              <h3>Fast Production</h3>
-              <p>Our optimized manufacturing pipeline and advanced automation allow us to meet tight deadlines with speed and accuracy — ensuring your projects are delivered on time, every time.</p>
+              <h3>Metallurgy Lab</h3>
+              <p>We test every batch of raw aluminum and stainless steel for tensile strength and corrosion resistance before it enters the production line.</p>
             </div>
           </div>
         </div>
