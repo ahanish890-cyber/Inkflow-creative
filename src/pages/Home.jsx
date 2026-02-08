@@ -1,12 +1,9 @@
 import { CheckCircle, Zap, Star, Plane, Building2, Hospital, ShoppingBag, Music, Shield, Wrench, ShieldCheck, Leaf, Clock } from 'lucide-react'
 import WhyChooseInkflow from '../components/WhyChooseInkflow'
 import { ContainerScrollAnimation } from '../components/ContainerScrollAnimation'
-import Testimonials from '../components/Testimonials'
+import TestimonialSection from '../components/TestimonialSection'
 import FAQSection from '../components/FAQSection'
 import TextType from '../components/TextType'
-import TextReveal from '../components/TextReveal'
-import ParallaxImage from '../components/ParallaxImage'
-import ScrollAnimator from '../components/ScrollAnimator'
 
 export default function Home() {
   return (
@@ -96,7 +93,7 @@ export default function Home() {
           </>
         }
       >
-        <img src="/Hero-section.png" alt="Premium Printing Services" />
+        <img src="/Hero-main.png" alt="Premium Printing Services" />
       </ContainerScrollAnimation>
 
       <section className="solutions scroll-container">
@@ -218,15 +215,14 @@ export default function Home() {
       </section>
 
       <WhyChooseInkflow />
-      <Testimonials />
+      <TestimonialSection />
 
       <section className="manufacturing scroll-container">
         <div className="manufacturing-container">
           <div className="manufacturing-header">
             <p className="manufacturing-label">Vertical Integration</p>
             <h2 data-reveal>
-              <span>State-of-the-Art</span>
-              <span className="manufacturing-highlight">Manufacturing.</span>
+              State-of-the-<span>Art</span> <span className="manufacturing-highlight">Manufacturing.</span>
             </h2>
             <p className="manufacturing-description" data-reveal>
               <span>Our advanced printing facilities and cutting-edge technology ensure precision, consistency, and quality in every product we deliver across all industries.</span>

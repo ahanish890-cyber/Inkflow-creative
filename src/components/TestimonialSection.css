@@ -1,56 +1,53 @@
-/* Testimonials Section */
-
-.testimonials-section {
-  background-color: #f5f5f7;
-  padding: 120px 0;
+.testimonial-section {
+  padding: 100px 80px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+  position: relative;
+  z-index: 5;
 }
 
-.testimonials-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 48px;
-}
-
-.testimonials-header {
-  text-align: center;
+.testimonial-section h2 {
+  font-size: 48px;
   margin-bottom: 80px;
-}
-
-.testimonials-header h2 {
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.1;
   letter-spacing: -0.5px;
-  margin: 0;
   color: #1d1d1f;
+  text-align: center;
+  font-weight: 700;
 }
 
-.testimonials-grid {
+.testimonial-section h2 span {
+  color: #0071e3;
+}
+
+.testimonials-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .testimonial-card {
   background: #ffffff;
+  border: 1px solid #e5e5e7;
   border-radius: 20px;
   padding: 48px 40px;
   position: relative;
-  min-height: 380px;
+  min-height: 420px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
   transform: translateZ(0);
 }
 
 .testimonial-card:hover {
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  border-color: #d2d2d7;
   transform: translateY(-4px);
 }
 
-.quote-mark {
+.quote-icon {
   width: 64px;
   height: 64px;
   background-color: #2c3e50;
@@ -62,10 +59,23 @@
   flex-shrink: 0;
 }
 
-.quote-mark svg {
+.quote-icon svg {
   width: 32px;
   height: 32px;
   color: #ffffff;
+}
+
+.rating {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.star {
+  width: 18px;
+  height: 18px;
+  color: #ffc107;
+  flex-shrink: 0;
 }
 
 .testimonial-quote {
@@ -101,78 +111,60 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .testimonials-container {
-    padding: 0 32px;
+  .testimonial-section {
+    padding: 80px 48px;
   }
 
-  .testimonials-grid {
+  .testimonials-wrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
   }
 
+  .testimonial-section h2 {
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+
   .testimonial-card {
+    min-height: 400px;
     padding: 40px 32px;
-    min-height: 360px;
-  }
-
-  .quote-mark {
-    width: 56px;
-    height: 56px;
-    margin-bottom: 28px;
-  }
-
-  .quote-mark svg {
-    width: 28px;
-    height: 28px;
   }
 }
 
 @media (max-width: 768px) {
-  .testimonials-section {
-    padding: 80px 0;
+  .testimonial-section {
+    padding: 60px 30px;
   }
 
-  .testimonials-container {
-    padding: 0 24px;
-  }
-
-  .testimonials-header {
-    margin-bottom: 60px;
-  }
-
-  .testimonials-header h2 {
-    font-size: 40px;
-  }
-
-  .testimonials-grid {
+  .testimonials-wrapper {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
-  .testimonial-card {
-    padding: 36px 28px;
-    min-height: auto;
+  .testimonial-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
   }
 
-  .quote-mark {
-    width: 52px;
-    height: 52px;
+  .testimonial-card {
+    min-height: auto;
+    padding: 32px 24px;
+  }
+
+  .quote-icon {
+    width: 56px;
+    height: 56px;
     margin-bottom: 24px;
   }
 
-  .quote-mark svg {
-    width: 26px;
-    height: 26px;
+  .quote-icon svg {
+    width: 28px;
+    height: 28px;
   }
 
   .testimonial-quote {
     font-size: 15px;
     line-height: 1.7;
-  }
-
-  .testimonial-footer {
-    margin-top: 32px;
-    padding-top: 20px;
   }
 
   .author-name {
@@ -185,37 +177,30 @@
 }
 
 @media (max-width: 480px) {
-  .testimonials-section {
-    padding: 60px 0;
+  .testimonial-section {
+    padding: 40px 16px;
   }
 
-  .testimonials-container {
-    padding: 0 16px;
+  .testimonials-wrapper {
+    gap: 16px;
   }
 
-  .testimonials-header {
-    margin-bottom: 40px;
-  }
-
-  .testimonials-header h2 {
-    font-size: 28px;
-  }
-
-  .testimonials-grid {
-    gap: 20px;
+  .testimonial-section h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
   }
 
   .testimonial-card {
-    padding: 28px 20px;
+    padding: 24px 16px;
   }
 
-  .quote-mark {
+  .quote-icon {
     width: 48px;
     height: 48px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
-  .quote-mark svg {
+  .quote-icon svg {
     width: 24px;
     height: 24px;
   }
