@@ -1,6 +1,6 @@
 import React from 'react'
 import { Zap, Shield, Award, History, ArrowUpRight } from 'lucide-react'
-import '../styles/AboutUs.css'
+import './AboutHero.css'
 
 const legacyStats = [
   { label: 'Founded', value: '2009' },
@@ -27,49 +27,48 @@ const valuesMatrix = [
   }
 ]
 
-export default function AboutUs() {
+export default function AboutHero() {
   return (
-    <div className="about-us-page">
-      {/* Main Hero Section */}
-      <section className="about-hero-section">
-        <div className="about-hero-container">
-          {/* Left Content */}
-          <div className="about-hero-content">
+    <section id="about" className="about-hero">
+      <div className="about-container">
+        {/* Main Hero Layout */}
+        <div className="about-grid">
+          <div className="about-content">
             <div className="about-label">
               <History size={16} />
               <span>Company Heritage</span>
             </div>
             
-            <h2 className="about-hero-title">
+            <h2 className="about-title">
               Redefining <br />
               <span className="about-highlight">Enterprise</span> <br />
               Presence.
             </h2>
 
-            <div className="about-hero-text">
+            <div className="about-description">
               <p>Since 2009, Inkflow Creative has been India's trusted partner for organizations demanding absolute excellence. We serve 500+ enterprise clients including retail chains, multinational corporations, and government agencies.</p>
               
               <p>Our ISO-certified processes and cutting-edge technology ensure consistent excellence at scale. From the first spark in our Bengaluru facility to final deployment at IGI Airport, our legacy is built on the pursuit of 100% reliability.</p>
 
-              <div className="about-stats-grid">
+              <div className="about-stats">
                 {legacyStats.map((stat, i) => (
-                  <div key={i} className="about-stat-item">
-                    <span className="about-stat-label">{stat.label}</span>
-                    <span className="about-stat-value">{stat.value}</span>
+                  <div key={i} className="stat-item">
+                    <span className="stat-label">{stat.label}</span>
+                    <span className="stat-value">{stat.value}</span>
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Right Image */}
-          <div className="about-hero-image">
+          {/* Image Section */}
+          <div className="about-image-wrapper">
             <img 
               src="https://images.unsplash.com/photo-1565034946487-077786996e27?auto=format&fit=crop&q=90&w=1200" 
               alt="Precision Industrial Detail"
               className="about-image"
             />
-            <div className="about-image-overlay"></div>
+            <div className="about-overlay"></div>
             
             {/* Blueprint Lines */}
             <div className="blueprint-overlay">
@@ -95,34 +94,30 @@ export default function AboutUs() {
             <div className="doc-id">DOC_ID: INK_2009_VISUAL</div>
           </div>
         </div>
-      </section>
 
-      {/* Values Matrix */}
-      <section className="about-values-section">
-        <div className="about-values-container">
+        {/* Values Matrix */}
+        <div className="values-grid">
           {valuesMatrix.map((item, i) => (
-            <div key={i} className="about-value-card">
-              <div className="about-value-icon">
+            <div key={i} className="value-card">
+              <div className="value-icon">
                 {item.icon}
               </div>
-              <h3 className="about-value-title">{item.title}</h3>
-              <p className="about-value-desc">{item.desc}</p>
-              <div className="about-value-link">
+              <h3 className="value-title">{item.title}</h3>
+              <p className="value-desc">{item.desc}</p>
+              <div className="value-link">
                 <span>View Documentation</span>
                 <ArrowUpRight size={14} />
               </div>
             </div>
           ))}
         </div>
-      </section>
 
-      {/* Closing Statement */}
-      <section className="about-closing-section">
-        <div className="about-closing-content">
+        {/* Closing Statement */}
+        <div className="closing-statement">
           <h3>Built for <br /><span>Permanent Performance.</span></h3>
           <p>99.8% customer retention since 2012. We build relationships as durable as our hardware.</p>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   )
 }
