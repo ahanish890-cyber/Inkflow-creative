@@ -17,7 +17,7 @@
 }
 
 .scroll-title {
-  perspective: 1200px;
+  perspective: none;
 }
 
 .scroll-title h1 {
@@ -38,22 +38,23 @@
   position: relative;
   width: 100%;
   margin-top: 40px;
-  transform-style: preserve-3d;
   animation: containerScroll ease-in-out forwards;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
+  will-change: transform, opacity;
+  transform: translateZ(0);
 }
 
 @keyframes containerScroll {
   0% {
-    transform: rotateX(65deg) rotateY(18deg) rotateZ(8deg) translateZ(0);
+    transform: translateY(40px) scale(0.95);
     opacity: 0;
   }
   50% {
     opacity: 1;
   }
   100% {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(0);
+    transform: translateY(0) scale(1);
     opacity: 1;
   }
 }
@@ -63,7 +64,7 @@
   height: auto;
   display: block;
   border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
 @media (max-width: 1024px) {
@@ -91,14 +92,14 @@
 
   @keyframes containerScroll {
     0% {
-      transform: rotateX(45deg) rotateY(10deg) rotateZ(4deg) translateZ(0);
+      transform: translateY(30px) scale(0.97);
       opacity: 0;
     }
     50% {
       opacity: 1;
     }
     100% {
-      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(0);
+      transform: translateY(0) scale(1);
       opacity: 1;
     }
   }
@@ -115,14 +116,14 @@
 
   @keyframes containerScroll {
     0% {
-      transform: rotateX(30deg) rotateY(5deg) rotateZ(2deg) translateZ(0);
+      transform: translateY(20px) scale(0.98);
       opacity: 0;
     }
     50% {
       opacity: 1;
     }
     100% {
-      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(0);
+      transform: translateY(0) scale(1);
       opacity: 1;
     }
   }

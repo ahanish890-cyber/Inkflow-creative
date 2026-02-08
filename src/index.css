@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 html {
-  scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
+  scroll-behavior: auto;
   -webkit-font-smoothing: antialiased;
 }
 
 /* Disable scroll snap on body to allow Lenis to handle it */
 body {
   scroll-snap-type: none;
+}
+
+/* GPU Acceleration - Critical for performance */
+* {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 :root {
