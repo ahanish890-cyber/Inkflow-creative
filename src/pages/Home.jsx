@@ -3,6 +3,7 @@ import WhyChooseInkflow from '../components/WhyChooseInkflow'
 import { ContainerScrollAnimation } from '../components/ContainerScrollAnimation'
 import HeroProduct from '../components/HeroProduct'
 import TestimonialSection from '../components/TestimonialSection'
+import ManufacturingCapabilities from '../components/ManufacturingCapabilities'
 import FAQSection from '../components/FAQSection'
 import TextType from '../components/TextType'
 
@@ -235,43 +236,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          <div className="capabilities-row">
-            <div className="capability-item">
-              <div className="capability-icon">
-                <Wrench size={32} strokeWidth={1.5} />
-              </div>
-              <h3>Industrial Grade Equipment</h3>
-              <p>We operate state-of-the-art machinery engineered for precision, durability, and consistent output — enabling us to deliver flawless products at scale without compromising on quality.</p>
-            </div>
-
-            <div className="capability-item">
-              <div className="capability-icon">
-                <ShieldCheck size={32} strokeWidth={1.5} />
-              </div>
-              <h3>Quality Assured</h3>
-              <p>Every product undergoes rigorous quality checks and controlled production processes to ensure exceptional performance, reliability, and long-term durability.</p>
-            </div>
-
-            <div className="capability-item">
-              <div className="capability-icon">
-                <Leaf size={32} strokeWidth={1.5} />
-              </div>
-              <h3>Eco-Friendly Materials</h3>
-              <p>Sustainability is built into our workflow. We use responsibly sourced materials and environmentally conscious printing processes to reduce impact while maintaining superior results.</p>
-            </div>
-
-            <div className="capability-item">
-              <div className="capability-icon">
-                <Clock size={32} strokeWidth={1.5} />
-              </div>
-              <h3>
-                Fast Production</h3>
-              <p>Our optimized manufacturing pipeline and advanced automation allow us to meet tight deadlines with speed and accuracy — ensuring your projects are delivered on time, every time.</p>
-            </div>
-          </div>
         </div>
+          <ManufacturingCapabilities />
       </section>
+
+    
 
       <FAQSection />
     </main>
