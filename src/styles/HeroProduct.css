@@ -1,7 +1,7 @@
 /* Hero Product Section */
 .hero-product {
   background: #ffffff;
-  padding: 48px 0;
+  padding: 4px 0 0 0;
 }
 
 .hero-product-container {
@@ -10,8 +10,8 @@
   padding: 0 48px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+  gap: 30px;
+  align-items: flex-start;
 }
 
 /* Left Side - Product Image */
@@ -19,7 +19,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 8px;
 }
 
 .hero-product-left-heading {
@@ -30,7 +30,7 @@
   letter-spacing: -0.3px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', sans-serif;
-  min-height: 120px;
+  min-height: auto;
   display: flex;
   align-items: center;
 }
@@ -61,11 +61,11 @@
 .hero-product-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 8px;
 }
 
 .hero-product-label {
-  font-size: 16px;
+  font-size: 14px;
   color: #1d1d1f;
   font-weight: 400;
   margin: 0;
@@ -83,18 +83,18 @@
 }
 
 .hero-product-intro {
-  font-size: 16px;
+  font-size: 14px;
   color: #1d1d1f;
-  line-height: 1.7;
+  line-height: 1.5;
   margin: 0;
   font-weight: 400;
   letter-spacing: 0.2px;
 }
 
 .hero-product-description {
-  font-size: 16px;
+  font-size: 14px;
   color: #6f6f77;
-  line-height: 1.7;
+  line-height: 1.5;
   margin: 0;
   font-weight: 400;
   letter-spacing: 0.2px;
@@ -104,18 +104,18 @@
 .hero-product-features {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-top: 12px;
+  gap: 8px;
+  margin-top: 4px;
 }
 
 .feature-item {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   align-items: center;
-  font-size: 15px;
+  font-size: 13px;
   color: #1d1d1f;
   font-weight: 500;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
 }
 
 .feature-item svg {
@@ -129,7 +129,7 @@
 /* Responsive */
 @media (max-width: 1200px) {
   .hero-product-container {
-    gap: 60px;
+    gap: 25px;
     padding: 0 32px;
   }
 
@@ -144,12 +144,12 @@
 
 @media (max-width: 768px) {
   .hero-product {
-    padding: 40px 0;
+    padding: 8px 0;
   }
 
   .hero-product-container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 16px;
     padding: 0 24px;
   }
 
@@ -159,7 +159,7 @@
 
   .hero-product-left-heading {
     font-size: 28px;
-    min-height: 90px;
+    min-height: auto;
   }
 
   .hero-product-intro {
@@ -177,11 +177,11 @@
 
 @media (max-width: 480px) {
   .hero-product {
-    padding: 40px 0;
+    padding: 6px 0;
   }
 
   .hero-product-container {
-    gap: 32px;
+    gap: 12px;
     padding: 0 16px;
   }
 
@@ -191,7 +191,7 @@
 
   .hero-product-left-heading {
     font-size: 22px;
-    min-height: 70px;
+    min-height: auto;
   }
 
   .hero-product-heading {
