@@ -12,6 +12,7 @@ export default function ContactUs() {
   })
 
   const [submitStatus, setSubmitStatus] = useState(null)
+  const [errors, setErrors] = useState({})
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -19,6 +20,13 @@ export default function ContactUs() {
       ...prev,
       [name]: value
     }))
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }))
+    }
   }
 
   const handleSubmit = (e) => {
