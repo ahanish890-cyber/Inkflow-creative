@@ -130,68 +130,8 @@ export default function SolutionsPortfolio() {
         </div>
       </div>
 
-      {/* Why Choose Section */}
-      <section className="why-choose-section">
-        <div className="why-choose-inner">
-          <div className="why-choose-header-flex">
-            <h2 className="why-choose-title">Why Industry Leaders<br />Choose Inkflow.</h2>
-            <a href="#solutions" className="why-choose-link">
-              Our Solutions <ArrowRight size={16} />
-            </a>
-          </div>
-
-          <div className="why-choose-cards-grid">
-            <div className="why-choose-card">
-              <div className="why-choose-icon">
-                <Zap size={24} strokeWidth={1.5} />
-              </div>
-              <h3 className="why-choose-card-title">Fast Turnaround</h3>
-              <p className="why-choose-card-desc">High-speed production ensures your materials are delivered exactly when you need them.</p>
-            </div>
-
-            <div className="why-choose-card">
-              <div className="why-choose-icon">
-                <Sparkles size={24} strokeWidth={1.5} />
-              </div>
-              <h3 className="why-choose-card-title">Premium Print Quality</h3>
-              <p className="why-choose-card-desc">Industry-grade printers producing sharp, vibrant, and durable results.</p>
-            </div>
-
-            <div className="why-choose-card">
-              <div className="why-choose-icon">
-                <Palette size={24} strokeWidth={1.5} />
-              </div>
-              <h3 className="why-choose-card-title">Custom Branding Solutions</h3>
-              <p className="why-choose-card-desc">Tailor-made printing designed to elevate your brand presence.</p>
-            </div>
-
-            <div className="why-choose-card">
-              <div className="why-choose-icon">
-                <ShieldCheck size={24} strokeWidth={1.5} />
-              </div>
-              <h3 className="why-choose-card-title">Trusted by Businesses</h3>
-              <p className="why-choose-card-desc">Reliable printing partner for corporates, retail chains, and institutions.</p>
-            </div>
-          </div>
-        </div>
+    
       </section>
 
-      {/* Portfolio Showcase with Horizontal Scroll */}
-      <section className="portfolio-showcase-section">
-        <div className="portfolio-showcase-header">
-          <h2 className="portfolio-showcase-title">
-            <TextType 
-              text="Our Work & Portfolio"
-              typingSpeed={50}
-              pauseDuration={2500}
-              showCursor={false}
-            />
-          </h2>
-          <p className="portfolio-showcase-desc">Scroll through our latest projects and successful implementations</p>
-        </div>
-        
-        <HorizontalScrollCarousel images={portfolioImages} />
-      </section>
-    </section>
   )
 }
