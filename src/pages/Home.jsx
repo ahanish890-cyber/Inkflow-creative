@@ -4,6 +4,9 @@ import { ContainerScrollAnimation } from '../components/ContainerScrollAnimation
 import Testimonials from '../components/Testimonials'
 import FAQSection from '../components/FAQSection'
 import TextType from '../components/TextType'
+import TextReveal from '../components/TextReveal'
+import ParallaxImage from '../components/ParallaxImage'
+import ScrollAnimator from '../components/ScrollAnimator'
 
 export default function Home() {
   return (
@@ -134,23 +137,23 @@ export default function Home() {
 
       <section className="industries">
         <div className="industries-container">
-          <div className="industries-header">
-            <h2>Industries We Serve</h2>
-            <p>Trusted by leading organizations across diverse sectors</p>
-          </div>
+<div className="industries-header">
+  <h2>Industries We Serve</h2>
+  <p>Trusted by leading organizations across diverse sectors</p>
+</div>
 
-          <div className="industries-grid">
-          <div className="industry-card">
-            <div className="industry-image" style={{ backgroundImage: 'url(/Airport.png)' }}></div>
-            <div className="industry-content">
-              <div className="industry-icon">
-                <Plane size={32} strokeWidth={1.5} />
-              </div>
-              <h3>Airports</h3>
-              <p>Managing passenger flow efficiently with durable, weather-resistant queue management systems designed for high-traffic environments.</p>
-              <a href="#" className="industry-link">Explore Sector →</a>
-            </div>
-          </div>
+<div className="industries-grid">
+  <div className="industry-card">
+    <div className="industry-image" style={{ backgroundImage: 'url(/Airport.png)' }}></div>
+    <div className="industry-content">
+      <div className="industry-icon">
+        <Plane size={32} strokeWidth={1.5} />
+      </div>
+      <h3>Airports</h3>
+      <p>Managing passenger flow efficiently with durable, weather-resistant queue management systems designed for high-traffic environments.</p>
+      <a href="#" className="industry-link">Explore Sector →</a>
+    </div>
+  </div>
 
           <div className="industry-card">
             <div className="industry-image" style={{ backgroundImage: 'url(/Bank.jpeg)' }}></div>
@@ -217,6 +220,7 @@ export default function Home() {
 
       <WhyChooseInkflow />
       <Testimonials />
+      
       <section className="manufacturing">
         <div className="manufacturing-container">
           <div className="manufacturing-header">

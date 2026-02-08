@@ -1,0 +1,51 @@
+/* Parallax Image Effects */
+
+.parallax-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.parallax-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  will-change: transform;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.parallax-container:hover .parallax-image {
+  transform: scale(1.02);
+}
+
+/* Parallax depth effect */
+.parallax-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Responsive parallax */
+@media (max-width: 768px) {
+  .parallax-container {
+    border-radius: 16px;
+  }
+
+  .parallax-image {
+    will-change: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax-image {
+    will-change: auto;
+  }
+}

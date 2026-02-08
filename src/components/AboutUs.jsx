@@ -1,36 +1,152 @@
 import React from 'react'
 import '../styles/AboutUs.css'
 import TextType from './TextType'
+import { 
+  Zap, 
+  Users, 
+  Leaf, 
+  Rocket, 
+  Award, 
+  Shield, 
+  TrendingUp, 
+  CheckCircle,
+  Gauge,
+  HeartHandshake,
+  Lightbulb,
+  Clock,
+  Printer,
+  Sparkles,
+  Target,
+  Building2,
+  Send,
+  Boxes
+} from 'lucide-react'
 
 export default function AboutUs() {
+  const whatWeDo = [
+    {
+      icon: Printer,
+      title: 'Digital Printing Excellence',
+      description: 'High-speed, high-quality digital printing for on-demand marketing materials, personalized communications, and short-run jobs with exceptional color accuracy.'
+    },
+    {
+      icon: Boxes,
+      title: 'Packaging & Branding',
+      description: 'Custom packaging solutions that elevate your brand. From concept to delivery, we create packaging that protects your product and captivates your customers.'
+    },
+    {
+      icon: Building2,
+      title: 'Queue Management Systems',
+      description: 'Integrated queue management solutions for retail, healthcare, and service industries. Improve customer experience and operational efficiency.'
+    },
+    {
+      icon: Send,
+      title: 'Direct Mail Campaigns',
+      description: 'Complete direct mail production and fulfillment. Personalized, trackable campaigns that drive real results and measurable ROI.'
+    },
+    {
+      icon: Sparkles,
+      title: 'Creative Design Services',
+      description: 'In-house design team ready to bring your vision to life. From concept development to pre-press preparation, we handle the complete creative process.'
+    },
+    {
+      icon: Target,
+      title: 'Business Collaterals',
+      description: 'Professional business cards, letterheads, envelopes, brochures, and promotional materials that represent your brand with impact.'
+    }
+  ]
+
+  const whyInkflow = [
+    {
+      number: '15+',
+      title: 'Years of Excellence',
+      description: 'Since 2009, we\'ve been printing with passion and precision for thousands of satisfied clients across diverse industries.'
+    },
+    {
+      number: '99.8%',
+      title: 'Quality Guarantee',
+      description: 'ISO 9001:2015 certified processes ensure consistent, superior quality on every project, every single time.'
+    },
+    {
+      number: '24/7',
+      title: 'Customer Support',
+      description: 'Dedicated account managers and round-the-clock support ensure your concerns are addressed instantly.'
+    },
+    {
+      number: '50M+',
+      title: 'Annual Production',
+      description: 'We print 50+ million products annually with consistent excellence. Scale with confidence.'
+    }
+  ]
+
   const values = [
     {
-      icon: '⚙️',
+      icon: Gauge,
       title: 'Excellence in Execution',
-      description: 'Precision engineering meets creative vision in every print we produce.'
+      description: 'Precision engineering meets creative vision. We maintain 99.8% quality standards across all projects with rigorous quality control protocols.'
     },
     {
-      icon: '🤝',
-      title: 'Client-Centric Approach',
-      description: 'Your success is our success. We listen, collaborate, and deliver beyond expectations.'
+      icon: HeartHandshake,
+      title: 'Client-Centric Partnership',
+      description: 'Your success drives ours. Dedicated account managers, personalized solutions, and transparent communication at every stage.'
     },
     {
-      icon: '♻️',
-      title: 'Sustainable Practices',
-      description: 'Eco-conscious printing solutions that protect our planet without compromising quality.'
+      icon: Leaf,
+      title: 'Sustainable Excellence',
+      description: 'Eco-conscious printing innovations using sustainable materials and processes. Environmental responsibility without quality compromise.'
     },
     {
-      icon: '⚡',
-      title: 'Innovation & Speed',
-      description: 'Cutting-edge technology with rapid turnaround—your deadlines are our priorities.'
+      icon: Zap,
+      title: 'Innovation & Velocity',
+      description: 'Cutting-edge technology platform with AI-driven workflows. Rapid turnaround without sacrificing precision or quality.'
+    }
+  ]
+
+  const whyChooseReasons = [
+    {
+      icon: Award,
+      title: 'Industry-Leading Technology',
+      description: 'State-of-the-art printing infrastructure with enterprise-grade quality assurance. ISO certified processes and continuous innovation.'
+    },
+    {
+      icon: Lightbulb,
+      title: 'Custom Enterprise Solutions',
+      description: 'Scalable solutions for SMEs to Fortune 500 companies. API integrations, white-label options, and customizable workflows.'
+    },
+    {
+      icon: Clock,
+      title: 'Guaranteed SLA Delivery',
+      description: 'Industry-leading turnaround times with 99.9% on-time delivery guarantee. Real-time tracking and proactive notifications.'
+    },
+    {
+      icon: Shield,
+      title: 'Complete Enterprise Support',
+      description: 'Dedicated account teams, 24/7 support, and strategic consulting. From design to delivery, we handle the entire workflow.'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Volume Discounts & Flexibility',
+      description: 'Transparent pricing with tiered discounts. Flexible payment terms, bulk printing options, and recurring service packages.'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Proven Enterprise Track Record',
+      description: 'Trusted by 500+ leading brands. Certified printing partner for retail, corporate, and institutional sectors.'
     }
   ]
 
   const stats = [
-    { number: '500+', label: 'Happy Clients' },
-    { number: '2M+', label: 'Products Delivered' },
-    { number: '15+', label: 'Years Experience' },
-    { number: '99.8%', label: 'Quality Rate' }
+    { number: '500+', label: 'Enterprise Clients', subLabel: 'Across India' },
+    { number: '50M+', label: 'Products Delivered', subLabel: 'Annually' },
+    { number: '15+', label: 'Years Excellence', subLabel: 'Industry Leadership' },
+    { number: '99.8%', label: 'Quality Rate', subLabel: 'Certified' }
+  ]
+
+  const capabilities = [
+    { label: 'Digital Printing', value: '500+' },
+    { label: 'Offset Solutions', value: '1000+' },
+    { label: 'Packaging & Branding', value: '250+' },
+    { label: 'Queue Management Systems', value: '100+' }
   ]
 
   return (
@@ -41,7 +157,7 @@ export default function AboutUs() {
           <h1>About Inkflow Creative</h1>
           <div style={{ fontSize: '1.2rem', color: '#fff' }}>
             <TextType 
-              text="Where precision printing meets creative excellence"
+              text="Enterprise-Grade Printing Solutions for Modern Businesses"
               typingSpeed={50}
               pauseDuration={3000}
               showCursor={true}
@@ -58,26 +174,47 @@ export default function AboutUs() {
             <div className="intro-text">
               <h2>
                 <TextType 
-                  text="Redefining Professional Printing"
+                  text="Redefining Enterprise Printing"
                   typingSpeed={60}
                   pauseDuration={2000}
                   showCursor={false}
                 />
               </h2>
               <p className="intro-lead">
-                Since 2009, Inkflow Creative has been the trusted printing partner for businesses across India. We combine traditional craftsmanship with modern technology to deliver printing solutions that elevate brands and drive results.
+                Since 2009, Inkflow Creative has been India's trusted printing partner for organizations demanding excellence. We deliver enterprise-grade solutions combining precision, reliability, and innovation.
               </p>
               <p>
-                From queue management systems to premium marketing collaterals, our commitment to quality, reliability, and innovation has made us the go-to choice for corporates, retail chains, educational institutions, and growing businesses.
+                From queue management systems to premium marketing collaterals, mission-critical business documents to large-scale packaging solutions—we serve 500+ enterprise clients including retail chains, multinational corporations, educational institutions, and government agencies. Our ISO-certified processes and cutting-edge technology ensure consistent excellence at scale.
               </p>
+              <div className="intro-highlights">
+                <div className="highlight-item">
+                  <Rocket size={20} />
+                  <span>99.9% SLA Delivery</span>
+                </div>
+                <div className="highlight-item">
+                  <Shield size={20} />
+                  <span>ISO 9001:2015 Certified</span>
+                </div>
+                <div className="highlight-item">
+                  <TrendingUp size={20} />
+                  <span>Scalable Growth</span>
+                </div>
+              </div>
             </div>
             <div className="intro-image">
               <div className="image-placeholder">
                 <svg viewBox="0 0 400 300" fill="none" stroke="currentColor" strokeWidth="1">
-                  <rect x="20" y="20" width="360" height="260" rx="8" />
-                  <circle cx="200" cy="100" r="30" fill="currentColor" opacity="0.1" />
-                  <rect x="60" y="150" width="280" height="8" rx="4" fill="currentColor" opacity="0.1" />
-                  <rect x="60" y="170" width="240" height="8" rx="4" fill="currentColor" opacity="0.1" />
+                  <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style={{stopColor: '#0071e3', stopOpacity: 0.1}} />
+                      <stop offset="100%" style={{stopColor: '#0071e3', stopOpacity: 0.2}} />
+                    </linearGradient>
+                  </defs>
+                  <rect x="20" y="20" width="360" height="260" rx="8" fill="url(#grad1)" stroke="#0071e3" strokeWidth="2"/>
+                  <circle cx="200" cy="100" r="40" fill="none" stroke="#0071e3" strokeWidth="2" opacity="0.6" />
+                  <rect x="60" y="150" width="280" height="12" rx="6" fill="#0071e3" opacity="0.1" />
+                  <rect x="60" y="170" width="240" height="12" rx="6" fill="#0071e3" opacity="0.1" />
+                  <rect x="60" y="190" width="260" height="12" rx="6" fill="#0071e3" opacity="0.1" />
                 </svg>
               </div>
             </div>
@@ -88,11 +225,97 @@ export default function AboutUs() {
       {/* Stats Section */}
       <section className="about-section about-stats">
         <div className="section-container">
+          <h3 className="stats-subtitle">By The Numbers</h3>
           <div className="stats-grid">
             {stats.map((stat, index) => (
               <div key={index} className="stat-card">
                 <div className="stat-number">{stat.number}</div>
                 <div className="stat-label">{stat.label}</div>
+                <div className="stat-sublabel">{stat.subLabel}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What is Inkflow Section */}
+      <section className="about-section about-what-is">
+        <div className="section-container">
+          <div className="what-is-layout">
+            <div className="what-is-content">
+              <h2 className="section-title">What is Inkflow Creative?</h2>
+              <p className="what-is-lead">
+                Inkflow Creative is India's premier printing partner for businesses that demand excellence. We're not just a print shop—we're your strategic printing partner, innovation hub, and quality guardian all rolled into one.
+              </p>
+              <div className="what-is-features">
+                <div className="feature-item">
+                  <div className="feature-check">✓</div>
+                  <div className="feature-text">
+                    <h4>Complete Printing Solutions</h4>
+                    <p>From concept to execution, we handle every aspect of your printing needs with expertise and precision.</p>
+                  </div>
+                </div>
+                <div className="feature-item">
+                  <div className="feature-check">✓</div>
+                  <div className="feature-text">
+                    <h4>Trusted by 500+ Brands</h4>
+                    <p>Corporate giants, retail chains, startups, and government agencies rely on us for mission-critical printing.</p>
+                  </div>
+                </div>
+                <div className="feature-item">
+                  <div className="feature-check">✓</div>
+                  <div className="feature-text">
+                    <h4>Cutting-Edge Technology</h4>
+                    <p>Latest printing equipment combined with AI-driven workflows for superior quality and faster turnaround.</p>
+                  </div>
+                </div>
+                <div className="feature-item">
+                  <div className="feature-check">✓</div>
+                  <div className="feature-text">
+                    <h4>Certified Excellence</h4>
+                    <p>ISO 9001:2015 certified with 99.8% quality guarantee and 99.9% on-time delivery rate.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Do Section */}
+      <section className="about-section about-what-we-do">
+        <div className="section-container">
+          <h2 className="section-title">What We Do</h2>
+          <p className="section-subtitle-text">Comprehensive printing solutions tailored to your business needs</p>
+          <div className="what-we-do-grid">
+            {whatWeDo.map((service, index) => {
+              const IconComponent = service.icon
+              return (
+                <div key={index} className="service-card">
+                  <div className="service-icon">
+                    <IconComponent size={36} />
+                  </div>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                  <a href="#" className="service-link">Learn More →</a>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Inkflow Section */}
+      <section className="about-section about-why-inkflow">
+        <div className="section-container">
+          <h2 className="section-title">Why Inkflow Creative?</h2>
+          <p className="section-subtitle-text">The numbers tell our story of excellence and trust</p>
+          <div className="why-inkflow-grid">
+            {whyInkflow.map((reason, index) => (
+              <div key={index} className="why-inkflow-card">
+                <div className="why-number">{reason.number}</div>
+                <h3>{reason.title}</h3>
+                <p>{reason.description}</p>
               </div>
             ))}
           </div>
@@ -103,16 +326,18 @@ export default function AboutUs() {
       <section className="about-section about-mission">
         <div className="section-container">
           <div className="mission-grid">
-            <div className="mission-card">
+            <div className="mission-card mission-card-primary">
+              <Rocket className="mission-icon" size={40} />
               <h3>Our Mission</h3>
               <p>
-                To empower businesses with exceptional printing solutions that combine quality, reliability, and innovation. We believe great printing is more than ink on paper—it's about translating your vision into tangible success.
+                To empower organizations with enterprise-grade printing solutions that drive measurable business impact. We're committed to delivering exceptional quality, reliability, and innovation—transforming complex printing challenges into competitive advantages.
               </p>
             </div>
-            <div className="mission-card">
+            <div className="mission-card mission-card-secondary">
+              <Lightbulb className="mission-icon" size={40} />
               <h3>Our Vision</h3>
               <p>
-                To be India's most trusted and innovative printing partner, recognized for our unwavering commitment to excellence, sustainability, and customer success across every industry we serve.
+                To be India's most trusted and innovative printing technology partner, recognized for operational excellence, sustainability leadership, and transformative solutions that scale businesses from startups to enterprises.
               </p>
             </div>
           </div>
@@ -124,13 +349,18 @@ export default function AboutUs() {
         <div className="section-container">
           <h2 className="section-title">Our Core Values</h2>
           <div className="values-grid">
-            {values.map((value, index) => (
-              <div key={index} className="value-card">
-                <div className="value-icon">{value.icon}</div>
-                <h3 className="value-title">{value.title}</h3>
-                <p className="value-description">{value.description}</p>
-              </div>
-            ))}
+            {values.map((value, index) => {
+              const IconComponent = value.icon
+              return (
+                <div key={index} className="value-card">
+                  <div className="value-icon-wrapper">
+                    <IconComponent className="value-icon" size={32} />
+                  </div>
+                  <h3 className="value-title">{value.title}</h3>
+                  <p className="value-description">{value.description}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -140,30 +370,35 @@ export default function AboutUs() {
         <div className="section-container">
           <h2 className="section-title">Why Choose Inkflow Creative?</h2>
           <div className="why-content">
-            <div className="why-item">
-              <h3>Industry-Leading Technology</h3>
-              <p>State-of-the-art printing equipment combined with expert craftsmanship ensures every project exceeds expectations.</p>
-            </div>
-            <div className="why-item">
-              <h3>Custom Solutions</h3>
-              <p>We understand that every business is unique. Our tailored approach ensures your printing solutions reflect your brand perfectly.</p>
-            </div>
-            <div className="why-item">
-              <h3>Guaranteed Turnaround</h3>
-              <p>Strict timeline commitments and rapid production mean your materials arrive when you need them, without compromise on quality.</p>
-            </div>
-            <div className="why-item">
-              <h3>Complete Support</h3>
-              <p>From concept to delivery, our dedicated team guides you through every step, offering design expertise and strategic insights.</p>
-            </div>
-            <div className="why-item">
-              <h3>Competitive Pricing</h3>
-              <p>Premium quality doesn't have to break the bank. We offer transparent pricing with flexible options for all business sizes.</p>
-            </div>
-            <div className="why-item">
-              <h3>Proven Track Record</h3>
-              <p>Trusted by industry leaders and backed by years of consistent delivery. Our clients are our best testimonials.</p>
-            </div>
+            {whyChooseReasons.map((reason, index) => {
+              const IconComponent = reason.icon
+              return (
+                <div key={index} className="why-item">
+                  <div className="why-icon-wrapper">
+                    <IconComponent className="why-icon" size={28} />
+                  </div>
+                  <h3>{reason.title}</h3>
+                  <p>{reason.description}</p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Capabilities Section */}
+      <section className="about-section about-capabilities">
+        <div className="section-container">
+          <h2 className="section-title">Our Capabilities</h2>
+          <div className="capabilities-grid">
+            {capabilities.map((cap, index) => (
+              <div key={index} className="capability-card">
+                <div className="capability-header">
+                  <h4>{cap.label}</h4>
+                  <span className="capability-badge">{cap.value}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -172,11 +407,11 @@ export default function AboutUs() {
       <section className="about-section about-cta">
         <div className="section-container">
           <div className="cta-content">
-            <h2>Ready to Transform Your Printing?</h2>
-            <p>Let's create something exceptional together. Our team is ready to discuss your printing needs.</p>
+            <h2>Ready to Partner with Enterprise Excellence?</h2>
+            <p>Join 500+ leading organizations that trust Inkflow Creative for mission-critical printing solutions. Let's discuss your requirements.</p>
             <div className="cta-buttons">
-              <button className="btn btn-primary">Get Your Quote Now</button>
-              <button className="btn btn-secondary">Contact Us</button>
+              <button className="btn btn-primary">Request Enterprise Demo</button>
+              <button className="btn btn-secondary">Schedule Consultation</button>
             </div>
           </div>
         </div>

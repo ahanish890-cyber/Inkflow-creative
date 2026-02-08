@@ -1,8 +1,8 @@
-/* About Us Page - Premium Apple-style Design */
+/* About Us Page - Professional White & Black with Blue Accents */
 
 .about-us-page {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-  color: #1d1d1f;
+  color: #1a1a1a;
   background-color: #ffffff;
 }
 
@@ -14,41 +14,90 @@
 
 /* Hero Section */
 .about-hero {
-  background: linear-gradient(135deg, #f5f5f7 0%, #ffffff 100%);
-  padding: 120px 32px;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  padding: 140px 32px;
   text-align: center;
-  border-bottom: 1px solid #e5e5e7;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+}
+
+.about-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
 }
 
 .about-hero-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .about-hero h1 {
   font-size: 64px;
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.5px;
-  margin: 0 0 16px 0;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  word-spacing: 0.1em;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.about-hero h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  border-radius: 3px;
 }
 
 .about-hero p {
-  font-size: 20px;
-  color: #86868b;
-  line-height: 1.5;
-  margin: 0;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
+  margin: 32px 0 0 0;
   font-weight: 400;
+  letter-spacing: 0.3px;
 }
 
 /* About Sections */
 .about-section {
   padding: 80px 0;
-  border-bottom: 1px solid #f5f5f7;
 }
 
-.about-section:last-child {
-  border-bottom: none;
+.about-section:nth-child(odd) {
+  background: #ffffff;
+}
+
+.about-section:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.about-hero {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
 }
 
 /* Intro Section */
@@ -65,12 +114,13 @@
   line-height: 1.2;
   letter-spacing: -0.3px;
   margin: 0 0 32px 0;
+  color: #1a1a1a;
 }
 
 .intro-lead {
   font-size: 18px;
   line-height: 1.6;
-  color: #1d1d1f;
+  color: #1a1a1a;
   font-weight: 500;
   margin: 0 0 20px 0;
 }
@@ -78,19 +128,43 @@
 .intro-text p {
   font-size: 16px;
   line-height: 1.7;
-  color: #86868b;
+  color: #555555;
   margin: 20px 0;
   letter-spacing: 0.3px;
 }
 
+/* Intro Highlights */
+.intro-highlights {
+  display: flex;
+  gap: 32px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 2px solid #eeeeee;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0071e3;
+}
+
+.highlight-item svg {
+  color: #0071e3;
+  flex-shrink: 0;
+}
+
 .intro-image {
-  background: #f5f5f7;
-  border-radius: 20px;
+  background: #f5f5f5;
+  border-radius: 24px;
   padding: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 400px;
+  border: 2px solid #eeeeee;
 }
 
 .image-placeholder {
@@ -107,7 +181,17 @@
 
 /* Stats Section */
 .about-stats {
-  background-color: #f5f5f7;
+  background: #ffffff;
+}
+
+.stats-subtitle {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0071e3;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .stats-grid {
@@ -118,16 +202,18 @@
 
 .stat-card {
   background: #ffffff;
-  border-radius: 18px;
+  border-radius: 16px;
   padding: 40px 24px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 250ms ease;
+  border: 2px solid #f0f0f0;
 }
 
 .stat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  border-color: #0071e3;
 }
 
 .stat-number {
@@ -140,9 +226,222 @@
 
 .stat-label {
   font-size: 15px;
-  color: #86868b;
-  font-weight: 500;
+  color: #1a1a1a;
+  font-weight: 600;
   letter-spacing: 0.3px;
+  margin-bottom: 6px;
+}
+
+.stat-sublabel {
+  font-size: 13px;
+  color: #888888;
+  font-weight: 500;
+}
+
+/* What is Inkflow Section */
+.about-what-is {
+  background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+}
+
+.what-is-layout {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.what-is-lead {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #1a1a1a;
+  margin: 0 0 40px 0;
+  font-weight: 500;
+}
+
+.what-is-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #f0f0f0;
+  transition: all 250ms ease;
+}
+
+.feature-item:hover {
+  border-color: #0071e3;
+  box-shadow: 0 8px 24px rgba(0, 113, 227, 0.08);
+  transform: translateY(-3px);
+}
+
+.feature-check {
+  font-size: 24px;
+  color: #0071e3;
+  font-weight: 700;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 113, 227, 0.1);
+  border-radius: 50%;
+}
+
+.feature-text h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+}
+
+.feature-text p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666666;
+  margin: 0;
+}
+
+/* What We Do Section */
+.about-what-we-do {
+  background: #ffffff;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  text-align: center;
+  margin: 0 0 16px 0;
+  color: #1a1a1a;
+}
+
+.section-subtitle-text {
+  text-align: center;
+  font-size: 18px;
+  color: #666666;
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+
+.what-we-do-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.service-card {
+  background: #f9f9f9;
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 250ms ease;
+  border: 2px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  background: #ffffff;
+  border-color: #0071e3;
+  box-shadow: 0 12px 40px rgba(0, 113, 227, 0.12);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #e3f2ff 0%, #f0f7ff 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: #0071e3;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.service-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0 0 16px 0;
+  flex-grow: 1;
+}
+
+.service-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0071e3;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 250ms ease;
+}
+
+.service-link:hover {
+  gap: 4px;
+  transform: translateX(4px);
+}
+
+/* Why Inkflow Section */
+.about-why-inkflow {
+  background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+}
+
+.why-inkflow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.why-inkflow-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  border: 2px solid #f0f0f0;
+  transition: all 250ms ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-inkflow-card:hover {
+  border-color: #0071e3;
+  box-shadow: 0 12px 32px rgba(0, 113, 227, 0.1);
+  transform: translateY(-6px);
+}
+
+.why-number {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0071e3;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.why-inkflow-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+}
+
+.why-inkflow-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666666;
+  margin: 0;
 }
 
 /* Mission Section */
@@ -153,19 +452,53 @@
 .mission-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 40px;
 }
 
 .mission-card {
   padding: 48px;
-  background: #f5f5f7;
-  border-radius: 20px;
+  border-radius: 16px;
+  transition: all 250ms ease;
+  border: 2px solid #f0f0f0;
+  position: relative;
+  overflow: hidden;
+  background: #f9f9f9;
+}
+
+.mission-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, rgba(0, 113, 227, 0.05) 0%, transparent 100%);
+  border-radius: 50% 0 0 0;
+}
+
+.mission-card-primary {
+  background: linear-gradient(135deg, #f5f9ff 0%, #ffffff 100%);
+}
+
+.mission-card-secondary {
+  background: #ffffff;
+}
+
+.mission-card:hover {
+  transform: translateY(-6px);
+  border-color: #0071e3;
+  box-shadow: 0 12px 32px rgba(0, 113, 227, 0.1);
+}
+
+.mission-icon {
+  color: #0071e3;
+  margin-bottom: 20px;
 }
 
 .mission-card h3 {
   font-size: 28px;
   font-weight: 700;
-  color: #1d1d1f;
+  color: #1a1a1a;
   margin: 0 0 20px 0;
   line-height: 1.3;
 }
@@ -173,25 +506,14 @@
 .mission-card p {
   font-size: 16px;
   line-height: 1.7;
-  color: #86868b;
+  color: #666666;
   margin: 0;
   letter-spacing: 0.3px;
 }
 
-/* Section Title */
-.section-title {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.3px;
-  text-align: center;
-  margin: 0 0 60px 0;
-  color: #1d1d1f;
-}
-
 /* Values Section */
 .about-values {
-  background-color: #f5f5f7;
+  background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
 }
 
 .values-grid {
@@ -202,29 +524,41 @@
 
 .value-card {
   background: #ffffff;
-  border-radius: 20px;
-  padding: 40px 32px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
+  padding: 36px 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   transition: all 250ms ease;
   display: flex;
   flex-direction: column;
+  border: 2px solid #f0f0f0;
 }
 
 .value-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  border-color: #0071e3;
+  box-shadow: 0 12px 40px rgba(0, 113, 227, 0.12);
+}
+
+.value-icon-wrapper {
+  width: 54px;
+  height: 54px;
+  background: linear-gradient(135deg, #e3f2ff 0%, #f0f7ff 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .value-icon {
-  font-size: 44px;
-  margin-bottom: 20px;
-  line-height: 1;
+  color: #0071e3;
 }
 
 .value-title {
   font-size: 20px;
   font-weight: 600;
-  color: #1d1d1f;
+  color: #1a1a1a;
   margin: 0 0 12px 0;
   line-height: 1.3;
 }
@@ -232,30 +566,58 @@
 .value-description {
   font-size: 15px;
   line-height: 1.6;
-  color: #86868b;
+  color: #666666;
   margin: 0;
   letter-spacing: 0.3px;
 }
 
-/* Why Section */
+/* Why Choose Section */
 .about-why {
-  background-color: #ffffff;
+  background: #ffffff;
 }
 
 .why-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 32px;
 }
 
 .why-item {
-  padding: 32px 0;
+  padding: 32px 28px;
+  background: #f9f9f9;
+  border-radius: 16px;
+  border: 2px solid #f0f0f0;
+  transition: all 250ms ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-item:hover {
+  background: #ffffff;
+  border-color: #0071e3;
+  box-shadow: 0 12px 32px rgba(0, 113, 227, 0.1);
+  transform: translateY(-6px);
+}
+
+.why-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #e3f2ff 0%, #f0f7ff 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.why-icon {
+  color: #0071e3;
 }
 
 .why-item h3 {
   font-size: 18px;
   font-weight: 600;
-  color: #1d1d1f;
+  color: #1a1a1a;
   margin: 0 0 12px 0;
   line-height: 1.4;
 }
@@ -263,20 +625,73 @@
 .why-item p {
   font-size: 15px;
   line-height: 1.6;
-  color: #86868b;
+  color: #666666;
   margin: 0;
   letter-spacing: 0.3px;
 }
 
+/* Capabilities Section */
+.about-capabilities {
+  background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.capability-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  border: 2px solid #f0f0f0;
+  transition: all 250ms ease;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.capability-card:hover {
+  transform: translateY(-6px);
+  border-color: #0071e3;
+  box-shadow: 0 12px 32px rgba(0, 113, 227, 0.1);
+}
+
+.capability-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.capability-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.capability-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #e3f2ff 0%, #f0f7ff 100%);
+  color: #0071e3;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #cce0ff;
+}
+
 /* CTA Section */
 .about-cta {
-  background: linear-gradient(135deg, #0071e3 0%, #0077ed 100%);
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
   color: #ffffff;
 }
 
 .cta-content {
   text-align: center;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -286,6 +701,7 @@
   line-height: 1.2;
   letter-spacing: -0.3px;
   margin: 0 0 20px 0;
+  color: white;
 }
 
 .cta-content p {
@@ -293,6 +709,7 @@
   line-height: 1.6;
   margin: 0 0 40px 0;
   opacity: 0.95;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .cta-buttons {
@@ -303,7 +720,7 @@
 }
 
 .btn {
-  padding: 14px 28px;
+  padding: 14px 32px;
   font-size: 16px;
   font-weight: 600;
   border-radius: 8px;
@@ -314,23 +731,25 @@
 }
 
 .btn-primary {
-  background-color: #ffffff;
-  color: #0071e3;
+  background-color: #0071e3;
+  color: #ffffff;
 }
 
 .btn-primary:hover {
-  background-color: #f5f5f7;
+  background-color: #0055b3;
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 113, 227, 0.3);
 }
 
 .btn-secondary {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
   color: #ffffff;
-  border: 2px solid #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: #ffffff;
   transform: translateY(-2px);
 }
 
@@ -350,6 +769,27 @@
 
   .intro-layout {
     gap: 60px;
+  }
+
+  .capabilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro-highlights {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .what-we-do-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-inkflow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .what-is-features {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -412,9 +852,18 @@
     grid-template-columns: 1fr;
   }
 
+  .capabilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .section-title {
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
+  }
+
+  .section-subtitle-text {
+    font-size: 16px;
+    margin-bottom: 32px;
   }
 
   .cta-content h2 {
@@ -431,6 +880,14 @@
 
   .btn {
     width: 100%;
+  }
+
+  .what-we-do-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-inkflow-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -485,6 +942,10 @@
     font-size: 13px;
   }
 
+  .stat-sublabel {
+    font-size: 12px;
+  }
+
   .mission-card {
     padding: 24px 20px;
   }
@@ -499,7 +960,12 @@
 
   .section-title {
     font-size: 28px;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
+  }
+
+  .section-subtitle-text {
+    font-size: 14px;
+    margin-bottom: 24px;
   }
 
   .why-item h3 {
@@ -518,6 +984,15 @@
     font-size: 14px;
   }
 
+  .capability-card h4 {
+    font-size: 14px;
+  }
+
+  .capability-badge {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
   .cta-content h2 {
     font-size: 28px;
   }
@@ -529,5 +1004,46 @@
   .btn {
     padding: 12px 20px;
     font-size: 14px;
+  }
+
+  .intro-highlights {
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .what-we-do-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-inkflow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card h3 {
+    font-size: 16px;
+  }
+
+  .service-card p {
+    font-size: 13px;
+  }
+
+  .what-is-features {
+    grid-template-columns: 1fr;
+  }
+
+  .why-number {
+    font-size: 36px;
+  }
+
+  .why-inkflow-card h3 {
+    font-size: 15px;
+  }
+
+  .why-inkflow-card p {
+    font-size: 13px;
   }
 }
