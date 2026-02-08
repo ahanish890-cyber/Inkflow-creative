@@ -5,7 +5,7 @@ import AboutUs from './components/AboutUs'
 import ContactUs from './components/ContactUs'
 import Products from './pages/Products'
 import Home from './pages/Home'
-import Products from './pages/Products'
+import useLenisScroll from './hooks/useLenisScroll'
 import './App.css'
 
 function App() {
@@ -17,7 +17,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/products" element={<Products />} />
         <Route path="/contact" element={<ContactUs />} />
