@@ -116,7 +116,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <WhyChooseInkflow />
+    
 
 
       <section className="industries scroll-container">
@@ -206,7 +206,7 @@ export default function Home() {
         </div>
       </section>
 
-      
+      <WhyChooseInkflow />
       <TestimonialSection />
 
       <section className="manufacturing scroll-container">

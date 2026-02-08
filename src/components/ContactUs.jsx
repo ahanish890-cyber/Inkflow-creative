@@ -391,66 +391,6 @@ export default function ContactUs() {
           </div>
         </div>
       </section>
-
-      {/* FAQ Section */}
-      
-
-      {/* Process Section */}
-      <section className="contact-section contact-process">
-        <div className="section-container">
-          <h2 className="section-title">Our Process</h2>
-          <p className="section-subtitle">How we transform your vision into reality</p>
-          <div className="process-grid">
-            <div className="process-step">
-              <div className="step-number">1</div>
-              <h3>Consultation</h3>
-              <p>We understand your requirements, budget, timeline, and vision for your project.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">2</div>
-              <h3>Design & Planning</h3>
-              <p>Our team creates a detailed plan, design concepts, and provides a customized quote.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">3</div>
-              <h3>Production</h3>
-              <p>Your project enters our state-of-the-art production facility with quality assurance.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">4</div>
-              <h3>Quality Check</h3>
-              <p>Rigorous 99.8% quality checks ensure every detail meets your specifications.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">5</div>
-              <h3>Delivery</h3>
-              <p>On-time delivery with tracking and logistics support to your doorstep.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="contact-section contact-final-cta">
-        <div className="cta-background"></div>
-        <div className="section-container">
-          <div className="cta-content">
-            <div className="cta-badge">Ready to Start?</div>
-            <h2>Let's Bring Your Project to Life</h2>
-            <p>From concept to delivery, we handle every detail. Connect with our team today for a free consultation and customized proposal.</p>
-            <div className="cta-buttons">
-              <button className="btn btn-primary">
-                <span>Get Started</span>
-                <ArrowRight size={18} />
-              </button>
-              <button className="btn btn-secondary">
-                <span>Schedule a Call</span>
-                <Calendar size={18} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
