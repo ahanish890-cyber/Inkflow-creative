@@ -16,11 +16,11 @@ export default function Home() {
           <img src="/Hero-section.png" alt="Printing Services" className="hero-bg-img" />
           <div className="hero-overlay"></div>
         </div>
-        
+
         <div className="hero-content">
           <h1>Professional <span className="highlight">Queue Management</span> Solutions</h1>
           <div className="hero-subtitle">
-            <TextType 
+            <TextType
               text={['Premium printing belts for queue management systems', 'High-quality marketing collaterals that streamline operations']}
               typingSpeed={40}
               pauseDuration={2500}
@@ -30,7 +30,7 @@ export default function Home() {
               cursorBlinkDuration={0.7}
             />
           </div>
-          
+
           <div className="hero-features">
             <div className="feature">
               <span className="feature-icon">
@@ -62,7 +62,7 @@ export default function Home() {
           <div className="stats-card">
             <div className="stat-item">
               <span className="stat-number">12yr</span>
-          
+
               <span className="stat-desc">Industry Experience</span>
             </div>
             <div className="stat-divider"></div>
@@ -75,8 +75,8 @@ export default function Home() {
               <span className="stat-number">1.2M</span>
               <span className="stat-desc">Products Shipped</span>
             </div>
-            
-           
+
+
           </div>
         </div>
       </section>
@@ -86,7 +86,7 @@ export default function Home() {
           <>
             <h1>
               Experience the <br />
-              <TextType 
+              <TextType
                 text="Power of Premium Printing"
                 typingSpeed={45}
                 pauseDuration={2500}
@@ -103,7 +103,7 @@ export default function Home() {
         <div className="solutions-header">
           <p className="solutions-label">Our Specialized Solutions</p>
           <h2>
-            <TextType 
+            <TextType
               text="Engineered for excellence."
               typingSpeed={50}
               pauseDuration={2000}
@@ -137,90 +137,90 @@ export default function Home() {
 
       <section className="industries">
         <div className="industries-container">
-<div className="industries-header">
-  <h2>Industries We Serve</h2>
-  <p>Trusted by leading organizations across diverse sectors</p>
-</div>
-
-<div className="industries-grid">
-  <div className="industry-card">
-    <div className="industry-image" style={{ backgroundImage: 'url(/Airport.png)' }}></div>
-    <div className="industry-content">
-      <div className="industry-icon">
-        <Plane size={32} strokeWidth={1.5} />
-      </div>
-      <h3>Airports</h3>
-      <p>Managing passenger flow efficiently with durable, weather-resistant queue management systems designed for high-traffic environments.</p>
-      <a href="#" className="industry-link">Explore Sector →</a>
-    </div>
-  </div>
-
-          <div className="industry-card">
-            <div className="industry-image" style={{ backgroundImage: 'url(/Bank.jpeg)' }}></div>
-            <div className="industry-content">
-              <div className="industry-icon">
-                <Building2 size={32} strokeWidth={1.5} />
-              </div>
-              <h3>Banks</h3>
-              <p>Professional queue management solutions that enhance customer experience while maintaining security and organization in financial institutions.</p>
-              <a href="#" className="industry-link">Explore Sector →</a>
-            </div>
+          <div className="industries-header">
+            <h2>Industries We Serve</h2>
+            <p>Trusted by leading organizations across diverse sectors</p>
           </div>
 
-          <div className="industry-card">
-            <div className="industry-image" style={{ backgroundImage: 'url(/Hospital.png)' }}></div>
-            <div className="industry-content">
-              <div className="industry-icon">
-                <Hospital size={32} strokeWidth={1.5} />
+          <div className="industries-grid">
+            <div className="industry-card">
+              <div className="industry-image" style={{ backgroundImage: 'url(/Airport.png)' }}></div>
+              <div className="industry-content">
+                <div className="industry-icon">
+                  <Plane size={32} strokeWidth={1.5} />
+                </div>
+                <h3>Airports</h3>
+                <p>Managing passenger flow efficiently with durable, weather-resistant queue management systems designed for high-traffic environments.</p>
+                <a href="#" className="industry-link">Explore Sector →</a>
               </div>
-              <h3>Hospitals</h3>
-              <p>Patient flow management solutions that ensure orderly, comfortable waiting experiences in hospitals, clinics, and medical facilities.</p>
-              <a href="#" className="industry-link">Explore Sector →</a>
             </div>
-          </div>
 
-          <div className="industry-card">
-            <div className="industry-image" style={{ backgroundImage: 'url(/Retail.png)' }}></div>
-            <div className="industry-content">
-              <div className="industry-icon">
-                <ShoppingBag size={32} strokeWidth={1.5} />
+            <div className="industry-card">
+              <div className="industry-image" style={{ backgroundImage: 'url(/Bank.jpeg)' }}></div>
+              <div className="industry-content">
+                <div className="industry-icon">
+                  <Building2 size={32} strokeWidth={1.5} />
+                </div>
+                <h3>Banks</h3>
+                <p>Professional queue management solutions that enhance customer experience while maintaining security and organization in financial institutions.</p>
+                <a href="#" className="industry-link">Explore Sector →</a>
               </div>
-              <h3>Retail</h3>
-              <p>Queue management systems for retail stores, shopping centers, and checkout areas that improve customer satisfaction and reduce wait times.</p>
-              <a href="#" className="industry-link">Explore Sector →</a>
             </div>
-          </div>
 
-          <div className="industry-card">
-            <div className="industry-image" style={{ backgroundImage: 'url(/Event.png)' }}></div>
-            <div className="industry-content">
-              <div className="industry-icon">
-                <Music size={32} strokeWidth={1.5} />
+            <div className="industry-card">
+              <div className="industry-image" style={{ backgroundImage: 'url(/Hospital.png)' }}></div>
+              <div className="industry-content">
+                <div className="industry-icon">
+                  <Hospital size={32} strokeWidth={1.5} />
+                </div>
+                <h3>Hospitals</h3>
+                <p>Patient flow management solutions that ensure orderly, comfortable waiting experiences in hospitals, clinics, and medical facilities.</p>
+                <a href="#" className="industry-link">Explore Sector →</a>
               </div>
-              <h3>Events</h3>
-              <p>Crowd control solutions for concerts, exhibitions, theme parks, and special events ensuring safe and organized guest experiences.</p>
-              <a href="#" className="industry-link">Explore Sector →</a>
             </div>
-          </div>
 
-          <div className="industry-card">
-            <div className="industry-image" style={{ backgroundImage: 'url(/Goverment.png)' }}></div>
-            <div className="industry-content">
-              <div className="industry-icon">
-                <Shield size={32} strokeWidth={1.5} />
+            <div className="industry-card">
+              <div className="industry-image" style={{ backgroundImage: 'url(/Retail.png)' }}></div>
+              <div className="industry-content">
+                <div className="industry-icon">
+                  <ShoppingBag size={32} strokeWidth={1.5} />
+                </div>
+                <h3>Retail</h3>
+                <p>Queue management systems for retail stores, shopping centers, and checkout areas that improve customer satisfaction and reduce wait times.</p>
+                <a href="#" className="industry-link">Explore Sector →</a>
               </div>
-              <h3>Government</h3>
-              <p>Efficient crowd control and queue management systems for public services, elections, and government facilities.</p>
-              <a href="#" className="industry-link">Explore Sector →</a>
             </div>
-          </div>
+
+            <div className="industry-card">
+              <div className="industry-image" style={{ backgroundImage: 'url(/Event.png)' }}></div>
+              <div className="industry-content">
+                <div className="industry-icon">
+                  <Music size={32} strokeWidth={1.5} />
+                </div>
+                <h3>Events</h3>
+                <p>Crowd control solutions for concerts, exhibitions, theme parks, and special events ensuring safe and organized guest experiences.</p>
+                <a href="#" className="industry-link">Explore Sector →</a>
+              </div>
+            </div>
+
+            <div className="industry-card">
+              <div className="industry-image" style={{ backgroundImage: 'url(/Goverment.png)' }}></div>
+              <div className="industry-content">
+                <div className="industry-icon">
+                  <Shield size={32} strokeWidth={1.5} />
+                </div>
+                <h3>Government</h3>
+                <p>Efficient crowd control and queue management systems for public services, elections, and government facilities.</p>
+                <a href="#" className="industry-link">Explore Sector →</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <WhyChooseInkflow />
       <Testimonials />
-      
+
       <section className="manufacturing">
         <div className="manufacturing-container">
           <div className="manufacturing-header">
@@ -245,8 +245,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="capabilities-grid">
-            <div className="capability-card">
+          <div className="capabilities-row">
+            <div className="capability-item">
               <div className="capability-icon">
                 <Wrench size={32} strokeWidth={1.5} />
               </div>
@@ -254,7 +254,7 @@ export default function Home() {
               <p>We operate state-of-the-art machinery engineered for precision, durability, and consistent output — enabling us to deliver flawless products at scale without compromising on quality.</p>
             </div>
 
-            <div className="capability-card">
+            <div className="capability-item">
               <div className="capability-icon">
                 <ShieldCheck size={32} strokeWidth={1.5} />
               </div>
@@ -262,7 +262,7 @@ export default function Home() {
               <p>Every product undergoes rigorous quality checks and controlled production processes to ensure exceptional performance, reliability, and long-term durability.</p>
             </div>
 
-            <div className="capability-card">
+            <div className="capability-item">
               <div className="capability-icon">
                 <Leaf size={32} strokeWidth={1.5} />
               </div>
@@ -270,11 +270,12 @@ export default function Home() {
               <p>Sustainability is built into our workflow. We use responsibly sourced materials and environmentally conscious printing processes to reduce impact while maintaining superior results.</p>
             </div>
 
-            <div className="capability-card">
+            <div className="capability-item">
               <div className="capability-icon">
                 <Clock size={32} strokeWidth={1.5} />
               </div>
-              <h3>Fast Production</h3>
+              <h3>
+                Fast Production</h3>
               <p>Our optimized manufacturing pipeline and advanced automation allow us to meet tight deadlines with speed and accuracy — ensuring your projects are delivered on time, every time.</p>
             </div>
           </div>
