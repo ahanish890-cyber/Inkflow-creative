@@ -1,7 +1,7 @@
 /* Hero Product Section */
 .hero-product {
   background: #ffffff;
-  padding: 80px 0;
+  padding: 48px 0;
 }
 
 .hero-product-container {
@@ -154,7 +154,7 @@
 
 @media (max-width: 768px) {
   .hero-product {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   .hero-product-container {

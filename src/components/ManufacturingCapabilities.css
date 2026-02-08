@@ -1,7 +1,7 @@
 /* Manufacturing Capabilities Section */
 
 .manufacturing-capabilities {
-  padding: 80px 0;
+  padding: 48px 0;
   background: #ffffff;
 }
 
@@ -62,7 +62,7 @@
 
 @media (max-width: 768px) {
   .manufacturing-capabilities {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   .manufacturing-capabilities-container {

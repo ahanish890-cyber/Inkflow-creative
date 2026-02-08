@@ -28,34 +28,34 @@ export default function HeroProduct() {
         {/* Right Side - Content */}
         <div className="hero-product-right">
           <div className="hero-product-content">
-            <p className="hero-product-label">Focus on</p>
+            <p className="hero-product-label">Built for Precision</p>
             
             <h2 className="hero-product-heading">
-              Core Design & Components
+              Manufacturing Excellence Behind Every Print
             </h2>
             
             <p className="hero-product-intro">
-              Gain comprehensive knowledge of advanced robotic system architecture, along with a thorough understanding of the individual components that make up a quadruped robot
+              Powered by state-of-the-art industrial printers and automated production lines, our facility delivers exceptional clarity, color accuracy, and consistency at scale.
             </p>
 
             <p className="hero-product-description">
-              Dive deep into the engineering behind autonomous systems exploring the intricate hardware, advanced AI, and integrated sensors that power our quadruped robots.
+              From high-volume commercial jobs to specialized custom prints, our technology-driven workflow ensures faster turnaround times, superior material quality, and flawless finishing — helping brands make a lasting impression.
             </p>
 
             <div className="hero-product-features">
               <div className="feature-item">
                 <CheckCircle size={20} strokeWidth={2} />
-                <span>Enterprise-Grade Quality</span>
+                <span>Industrial-Grade Printing Technology</span>
               </div>
 
               <div className="feature-item">
                 <Zap size={20} strokeWidth={2} />
-                <span>Lightning-Fast Production</span>
+                <span>High-Speed, Scalable Production</span>
               </div>
 
               <div className="feature-item">
                 <Star size={20} strokeWidth={2} />
-                <span>Sustainable Solutions</span>
+                <span>Precision Color & Premium Finishes</span>
               </div>
             </div>
           </div>
