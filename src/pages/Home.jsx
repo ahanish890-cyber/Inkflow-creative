@@ -64,27 +64,21 @@ export default function Home() {
           <div className="stats-card">
             <div className="stat-item">
               <span className="stat-number">12yr</span>
-              <span className="stat-label">Manufacturing</span>
+          
               <span className="stat-desc">Industry Experience</span>
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
               <span className="stat-number">500+</span>
-              <span className="stat-label">Global Partners</span>
               <span className="stat-desc">Trusted Clients</span>
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
               <span className="stat-number">1.2M</span>
-              <span className="stat-label">Units Delivered</span>
               <span className="stat-desc">Products Shipped</span>
             </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <span className="stat-number">48hr</span>
-              <span className="stat-label">Rapid Dispatch</span>
-              <span className="stat-desc">Average Turnaround</span>
-            </div>
+            
+           
           </div>
         </div>
       </section>
@@ -146,95 +140,83 @@ export default function Home() {
       <ZoomParallax>
         <section className="industries">
           <div className="industries-container">
-            <div className="industries-header">
-              <h2>Industries We Serve</h2>
-              <p>Trusted by leading organizations across diverse sectors</p>
-            </div>
+<div className="industries-header">
+  <h2>Industries We Serve</h2>
+  <p>Trusted by leading organizations across diverse sectors</p>
+</div>
 
-            <div className="industries-grid">
-            <div className="industry-card">
-              <div className="industry-image">
-                <img src="/airports.jpg" alt="Airports" />
-              </div>
-              <div className="industry-content">
-                <div className="industry-icon">
-                  <Plane size={32} strokeWidth={1.5} />
-                </div>
-                <h3>Airports</h3>
-                <p>Seamless passenger flow and navigational branding.</p>
-                <a href="#" className="industry-link">Explore Sector →</a>
-              </div>
-            </div>
+<div className="industries-grid">
+  <div className="industry-card">
+    <div className="industry-image" style={{ backgroundImage: 'url(/Airport.png)' }}></div>
+    <div className="industry-content">
+      <div className="industry-icon">
+        <Plane size={32} strokeWidth={1.5} />
+      </div>
+      <h3>Airports</h3>
+      <p>Managing passenger flow efficiently with durable, weather-resistant queue management systems designed for high-traffic environments.</p>
+      <a href="#" className="industry-link">Explore Sector →</a>
+    </div>
+  </div>
 
-            <div className="industry-card">
-              <div className="industry-image">
-                <img src="/banks.jpg" alt="Banks" />
+          <div className="industry-card">
+            <div className="industry-image" style={{ backgroundImage: 'url(/Bank.jpeg)' }}></div>
+            <div className="industry-content">
+              <div className="industry-icon">
+                <Building2 size={32} strokeWidth={1.5} />
               </div>
-              <div className="industry-content">
-                <div className="industry-icon">
-                  <Building2 size={32} strokeWidth={1.5} />
-                </div>
-                <h3>Banks</h3>
-                <p>Professional solutions for financial institutions.</p>
-                <a href="#" className="industry-link">Explore Sector →</a>
-              </div>
+              <h3>Banks</h3>
+              <p>Professional queue management solutions that enhance customer experience while maintaining security and organization in financial institutions.</p>
+              <a href="#" className="industry-link">Explore Sector →</a>
             </div>
+          </div>
 
-            <div className="industry-card">
-              <div className="industry-image">
-                <img src="/hospitals.jpg" alt="Hospitals" />
+          <div className="industry-card">
+            <div className="industry-image" style={{ backgroundImage: 'url(/Hospital.png)' }}></div>
+            <div className="industry-content">
+              <div className="industry-icon">
+                <Hospital size={32} strokeWidth={1.5} />
               </div>
-              <div className="industry-content">
-                <div className="industry-icon">
-                  <Hospital size={32} strokeWidth={1.5} />
-                </div>
-                <h3>Hospitals</h3>
-                <p>Healthcare-grade printing for medical facilities.</p>
-                <a href="#" className="industry-link">Explore Sector →</a>
-              </div>
+              <h3>Hospitals</h3>
+              <p>Patient flow management solutions that ensure orderly, comfortable waiting experiences in hospitals, clinics, and medical facilities.</p>
+              <a href="#" className="industry-link">Explore Sector →</a>
             </div>
+          </div>
 
-            <div className="industry-card">
-              <div className="industry-image">
-                <img src="/retail.jpg" alt="Retail" />
+          <div className="industry-card">
+            <div className="industry-image" style={{ backgroundImage: 'url(/Retail.png)' }}></div>
+            <div className="industry-content">
+              <div className="industry-icon">
+                <ShoppingBag size={32} strokeWidth={1.5} />
               </div>
-              <div className="industry-content">
-                <div className="industry-icon">
-                  <ShoppingBag size={32} strokeWidth={1.5} />
-                </div>
-                <h3>Retail</h3>
-                <p>Eye-catching displays and promotional materials.</p>
-                <a href="#" className="industry-link">Explore Sector →</a>
-              </div>
+              <h3>Retail</h3>
+              <p>Queue management systems for retail stores, shopping centers, and checkout areas that improve customer satisfaction and reduce wait times.</p>
+              <a href="#" className="industry-link">Explore Sector →</a>
             </div>
+          </div>
 
-            <div className="industry-card">
-              <div className="industry-image">
-                <img src="/events.jpg" alt="Events" />
+          <div className="industry-card">
+            <div className="industry-image" style={{ backgroundImage: 'url(/Event.png)' }}></div>
+            <div className="industry-content">
+              <div className="industry-icon">
+                <Music size={32} strokeWidth={1.5} />
               </div>
-              <div className="industry-content">
-                <div className="industry-icon">
-                  <Music size={32} strokeWidth={1.5} />
-                </div>
-                <h3>Events</h3>
-                <p>Dynamic printing solutions for memorable experiences.</p>
-                <a href="#" className="industry-link">Explore Sector →</a>
-              </div>
+              <h3>Events</h3>
+              <p>Crowd control solutions for concerts, exhibitions, theme parks, and special events ensuring safe and organized guest experiences.</p>
+              <a href="#" className="industry-link">Explore Sector →</a>
             </div>
+          </div>
 
-            <div className="industry-card">
-              <div className="industry-image">
-                <img src="/government.jpg" alt="Government" />
+          <div className="industry-card">
+            <div className="industry-image" style={{ backgroundImage: 'url(/Goverment.png)' }}></div>
+            <div className="industry-content">
+              <div className="industry-icon">
+                <Shield size={32} strokeWidth={1.5} />
               </div>
-              <div className="industry-content">
-                <div className="industry-icon">
-                  <Shield size={32} strokeWidth={1.5} />
-                </div>
-                <h3>Government</h3>
-                <p>Compliant printing for public sector organizations.</p>
-                <a href="#" className="industry-link">Explore Sector →</a>
-              </div>
+              <h3>Government</h3>
+              <p>Efficient crowd control and queue management systems for public services, elections, and government facilities.</p>
+              <a href="#" className="industry-link">Explore Sector →</a>
             </div>
+          </div>
           </div>
         </div>
       </section>
