@@ -12,13 +12,14 @@ export function useLenisScroll() {
         const Lenis = (await import('@studio-freight/lenis')).default
         
         const lenis = new Lenis({
-          duration: 1.2,
+          duration: 0.6,
           smooth: true,
           direction: 'vertical',
           gestureDirection: 'vertical',
-          wheelMultiplier: 1,
-          smoothTouch: false,
-          touchMultiplier: 2,
+          wheelMultiplier: 1.3,
+          smoothTouch: true,
+          touchMultiplier: 1.5,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         })
 
         function raf(time) {

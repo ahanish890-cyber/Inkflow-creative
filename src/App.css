@@ -8,14 +8,19 @@ body {
   font-family: 'Plus Jakarta Sans', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #root {
   width: 100%;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 main {
   padding-top: 80px;
+  will-change: auto;
 }
 
 /* Hero Section */
@@ -1739,6 +1744,8 @@ input,
 textarea,
 select {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 /* Section entrance animation */
@@ -1765,6 +1772,8 @@ a:hover {
 .stat-card,
 .why-choose-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .card:hover,
@@ -1912,6 +1921,9 @@ section {
 .solutions-portfolio,
 .why-choose-section {
   animation: fadeInSection 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  will-change: transform, opacity;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 @keyframes fadeInSection {
@@ -1951,6 +1963,9 @@ section {
 .capability-card {
   animation: scaleOnScroll 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   opacity: 0;
+  will-change: transform, opacity;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .solution-card:nth-child(1) { animation-delay: 0s; }
@@ -2008,6 +2023,9 @@ section {
 .solution-img,
 .hero-bg-img {
   animation: imageParallaxEntry 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  will-change: transform, filter, opacity;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 /* Glow on Scroll Effect */

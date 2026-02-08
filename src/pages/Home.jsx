@@ -8,7 +8,6 @@ import TextType from '../components/TextType'
 import TextReveal from '../components/TextReveal'
 import ParallaxImage from '../components/ParallaxImage'
 import ScrollAnimator from '../components/ScrollAnimator'
-import { ZoomParallax } from '../components/ZoomParallax'
 
 export default function Home() {
   return (
@@ -137,9 +136,8 @@ export default function Home() {
         </div>
       </section>
 
-      <ZoomParallax>
-        <section className="industries">
-          <div className="industries-container">
+      <section className="industries">
+        <div className="industries-container">
 <div className="industries-header">
   <h2>Industries We Serve</h2>
   <p>Trusted by leading organizations across diverse sectors</p>
@@ -220,16 +218,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      </ZoomParallax>
 
-      <ZoomParallax>
-        <WhyChooseInkflow />
-      </ZoomParallax>
+      <WhyChooseInkflow />
       <SolutionsPortfolio />
       <Testimonials />
       
-      <ZoomParallax>
-        <section className="manufacturing">
+      <section className="manufacturing">
         <div className="manufacturing-container">
           <div className="manufacturing-header">
             <p className="manufacturing-label">Vertical Integration</p>
@@ -284,7 +278,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      </ZoomParallax>
 
       <FAQSection />
     </main>
