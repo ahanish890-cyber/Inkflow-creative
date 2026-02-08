@@ -1,6 +1,7 @@
 import { CheckCircle, Zap, Star, Plane, Building2, Hospital, ShoppingBag, Music, Shield, Wrench, ShieldCheck, Leaf, Clock } from 'lucide-react'
 import WhyChooseInkflow from '../components/WhyChooseInkflow'
 import { ContainerScrollAnimation } from '../components/ContainerScrollAnimation'
+import HeroProduct from '../components/HeroProduct'
 import TestimonialSection from '../components/TestimonialSection'
 import FAQSection from '../components/FAQSection'
 import TextType from '../components/TextType'
@@ -78,24 +79,12 @@ export default function Home() {
         </div>
       </section>
 
-      <ContainerScrollAnimation
-        titleComponent={
-          <>
-            <h1>
-              Experience the <br />
-              <TextType
-                text="Power of Premium Printing"
-                typingSpeed={45}
-                pauseDuration={2500}
-                showCursor={false}
-              />
-            </h1>
-          </>
-        }
-      >
-        <img src="/Hero-main.png" alt="Premium Printing Services" />
+      <ContainerScrollAnimation>
+         <HeroProduct />
       </ContainerScrollAnimation>
 
+     
+      
       <section className="solutions scroll-container">
         <div className="solutions-header">
           <p className="solutions-label">Our Specialized Solutions</p>
@@ -126,6 +115,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <WhyChooseInkflow />
+
 
       <section className="industries scroll-container">
         <div className="industries-container">
@@ -214,7 +205,7 @@ export default function Home() {
         </div>
       </section>
 
-      <WhyChooseInkflow />
+      
       <TestimonialSection />
 
       <section className="manufacturing scroll-container">
