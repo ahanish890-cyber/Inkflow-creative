@@ -1,0 +1,136 @@
+/* Zoom Parallax Scroll Effect */
+
+.zoom-parallax-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+.zoom-parallax-content {
+  width: 100%;
+  transform-origin: center;
+  will-change: transform, opacity;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Section specific zoom parallax */
+.section-zoom-parallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-zoom-parallax h2,
+.section-zoom-parallax h1 {
+  animation: zoomInParallax 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.section-zoom-parallax p,
+.section-zoom-parallax .section-description {
+  animation: zoomInParallax 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
+  opacity: 0;
+}
+
+.section-zoom-parallax .section-content {
+  animation: zoomInParallax 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+  opacity: 0;
+}
+
+@keyframes zoomInParallax {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Parallax text layers */
+.parallax-layer {
+  position: relative;
+  z-index: 1;
+}
+
+.parallax-layer-1 {
+  animation: float 3s ease-in-out infinite;
+}
+
+.parallax-layer-2 {
+  animation: float 4s ease-in-out infinite 0.5s;
+}
+
+.parallax-layer-3 {
+  animation: float 5s ease-in-out infinite 1s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .zoom-parallax-container {
+    padding: 40px 0;
+  }
+
+  @keyframes zoomInParallax {
+    from {
+      opacity: 0;
+      transform: scale(0.98) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .parallax-layer-1 {
+    animation: float 2s ease-in-out infinite;
+  }
+
+  .parallax-layer-2 {
+    animation: float 3s ease-in-out infinite 0.3s;
+  }
+
+  .parallax-layer-3 {
+    animation: float 4s ease-in-out infinite 0.6s;
+  }
+}
+
+/* Parallax effect for cards and components */
+.card-parallax {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card-parallax:hover {
+  transform: rotateX(5deg) rotateY(-5deg) translateZ(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Blur parallax effect */
+.blur-parallax {
+  backdrop-filter: blur(0px);
+  transition: backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blur-parallax:hover {
+  backdrop-filter: blur(10px);
+}
+
+/* Depth effect for text */
+.depth-text {
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: text-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.depth-text:hover {
+  text-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}

@@ -4,9 +4,13 @@ import Footer from './components/Footer'
 import AboutUs from './components/AboutUs'
 import ContactUs from './components/ContactUs'
 import Home from './pages/Home'
+import useLenisScroll from './hooks/useLenisScroll'
 import './App.css'
 
 function App() {
+  // Initialize Lenis smooth scroll
+  useLenisScroll()
+
   return (
     <>
       <Navbar />

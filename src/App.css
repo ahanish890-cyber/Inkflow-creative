@@ -1486,6 +1486,40 @@ main {
   margin: 0;
 }
 
+/* Portfolio Showcase Section */
+.portfolio-showcase-section {
+  padding: 120px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
+  width: 100%;
+  overflow: hidden;
+}
+
+.portfolio-showcase-header {
+  max-width: 1280px;
+  margin: 0 auto 80px;
+  padding: 0 32px;
+  text-align: center;
+}
+
+.portfolio-showcase-title {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin: 0 0 20px 0;
+  color: #1a1a1a;
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-showcase-desc {
+  font-size: 18px;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .solutions-container {
@@ -1632,4 +1666,383 @@ footer {
 
 footer .footer {
   border: none !important;
+}
+/* Smooth Scroll Animations - Apple Style */
+
+/* Smooth fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide in from left */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide in from right */
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scale up animation */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Add smooth transitions to all interactive elements */
+a,
+button,
+input,
+textarea,
+select {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Section entrance animation */
+section {
+  animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Hero section smooth entrance */
+.hero {
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth hover effects */
+button:hover,
+a:hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card and component smooth transitions */
+.card,
+.component,
+.feature-card,
+.solution-card,
+.stat-card,
+.why-choose-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover,
+.component:hover,
+.feature-card:hover,
+.solution-card:hover,
+.stat-card:hover,
+.why-choose-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth scroll-related transitions */
+* {
+  scroll-behavior: smooth !important;
+}
+
+/* Overflow hidden for smooth animations */
+.section-container,
+section {
+  overflow: visible;
+}
+
+/* Smooth transitions for opacity changes */
+.fade-transition {
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Apple-like smooth backdrop blur and transparency */
+header,
+nav,
+.navbar {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Zoom Parallax Section Integration */
+.industries.section-zoom-parallax,
+.manufacturing.section-zoom-parallax {
+  perspective: 1000px;
+}
+
+.industries h2,
+.manufacturing h2 {
+  animation: zoomInParallax 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.industries-header p,
+.manufacturing-description {
+  animation: zoomInParallax 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
+  opacity: 0;
+}
+
+@keyframes zoomInFromScroll {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Parallax card effects */
+.industry-card,
+.capability-card {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.industry-card:hover,
+.capability-card:hover {
+  transform: translateY(-12px) rotateX(2deg);
+}
+
+/* Floating animation for sections */
+@keyframes floatSection {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Staggered parallax layers */
+.industry-card:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.industry-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.industry-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.industry-card:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.industry-card:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.industry-card:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+/* Depth effect */
+.capability-card {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.capability-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Backdrop blur on hover */
+.industry-content {
+  backdrop-filter: blur(0px);
+  transition: backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.industry-card:hover .industry-content {
+  backdrop-filter: blur(5px);
+}
+
+/* Apple-Style Scroll Animations & Section Entrance Effects */
+
+/* Section Fade & Slide on Scroll */
+section {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero,
+.solutions,
+.industries,
+.manufacturing,
+.solutions-portfolio,
+.why-choose-section {
+  animation: fadeInSection 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Stagger Animation */
+.hero { animation-delay: 0s; }
+.solutions { animation-delay: 0.1s; }
+.industries { animation-delay: 0.2s; }
+.solutions-portfolio { animation-delay: 0.3s; }
+.why-choose-section { animation-delay: 0.4s; }
+.manufacturing { animation-delay: 0.5s; }
+
+/* Scale-on-Scroll Product Effect */
+@keyframes scaleOnScroll {
+  from {
+    transform: scale(1.15) translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.solution-card,
+.industry-card,
+.why-choose-card,
+.capability-card {
+  animation: scaleOnScroll 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+.solution-card:nth-child(1) { animation-delay: 0s; }
+.solution-card:nth-child(2) { animation-delay: 0.1s; }
+.solution-card:nth-child(3) { animation-delay: 0.2s; }
+.solution-card:nth-child(4) { animation-delay: 0.3s; }
+.solution-card:nth-child(5) { animation-delay: 0.4s; }
+
+/* Staggered Fade on Scroll */
+@keyframes staggerFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stat-card {
+  animation: staggerFadeUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+.stat-card:nth-child(1) { animation-delay: 0s; }
+.stat-card:nth-child(2) { animation-delay: 0.1s; }
+.stat-card:nth-child(3) { animation-delay: 0.2s; }
+.stat-card:nth-child(4) { animation-delay: 0.3s; }
+
+/* Text Transform on Scroll */
+.hero h1,
+.solutions-title,
+.why-choose-title,
+.manufacturing-header h2 {
+  transform-origin: left;
+  perspective: 1000px;
+}
+
+/* Image Parallax Entry */
+@keyframes imageParallaxEntry {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.9);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.manufacturing-image,
+.solution-img,
+.hero-bg-img {
+  animation: imageParallaxEntry 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Glow on Scroll Effect */
+@keyframes glowEffect {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 82, 204, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 82, 204, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(0, 82, 204, 0);
+  }
+}
+
+.why-choose-card:hover {
+  animation: glowEffect 0.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Smooth Entry for Featured Content */
+@keyframes featuredEntry {
+  from {
+    opacity: 0;
+    transform: translateY(60px) rotateX(20deg);
+    filter: blur(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+    filter: blur(0);
+  }
+}
+
+.solution-card-featured {
+  animation: featuredEntry 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+.solution-card-featured:nth-child(1) { animation-delay: 0.2s; }
+.solution-card-featured:nth-child(2) { animation-delay: 0.4s; }
+.industry-card:hover .industry-content {
+  backdrop-filter: blur(5px);
 }

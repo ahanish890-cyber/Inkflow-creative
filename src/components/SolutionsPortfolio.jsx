@@ -1,7 +1,19 @@
 import { Layers3, Cpu, ShieldCheck, Maximize2, Sparkles, CheckCircle2, ArrowRight, Zap, Palette } from 'lucide-react'
 import TextType from './TextType'
+import HorizontalScrollCarousel from './HorizontalScrollCarousel'
 
 export default function SolutionsPortfolio() {
+  const portfolioImages = [
+    "https://images.unsplash.com/photo-1572099606223-6e29045d7de3?q=80&w=2070",
+    "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2070",
+    "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070",
+    "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=2070",
+    "https://images.unsplash.com/photo-1559056169-641ef0c8f41f?q=80&w=2070",
+    "https://images.unsplash.com/photo-1541745537411-b8046dc7f58b?q=80&w=2070",
+    "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070",
+    "https://images.unsplash.com/photo-1559056199-641a0ac8b3d4?q=80&w=2070",
+  ]
+
   return (
     <section className="solutions-portfolio">
       <div className="solutions-container">
@@ -162,6 +174,23 @@ export default function SolutionsPortfolio() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Portfolio Showcase with Horizontal Scroll */}
+      <section className="portfolio-showcase-section">
+        <div className="portfolio-showcase-header">
+          <h2 className="portfolio-showcase-title">
+            <TextType 
+              text="Our Work & Portfolio"
+              typingSpeed={50}
+              pauseDuration={2500}
+              showCursor={false}
+            />
+          </h2>
+          <p className="portfolio-showcase-desc">Scroll through our latest projects and successful implementations</p>
+        </div>
+        
+        <HorizontalScrollCarousel images={portfolioImages} />
       </section>
     </section>
   )

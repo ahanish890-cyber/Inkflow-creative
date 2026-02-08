@@ -5,6 +5,10 @@ import { ContainerScrollAnimation } from '../components/ContainerScrollAnimation
 import Testimonials from '../components/Testimonials'
 import FAQSection from '../components/FAQSection'
 import TextType from '../components/TextType'
+import TextReveal from '../components/TextReveal'
+import ParallaxImage from '../components/ParallaxImage'
+import ScrollAnimator from '../components/ScrollAnimator'
+import { ZoomParallax } from '../components/ZoomParallax'
 
 export default function Home() {
   return (
@@ -139,14 +143,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="industries">
-        <div className="industries-container">
-          <div className="industries-header">
-            <h2>Industries We Serve</h2>
-            <p>Trusted by leading organizations across diverse sectors</p>
-          </div>
+      <ZoomParallax>
+        <section className="industries">
+          <div className="industries-container">
+            <div className="industries-header">
+              <h2>Industries We Serve</h2>
+              <p>Trusted by leading organizations across diverse sectors</p>
+            </div>
 
-          <div className="industries-grid">
+            <div className="industries-grid">
             <div className="industry-card">
               <div className="industry-image">
                 <img src="/airports.jpg" alt="Airports" />
@@ -233,11 +238,16 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ZoomParallax>
 
-      <WhyChooseInkflow />
+      <ZoomParallax>
+        <WhyChooseInkflow />
+      </ZoomParallax>
       <SolutionsPortfolio />
       <Testimonials />
-      <section className="manufacturing">
+      
+      <ZoomParallax>
+        <section className="manufacturing">
         <div className="manufacturing-container">
           <div className="manufacturing-header">
             <p className="manufacturing-label">Vertical Integration</p>
@@ -292,6 +302,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ZoomParallax>
 
       <FAQSection />
     </main>

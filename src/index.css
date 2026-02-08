@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Disable scroll snap on body to allow Lenis to handle it */
+body {
+  scroll-snap-type: none;
+}
+
 :root {
   font-family: 'Plus Jakarta Sans', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -30,6 +41,7 @@ body {
   margin: 0;
   background-color: #ffffff;
   color: #1a1a1a;
+  transition: background-color 0.3s ease;
 }
 
 h1 {

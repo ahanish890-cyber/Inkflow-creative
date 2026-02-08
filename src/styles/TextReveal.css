@@ -1,0 +1,59 @@
+/* Text Reveal Animations */
+
+.text-reveal {
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.reveal-word {
+  display: inline-block;
+  overflow: hidden;
+  margin-right: 0.3em;
+  line-height: 1.2;
+}
+
+.reveal-word::after {
+  content: '';
+}
+
+/* Character reveal effect */
+@keyframes charReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Word reveal with blur effect */
+@keyframes wordReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(80px) rotateX(90deg);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+    filter: blur(0px);
+  }
+}
+
+.reveal-word {
+  animation: wordReveal 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .text-reveal {
+    word-break: break-word;
+  }
+
+  .reveal-word {
+    margin-right: 0.25em;
+    font-size: 0.95em;
+  }
+}

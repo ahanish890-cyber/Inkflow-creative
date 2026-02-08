@@ -1,0 +1,69 @@
+/* Video Scroll Control */
+
+.video-scroll-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #000000;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.video-scroll-element {
+  width: 100%;
+  height: auto;
+  display: block;
+  will-change: none;
+}
+
+/* Video Entry Animation */
+@keyframes videoFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.video-scroll-container {
+  animation: videoFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Pause Text on Scroll */
+.video-scroll-container::after {
+  content: 'Scroll to play';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .video-scroll-container {
+    border-radius: 16px;
+  }
+
+  .video-scroll-element {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video-scroll-container {
+    animation: none;
+  }
+}
