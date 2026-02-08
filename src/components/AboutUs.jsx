@@ -1,5 +1,6 @@
 import React from 'react'
 import { Zap, Shield, Award, History, ArrowUpRight } from 'lucide-react'
+import CoreValues from './CoreValues'
 import '../styles/AboutUs.css'
 
 const legacyStats = [
@@ -115,6 +116,9 @@ export default function AboutUs() {
           ))}
         </div>
       </section>
+
+      {/* Core Values Component */}
+      <CoreValues />
 
       {/* Closing Statement */}
       <section className="about-closing-section">
