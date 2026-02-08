@@ -8,6 +8,10 @@ html {
 /* Disable scroll snap on body to allow Lenis to handle it */
 body {
   scroll-snap-type: none;
+  margin: 0;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  transition: background-color 0.3s ease;
 }
 
 /* GPU Acceleration - Critical for performance */
@@ -42,13 +46,6 @@ a:hover {
   color: #0052a3;
 }
 
-body {
-  margin: 0;
-  background-color: #ffffff;
-  color: #1a1a1a;
-  transition: background-color 0.3s ease;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -73,3 +70,16 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+/* Section and animation optimizations */
+section {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Enable scroll snap for optional behavior */
+section[data-snap] {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+

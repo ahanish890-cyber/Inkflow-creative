@@ -74,7 +74,7 @@ export default function ContactUs() {
   return (
     <div className="contact-us-page">
       {/* Hero Section */}
-      <section className="contact-hero">
+      <section className="contact-hero" data-snap>
         <div className="contact-hero-content">
           <h1>Get in Touch</h1>
           <p>We're here to partner with you on your printing needs. Reach out with any questions or project requirements.</p>
@@ -82,11 +82,11 @@ export default function ContactUs() {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="contact-section contact-info">
+      <section className="contact-section contact-info" data-snap>
         <div className="section-container">
           <div className="contact-info-grid">
             {contactInfo.map((info, index) => (
-              <a key={index} href={info.link} className="contact-info-card">
+              <a key={index} href={info.link} className="contact-info-card" data-card-hover>
                 <div className="info-icon">{info.icon}</div>
                 <h3>{info.title}</h3>
                 <p>{info.content}</p>
@@ -97,7 +97,7 @@ export default function ContactUs() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="contact-section contact-form-section">
+      <section className="contact-section contact-form-section" data-snap>
         <div className="section-container">
           <div className="contact-form-wrapper">
             <div className="form-header">
@@ -198,25 +198,25 @@ export default function ContactUs() {
       </section>
 
       {/* Response Time Section */}
-      <section className="contact-section response-time">
+      <section className="contact-section response-time" data-snap>
         <div className="section-container">
           <div className="response-grid">
-            <div className="response-card">
+            <div className="response-card" data-card-hover>
               <div className="response-number">24hrs</div>
               <h3>Average Response Time</h3>
               <p>Business days</p>
             </div>
-            <div className="response-card">
+            <div className="response-card" data-card-hover>
               <div className="response-number">99.8%</div>
               <h3>Project On-Time Delivery</h3>
               <p>Consistently</p>
             </div>
-            <div className="response-card">
+            <div className="response-card" data-card-hover>
               <div className="response-number">500+</div>
               <h3>Satisfied Clients</h3>
               <p>Partnerships</p>
             </div>
-            <div className="response-card">
+            <div className="response-card" data-card-hover>
               <div className="response-number">15+</div>
               <h3>Years of Experience</h3>
               <p>Industry</p>
@@ -226,31 +226,31 @@ export default function ContactUs() {
       </section>
 
       {/* FAQ Section */}
-      <section className="contact-section contact-faq">
+      <section className="contact-section contact-faq" data-snap>
         <div className="section-container">
           <h2 className="section-title">Frequently Asked Questions</h2>
           <div className="faq-grid">
-            <div className="faq-item">
+            <div className="faq-item" data-card-hover>
               <h3>What information do you need for a quote?</h3>
               <p>We typically need print specifications, quantity, materials, finish options, and your timeline to provide an accurate quote.</p>
             </div>
-            <div className="faq-item">
+            <div className="faq-item" data-card-hover>
               <h3>Do you offer custom design services?</h3>
               <p>Yes. Our design team can assist with design concepts, revisions, and production-ready file preparation for your projects.</p>
             </div>
-            <div className="faq-item">
+            <div className="faq-item" data-card-hover>
               <h3>What are your business hours?</h3>
               <p>Monday to Friday, 9:00 AM - 6:00 PM IST. We're closed on weekends and national holidays.</p>
             </div>
-            <div className="faq-item">
+            <div className="faq-item" data-card-hover>
               <h3>What file formats do you accept?</h3>
               <p>We accept PDF, AI, PSD, EPS, and high-resolution JPEG files. CMYK color mode is recommended for print projects.</p>
             </div>
-            <div className="faq-item">
+            <div className="faq-item" data-card-hover>
               <h3>Do you offer bulk corporate printing?</h3>
               <p>Absolutely. We specialize in high-volume corporate printing with volume-based pricing and dedicated account management.</p>
             </div>
-            <div className="faq-item">
+            <div className="faq-item" data-card-hover>
               <h3>How long are typical project timelines?</h3>
               <p>Standard turnaround is 5-7 business days. Rush services are available with expedited rates. Custom projects vary.</p>
             </div>
@@ -259,7 +259,7 @@ export default function ContactUs() {
       </section>
 
       {/* CTA Section */}
-      <section className="contact-section contact-cta">
+      <section className="contact-section contact-cta" data-snap>
         <div className="section-container">
           <div className="cta-content">
             <h2>Ready to Start Your Project?</h2>

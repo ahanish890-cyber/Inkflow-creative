@@ -6,11 +6,15 @@ import ContactUs from './components/ContactUs'
 import Products from './pages/Products'
 import Home from './pages/Home'
 import useLenisScroll from './hooks/useLenisScroll'
+import useGSAPAnimations from './hooks/useGSAPAnimations'
 import './App.css'
 
 function App() {
   // Initialize Lenis smooth scroll
   useLenisScroll()
+  
+  // Initialize GSAP animations with ScrollTrigger
+  useGSAPAnimations()
 
   return (
     <>
