@@ -143,10 +143,30 @@ export default function AboutUs() {
   ]
 
   const capabilities = [
-    { label: 'Digital Printing', value: '500+' },
-    { label: 'Offset Solutions', value: '1000+' },
-    { label: 'Packaging & Branding', value: '250+' },
-    { label: 'Queue Management Systems', value: '100+' }
+    { 
+      icon: Printer,
+      label: 'Digital Printing', 
+      value: '500+',
+      description: 'High-speed color and monochrome printing with exceptional quality'
+    },
+    { 
+      icon: Boxes,
+      label: 'Offset Solutions', 
+      value: '1000+',
+      description: 'Large-scale offset printing for high-volume production runs'
+    },
+    { 
+      icon: Sparkles,
+      label: 'Packaging & Branding', 
+      value: '250+',
+      description: 'Custom packaging solutions that elevate your brand presence'
+    },
+    { 
+      icon: Gauge,
+      label: 'Queue Management Systems', 
+      value: '100+',
+      description: 'Integrated queue management solutions for retail and service sectors'
+    }
   ]
 
   return (
@@ -390,32 +410,28 @@ export default function AboutUs() {
       <section className="about-section about-capabilities scroll-container">
         <div className="section-container">
           <h2 className="section-title">Our Capabilities</h2>
+          <p className="section-subtitle-text">Comprehensive solutions across all printing domains with proven expertise</p>
           <div className="capabilities-grid">
-            {capabilities.map((cap, index) => (
-              <div key={index} className="capability-card">
-                <div className="capability-header">
-                  <h4>{cap.label}</h4>
-                  <span className="capability-badge">{cap.value}</span>
+            {capabilities.map((cap, index) => {
+              const IconComponent = cap.icon
+              return (
+                <div key={index} className="capability-card">
+                  <div className="capability-icon">
+                    <IconComponent size={40} />
+                  </div>
+                  <div className="capability-header">
+                    <h4>{cap.label}</h4>
+                    <span className="capability-badge">{cap.value}</span>
+                  </div>
+                  <p className="capability-description">{cap.description}</p>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="about-section about-cta">
-        <div className="section-container">
-          <div className="cta-content">
-            <h2>Ready to Partner with Enterprise Excellence?</h2>
-            <p>Join 500+ leading organizations that trust Inkflow Creative for mission-critical printing solutions. Let's discuss your requirements.</p>
-            <div className="cta-buttons">
-              <button className="btn btn-primary">Request Enterprise Demo</button>
-              <button className="btn btn-secondary">Schedule Consultation</button>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
