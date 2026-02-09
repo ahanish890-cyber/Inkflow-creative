@@ -364,33 +364,7 @@ export default function ContactUs() {
       </section>
 
       {/* Stats Section */}
-      <section className="contact-section contact-stats">
-        <div className="section-container">
-          <h2 className="section-title">Trusted By Businesses Worldwide</h2>
-          <div className="stats-grid">
-            <div className="stat-card">
-              <div className="stat-number">500+</div>
-              <p className="stat-label">Enterprise Clients</p>
-              <p className="stat-description">Across diverse industries</p>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">50M+</div>
-              <p className="stat-label">Products Printed</p>
-              <p className="stat-description">Every year</p>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">99.8%</div>
-              <p className="stat-label">Quality Rate</p>
-              <p className="stat-description">ISO 9001:2015 certified</p>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">24hrs</div>
-              <p className="stat-label">Average Response</p>
-              <p className="stat-description">Business days</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* REMOVED - Stats section moved to home page only */}
     </div>
   )
 }

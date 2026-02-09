@@ -2,14 +2,14 @@
 
 .why-choose-inkflow {
   background-color: #ffffff;
-  padding: 60px 48px;
-  margin: 120px 0 0 0;
+  padding: 80px 48px;
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
 
 .section-container {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 40px auto 0;
   padding: 0;
 }
 
@@ -18,7 +18,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 80px;
+  margin-bottom: 64px;
   gap: 60px;
 }
 
@@ -359,7 +359,7 @@
 
 @media (max-width: 480px) {
   .why-choose-inkflow {
-    padding: 40px 16px;
+    padding: 60px 16px;
   }
 
   .section-headline {

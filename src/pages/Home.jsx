@@ -82,7 +82,7 @@ export default function Home() {
 
       <ContainerScrollAnimation>
          <HeroProduct />
-      </ContainerScrollAnimation>
+        </ContainerScrollAnimation>
 
      
       
@@ -117,8 +117,6 @@ export default function Home() {
         </div>
       </section>
     
-
-
       <section className="industries scroll-container">
         <div className="industries-container">
           <div className="industries-header">

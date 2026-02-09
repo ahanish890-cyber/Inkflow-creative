@@ -28,7 +28,8 @@ function TestimonialSection() {
 
   return (
     <section className="testimonial-section">
-      <h2>What Our <span>Clients</span> Say</h2>
+      <div className="testimonial-eyebrow">PROVEN AUTHORITY</div>
+      <h2>What Our<br /><span>Clients Say</span></h2>
       <div className="testimonials-wrapper">
         {testimonials.map((testimonial) => (
           <div key={testimonial.id} className="testimonial-card">
@@ -46,7 +47,7 @@ function TestimonialSection() {
               ))}
             </div>
             
-            <p className="testimonial-quote">{testimonial.quote}</p>
+          
             
             <div className="testimonial-footer">
               <div className="author-name">{testimonial.author}</div>
