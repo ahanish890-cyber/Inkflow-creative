@@ -1,60 +1,88 @@
 import React from 'react'
+import { Star } from 'lucide-react'
 import './TestimonialSection.css'
 
 function TestimonialSection() {
-  const testimonials = [
+  const testimonialData = [
     {
-      id: 1,
-      rating: 5,
-      quote: "Inkflow Creative has been our trusted partner for 5 years. Their queue management solutions transformed our passenger experience.",
-      author: "Rajesh Kumar",
-      role: "Airport Operations India"
+      name: "Rajesh Malhotra",
+      role: "COO, Terminal Ops",
+      company: "IGI Airport",
+      quote: "Inkflow re-engineered our passenger flow dynamics during the peak season. It was a transformation that set a new standard for our terminals.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
+      rating: 5
     },
     {
-      id: 2,
-      rating: 5,
-      quote: "The quality of their marketing materials is exceptional. Our brand visibility increased significantly after partnering with them.",
-      author: "Priya Sharma",
-      role: "Metro Retail"
+      name: "Sneha Kapur",
+      role: "VP Brand Experience",
+      company: "Westfield Retail",
+      quote: "The Stealth Matte series is a dream come true for our architects. Zero glare and impeccable finish that perfectly aligns with our brand.",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400",
+      rating: 5
     },
     {
-      id: 3,
-      rating: 5,
-      quote: "Fast turnaround, excellent support, and outstanding results. Inkflow Creative sets the bar for our entire industry.",
-      author: "Amit Patel",
-      role: "Healthcare Solutions"
+      name: "Vikram Singh",
+      role: "Head of Infrastructure",
+      company: "Metro Rail",
+      quote: "In transit hubs, equipment takes extreme abuse. These units show zero wear after 24 months. Truly a world-class engineering feat.",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400",
+      rating: 5
     }
   ]
 
-  return (
-    <section className="testimonial-section">
-      <div className="testimonial-eyebrow">PROVEN AUTHORITY</div>
-      <h2>What Our<br /><span>Clients Say</span></h2>
-      <div className="testimonials-wrapper">
-        {testimonials.map((testimonial) => (
-          <div key={testimonial.id} className="testimonial-card">
-            <div className="quote-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.716-5-7-5C5.5 0 3 2.75 3 4c0 1 0 1 1 3 1 2 1 4 1 6s0 5-1 6c-1 2-1 2-1 3s1.008 3 3 3z" />
-              </svg>
-            </div>
+  const renderStars = (rating) => {
+    return Array.from({ length: 5 }, (_, i) => (
+      <Star
+        key={i}
+        size={18}
+        className={`star ${i < rating ? 'filled' : ''}`}
+        strokeWidth={2}
+      />
+    ))
+  }
 
-            <div className="rating">
-              {[...Array(testimonial.rating)].map((_, i) => (
-                <svg key={i} className="star" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-              ))}
+  return (
+    <section id="testimonials" className="testimonial-section">
+      <div className="testimonial-bg-glow"></div>
+      
+      <div className="testimonial-container">
+        <div className="testimonial-header">
+          <h2 className="testimonial-title">
+            What Our <span className="testimonial-accent">Clients</span> Say
+          </h2>
+          <div className="testimonial-divider"></div>
+        </div>
+        <div className="testimonial-grid">
+          {testimonialData.map((item, index) => (
+            <div key={index} className="testimonial-card-wrapper">
+              <div className="testimonial-card">
+                <div className="quote-icon">"</div>
+                
+                <div className="star-rating">
+                  {renderStars(item.rating)}
+                </div>
+
+                <div className="testimonial-content">
+                  <p className="testimonial-quote">{item.quote}</p>
+                </div>
+
+                <div className="testimonial-footer">
+                  <div className="testimonial-profile">
+                    <img 
+                      src={item.image} 
+                      alt={item.name}
+                      className="testimonial-profile-img"
+                    />
+                  </div>
+                  <div className="testimonial-info">
+                    <h4 className="testimonial-name">{item.name}</h4>
+                    <p className="testimonial-role">{item.role}, {item.company}</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-          
-            
-            <div className="testimonial-footer">
-              <div className="author-name">{testimonial.author}</div>
-              <div className="author-role">{testimonial.role}</div>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )
