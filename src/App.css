@@ -172,16 +172,16 @@ main {
 }
 
 .stats-card {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
   border-radius: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   gap: 1px;
-  padding: 32px 40px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 40px 48px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -236,11 +236,11 @@ main {
 .stat-number {
   font-size: 64px;
   font-weight: 800;
-  color: #1a1a1a;
+  color: #000000;
   line-height: 1.05;
   margin: 0;
   letter-spacing: -1px;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: linear-gradient(135deg, #0071e3 0%, #0052cc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -248,7 +248,7 @@ main {
 
 .stat-desc {
   font-size: 14px;
-  color: #6f6f77;
+  color: #333333;
   font-weight: 500;
   margin: 0;
   display: block;
