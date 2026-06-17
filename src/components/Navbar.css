@@ -30,7 +30,7 @@
 }
 
 .logo-img {
-  height: 50px;
+  height: 80px;
   width: auto;
 }
 
@@ -46,7 +46,7 @@
 .nav-link {
   color: #666666;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   position: relative;
@@ -54,27 +54,12 @@
   transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #0052cc;
-  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .nav-link:hover {
-  color: #0052cc;
-}
-
-.nav-link:hover::after {
-  width: 100%;
+  color: #666666;
 }
 
 .nav-cta {
-  background-color: #0052cc;
+ 
   color: #ffffff;
   border: none;
   padding: 10px 24px;
@@ -83,18 +68,15 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 8px rgba(0, 82, 204, 0.2);
+  background-color: rgb(192, 160, 98);
 }
 
 .nav-cta:hover {
-  background-color: #0041a3;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 82, 204, 0.35);
 }
 
 .nav-cta:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(0, 82, 204, 0.25);
 }
 
 .hamburger {
@@ -165,5 +147,169 @@
 
   .bar.active:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -7px);
+  }
+}
+
+
+/* Navigation Dropdown Menu Styles */
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: none;
+  padding: 0;
+  padding-bottom: 4px;
+  color: #666666;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dropdown-trigger:hover {
+  color: #666666;
+}
+
+.dropdown-arrow {
+  display: none;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 8px 0;
+  min-width: 500px;
+  margin-top: 8px;
+  z-index: 1001;
+  animation: slideDown 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dropdown-content.premium-categories-menu {
+  min-width: 550px;
+  padding: 12px;
+}
+
+.category-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 16px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.category-menu-item:hover {
+  background: #faf7f0;
+  border-left-color: rgb(192, 160, 98);
+  transform: translateX(4px);
+}
+
+.category-menu-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(192, 160, 98, 0.1);
+  border-radius: 8px;
+  color: rgb(192, 160, 98);
+  flex-shrink: 0;
+}
+
+.category-menu-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.category-menu-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+.category-menu-desc {
+  font-size: 12px;
+  color: #999999;
+  line-height: 1.4;
+}
+
+.category-menu-arrow {
+  color: rgb(192, 160, 98);
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.category-menu-item:hover .category-menu-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdown-content {
+    position: static;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    min-width: 100%;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .components-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .component-item {
+    padding: 12px 20px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .dropdown-trigger {
+    width: 100%;
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 15px;
+  }
+
+  .navbar-menu.active {
+    max-height: 600px;
   }
 }

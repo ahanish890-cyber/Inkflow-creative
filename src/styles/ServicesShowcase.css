@@ -1,0 +1,382 @@
+/* Services Showcase Premium Component */
+
+.services-showcase {
+  background-color: #ffffff;
+  padding: 80px 40px;
+  overflow: hidden;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-label {
+  font-size: 12px;
+  color: #0071e3;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.services-header h2 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+/* Services Grid Container - Horizontal Flex */
+.services-grid {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 500px;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.service-card-wrapper {
+  flex: 1;
+  min-width: 0;
+  will-change: flex;
+  position: relative;
+}
+
+/* Service Card */
+.service-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  z-index: 0;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.65) 50%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  will-change: opacity;
+  z-index: 1;
+}
+
+/* Content Container */
+.service-content {
+  position: absolute;
+  inset: 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+  color: white;
+}
+
+.service-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  width: fit-content;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 12px;
+}
+
+.service-header-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.service-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+  line-height: 1.25;
+  color: white;
+  letter-spacing: -0.3px;
+}
+
+.service-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  max-width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Products List */
+.service-products {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  will-change: opacity, max-height;
+  transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0s,
+              max-height 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+}
+
+/* Product Row */
+.product-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.product-row:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(192, 160, 98, 0.5);
+  transform: translateY(-2px);
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.product-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
+
+.product-desc {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.3;
+}
+
+.product-arrow {
+  color: rgba(192, 160, 98, 0.8);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.product-row:hover .product-arrow {
+  color: rgb(192, 160, 98);
+  transform: translateX(4px);
+}
+
+/* Learn More Link */
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.service-link:hover {
+  color: rgb(192, 160, 98);
+  gap: 12px;
+}
+
+/* Hover State Animation */
+.service-card-wrapper:hover .service-image {
+  transform: scale(1.04);
+}
+
+.service-card-wrapper:hover .service-overlay {
+  opacity: 0.9 !important;
+}
+
+.service-card-wrapper:hover .service-products {
+  max-height: 220px;
+  opacity: 1;
+  transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.15s,
+              max-height 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0s;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .services-showcase {
+    padding: 60px 32px;
+  }
+
+  .services-grid {
+    height: 450px;
+    gap: 12px;
+  }
+
+  .service-card {
+    border-radius: 20px;
+  }
+
+  .service-content {
+    padding: 32px;
+  }
+
+  .service-title {
+    font-size: 24px;
+  }
+
+  .service-description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-showcase {
+    padding: 60px 20px;
+  }
+
+  .services-header h2 {
+    font-size: 36px;
+  }
+
+  .services-grid {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+
+  .service-card-wrapper {
+    height: 350px;
+  }
+
+  .service-content {
+    padding: 24px;
+  }
+
+  .service-title {
+    font-size: 22px;
+  }
+
+  .service-description {
+    font-size: 13px;
+    -webkit-line-clamp: 2;
+  }
+
+  .service-products {
+    display: flex;
+  }
+
+  .service-badge {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-showcase {
+    padding: 40px 16px;
+  }
+
+  .services-header {
+    margin-bottom: 40px;
+  }
+
+  .services-label {
+    font-size: 11px;
+  }
+
+  .services-header h2 {
+    font-size: 28px;
+  }
+
+  .services-grid {
+    height: auto;
+  }
+
+  .service-card-wrapper {
+    height: 300px;
+  }
+
+  .service-content {
+    padding: 20px;
+  }
+
+  .service-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .service-description {
+    font-size: 12px;
+    line-height: 1.5;
+    -webkit-line-clamp: 2;
+  }
+
+  .service-badge {
+    font-size: 9px;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+  }
+
+  .product-name {
+    font-size: 11px;
+  }
+
+  .product-desc {
+    font-size: 9px;
+  }
+
+  .service-link {
+    font-size: 12px;
+  }
+
+  .service-products {
+    gap: 8px;
+  }
+}

@@ -1,19 +1,78 @@
-import { CheckCircle, Zap, Star, Plane, Building2, Hospital, ShoppingBag, Music, Shield, Wrench, ShieldCheck, Leaf, Clock } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { CheckCircle, Zap, Star, Plane, Building2, Hospital, ShoppingBag, Music, Shield } from 'lucide-react'
 import WhyChooseInkflow from '../components/WhyChooseInkflow'
 import { ContainerScrollAnimation } from '../components/ContainerScrollAnimation'
-import HeroProduct from '../components/HeroProduct'
+import AboutUs from '../components/AboutUs'
 import TestimonialSection from '../components/TestimonialSection'
 import ManufacturingCapabilities from '../components/ManufacturingCapabilities'
+import PremiumContactForm from '../components/PremiumContactForm'
 import FAQSection from '../components/FAQSection'
+import ServicesShowcase from '../components/ServicesShowcase'
 import TextType from '../components/TextType'
 
+const HERO_IMAGES = [
+  {
+    url: "/PP-110.jpg",
+    title: "Precision Manufacturing Lines"
+  },
+  {
+    url: "/PP-103.jpg",
+    title: "Premium Terminal Layouts"
+  },
+  {
+    url: "/PP-110.jpg",
+    title: "Robust Quality Standards"
+  },
+  {
+    url: "/PP-111.jpg",
+    title: "Vivid Graphics Technology"
+  }
+]
+
 export default function Home() {
+  const [currentBg, setCurrentBg] = useState(0)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentBg((prev) => (prev + 1) % HERO_IMAGES.length)
+    }, 6000)
+    return () => clearInterval(timer)
+  }, [])
+
   return (
     <main>
       <section className="hero">
-        <div className="hero-background">
-          <img src="/Hero-section.png" alt="Printing Services" className="hero-bg-img" />
+        {/* Background Image Slider Container */}
+        <div className="hero-background-wrapper">
+          {/* Crossfading background images */}
+          {HERO_IMAGES.map((image, index) => (
+            <div
+              key={index}
+              className="hero-bg-slide"
+              style={{
+                backgroundImage: `url('${image.url}')`,
+                opacity: index === currentBg ? 1 : 0,
+                transition: 'opacity 1500ms ease-in-out'
+              }}
+            />
+          ))}
+
+          {/* Dark overlay */}
           <div className="hero-overlay"></div>
+
+          {/* Slide Indicators */}
+          <div className="hero-slide-indicators">
+            {HERO_IMAGES.map((image, index) => (
+              <button
+                key={index}
+                className={`slide-dot ${index === currentBg ? 'active' : ''}`}
+                onClick={() => setCurrentBg(index)}
+                title={image.title}
+              />
+            ))}
+            <span className="slide-title">{HERO_IMAGES[currentBg].title}</span>
+          </div>
         </div>
 
         <div className="hero-content">
@@ -57,188 +116,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="stats-card-overlay">
-          <div className="stats-card">
-            <div className="stat-item">
-              <span className="stat-number">12yr</span>
 
-              <span className="stat-desc">Industry Experience</span>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <span className="stat-number">500+</span>
-              <span className="stat-desc">Trusted Clients</span>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <span className="stat-number">1.2M</span>
-              <span className="stat-desc">Products Shipped</span>
-            </div>
-
-
-          </div>
-        </div>
       </section>
 
-      <ContainerScrollAnimation>
-         <HeroProduct />
-        </ContainerScrollAnimation>
+      <AboutUs />
 
-     
-      
-      <section className="solutions scroll-container">
-        <div className="solutions-header">
-          <p className="solutions-label">Our Specialized Solutions</p>
-          <h2 data-reveal>
-            <span>Engineered for excellence.</span>
-          </h2>
-        </div>
-
-        <div className="solutions-grid">
-          <div className="solution-card solution-card-featured">
-            <img src="/queue-belt.png" alt="Queue Belt" className="solution-image" />
-            <div className="solution-overlay">
-              <p className="solution-category">queue management</p>
-              <h3>Professional Queue Belts</h3>
-              <p>High-quality printing belts designed for queue management systems. Durable, weather-resistant materials ensure long-lasting performance in high-traffic environments</p>
-              <a href="#" className="learn-more">Learn more <span>›</span></a>
-            </div>
-          </div>
-
-          <div className="solution-card solution-card-featured">
-            <img src="/printer.png" alt="Printer" className="solution-image" />
-            <div className="solution-overlay">
-              <p className="solution-category">Marketing Materials</p>
-              <h3>Marketing Collaterals</h3>
-              <p>Professional printing services for all your marketing needs. From brochures to banners, we deliver high-quality materials that make your brand stand out.</p>
-              <a href="#" className="learn-more">Learn more <span>›</span></a>
-            </div>
-          </div>
-        </div>
-      </section>
-    
-      <section className="industries scroll-container">
-        <div className="industries-container">
-          <div className="industries-header">
-            <h2 data-reveal>
-              <span>Industries We Serve</span>
-            </h2>
-            <p data-reveal>
-              <span>Trusted by leading organizations across diverse sectors</span>
-            </p>
-          </div>
-
-          <div className="industries-grid">
-            <div className="industry-card">
-              <div className="industry-image" style={{ backgroundImage: 'url(/Airport.png)' }}></div>
-              <div className="industry-content">
-                <div className="industry-icon">
-                  <Plane size={32} strokeWidth={1.5} />
-                </div>
-                <h3>Airports</h3>
-                <p>Managing passenger flow efficiently with durable, weather-resistant queue management systems designed for high-traffic environments.</p>
-                <a href="#" className="industry-link">Explore Sector →</a>
-              </div>
-            </div>
-
-            <div className="industry-card">
-              <div className="industry-image" style={{ backgroundImage: 'url(/Bank.jpeg)' }}></div>
-              <div className="industry-content">
-                <div className="industry-icon">
-                  <Building2 size={32} strokeWidth={1.5} />
-                </div>
-                <h3>Banks</h3>
-                <p>Professional queue management solutions that enhance customer experience while maintaining security and organization in financial institutions.</p>
-                <a href="#" className="industry-link">Explore Sector →</a>
-              </div>
-            </div>
-
-            <div className="industry-card">
-              <div className="industry-image" style={{ backgroundImage: 'url(/Hospital.png)' }}></div>
-              <div className="industry-content">
-                <div className="industry-icon">
-                  <Hospital size={32} strokeWidth={1.5} />
-                </div>
-                <h3>Hospitals</h3>
-                <p>Patient flow management solutions that ensure orderly, comfortable waiting experiences in hospitals, clinics, and medical facilities.</p>
-                <a href="#" className="industry-link">Explore Sector →</a>
-              </div>
-            </div>
-
-            <div className="industry-card">
-              <div className="industry-image" style={{ backgroundImage: 'url(/Retail.png)' }}></div>
-              <div className="industry-content">
-                <div className="industry-icon">
-                  <ShoppingBag size={32} strokeWidth={1.5} />
-                </div>
-                <h3>Retail</h3>
-                <p>Queue management systems for retail stores, shopping centers, and checkout areas that improve customer satisfaction and reduce wait times.</p>
-                <a href="#" className="industry-link">Explore Sector →</a>
-              </div>
-            </div>
-
-            <div className="industry-card">
-              <div className="industry-image" style={{ backgroundImage: 'url(/Event.png)' }}></div>
-              <div className="industry-content">
-                <div className="industry-icon">
-                  <Music size={32} strokeWidth={1.5} />
-                </div>
-                <h3>Events</h3>
-                <p>Crowd control solutions for concerts, exhibitions, theme parks, and special events ensuring safe and organized guest experiences.</p>
-                <a href="#" className="industry-link">Explore Sector →</a>
-              </div>
-            </div>
-
-            <div className="industry-card">
-              <div className="industry-image" style={{ backgroundImage: 'url(/Goverment.png)' }}></div>
-              <div className="industry-content">
-                <div className="industry-icon">
-                  <Shield size={32} strokeWidth={1.5} />
-                </div>
-                <h3>Government</h3>
-                <p>Efficient crowd control and queue management systems for public services, elections, and government facilities.</p>
-                <a href="#" className="industry-link">Explore Sector →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <WhyChooseInkflow />
-      <TestimonialSection />
-
-      <section className="manufacturing scroll-container">
-        <div className="manufacturing-container">
-          <div className="manufacturing-header">
-            <p className="manufacturing-label">Vertical Integration</p>
-            <h2 data-reveal>
-              State-of-the-<span>Art</span> <span className="manufacturing-highlight">Manufacturing.</span>
-            </h2>
-            <p className="manufacturing-description" data-reveal>
-              <span>Our advanced printing facilities and cutting-edge technology ensure precision, consistency, and quality in every product we deliver across all industries.</span>
-            </p>
-          </div>
-
-          <div className="manufacturing-image-wrapper">
-            <img src="/manufacture-img.png" alt="Bengaluru Manufacturing Facility" className="manufacturing-image" />
-            <div className="manufacturing-overlay"></div>
-            <div className="facility-badge">
-              <p className="facility-label">Bengaluru</p>
-              <h4>3,000 Sq. Ft. of Pure Printing Services.</h4>
-              <div className="facility-stats">
-                <div className="stat-divider"></div>
-                <div className="stat">
-                  <p className="stat-label">24/7</p>
-                  <p className="stat-value">Production</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-          <ManufacturingCapabilities />
-      </section>
-
-    
+      <ServicesShowcase />
+      <PremiumContactForm />
 
       <FAQSection />
     </main>

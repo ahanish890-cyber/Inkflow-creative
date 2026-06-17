@@ -39,11 +39,11 @@ body {
 
 a {
   font-weight: 500;
-  color: #0066cc;
+   color:rgb(192, 160, 98);
   text-decoration: inherit;
 }
 a:hover {
-  color: #0052a3;
+  color:rgb(192, 160, 98);
 }
 
 h1 {
@@ -58,14 +58,12 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #0066cc;
+  background-color: rgb(192, 160, 98);
   color: #ffffff;
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  background-color: #0052a3;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;

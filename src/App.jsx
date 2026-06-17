@@ -4,6 +4,9 @@ import Footer from './components/Footer'
 import AboutUs from './components/AboutUs'
 import ContactUs from './components/ContactUs'
 import Products from './pages/Products'
+import QueueManagement from './pages/QueueManagement'
+import WebPrinting from './pages/WebPrinting'
+import SportsJersey from './pages/SportsJersey'
 import Home from './pages/Home'
 import useLenisScroll from './hooks/useLenisScroll'
 import useGSAPAnimations from './hooks/useGSAPAnimations'
@@ -23,6 +26,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/queue-management" element={<QueueManagement />} />
+        <Route path="/products/web-printing" element={<WebPrinting />} />
+        <Route path="/products/sports-jersey" element={<SportsJersey />} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
       <Footer />

@@ -1,107 +1,142 @@
-import React from 'react'
-import { Zap, Shield, Award, History, ArrowUpRight } from 'lucide-react'
+import React, { useState, useEffect } from 'react'
+import { Zap, Zap as Lightning, Star, CheckCircle2 } from 'lucide-react'
 import CoreValues from './CoreValues'
 import Capabilities from './Capabilities'
 import '../styles/AboutUs.css'
 
-const legacyStats = [
-  { label: 'Founded', value: '2009' },
-  { label: 'Enterprise Clients', value: '500+' },
-  { label: 'Annual Throughput', value: '50M+' },
-  { label: 'SLA Quality', value: '99.9%' }
-]
-
-const valuesMatrix = [
+const premiumFeatures = [
   {
-    icon: <Zap size={20} />,
-    title: "In-House Velocity",
-    desc: "From concept to pan-India deployment in under 72 hours. Our vertically integrated chain removes the bottleneck of third-party vendors."
+    icon: <CheckCircle2 size={20} />,
+    title: "Industrial-Grade Printing Technology",
+    description: "Advanced machinery ensuring unmatched precision"
   },
   {
-    icon: <Shield size={20} />,
-    title: "Absolute Precision",
-    desc: "Every component is calibrated to a 0.01mm tolerance. We don't just assemble; we engineer physical experiences."
+    icon: <Lightning size={20} />,
+    title: "High-Speed Production",
+    description: "Optimized workflows for rapid delivery"
   },
   {
-    icon: <Award size={20} />,
-    title: "Sustainability Leader",
-    desc: "First in India to implement a circular lifecycle for queue barriers, using 100% recyclable 304 Stainless Steel."
+    icon: <Star size={20} />,
+    title: "Premium Quality Standards",
+    description: "Every product passes strict quality inspection"
   }
 ]
 
 export default function AboutUs() {
+  const [isVisible, setIsVisible] = useState(false)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    const element = document.querySelector('.premium-about-section')
+    if (element) observer.observe(element)
+
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const section = document.querySelector('.premium-about-section')
+      if (!section) return
+
+      const rect = section.getBoundingClientRect()
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
+
+      // Calculate parallax offset - very subtle
+      const offsetX = (x - rect.width / 2) * 0.01
+      const offsetY = (y - rect.height / 2) * 0.01
+
+      setMousePosition({ x: offsetX, y: offsetY })
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
+
   return (
     <div className="about-us-page">
-      {/* Main Hero Section */}
-      <section className="about-hero-section">
-        <div className="about-hero-container">
-          {/* Left Content */}
-          <div className="about-hero-content">
-            <div className="about-label">
-              <History size={16} />
-              <span>Company Heritage</span>
+      {/* Premium About Section */}
+      <section className={`premium-about-section ${isVisible ? 'visible' : ''}`}>
+        {/* Background Watermark Layer */}
+        <div 
+          className="watermark-bg"
+          style={{
+            transform: `translateY(-50%) translateX(${mousePosition.x * 8}px) translateY(${mousePosition.y * 4}px)`
+          }}
+        >
+          <img 
+            src="/inkflow-logo-hero.jpeg" 
+            alt="Brand Watermark"
+            className="watermark-image"
+          />
+        </div>
+
+        {/* Watermark Overlay */}
+        <div className="watermark-overlay"></div>
+
+        <div className="premium-about-container">
+          {/* Left Side - Logo */}
+          <div className="about-logo-side">
+            <div className={`about-logo-wrapper ${isVisible ? 'fade-in-left' : ''}`}>
+              <img 
+                src="/inkflow-logo-hero.jpeg" 
+                alt="Inkflow Creative" 
+                className="about-logo-image"
+              />
             </div>
-            
-            <h2 className="about-hero-title">
-              Redefining <br />
-              <span className="about-highlight">Enterprise</span> <br />
-              Presence.
+          </div>
+
+          {/* Divider */}
+          <div className="about-divider"></div>
+
+          {/* Right Side - Content */}
+          <div className="about-content-side">
+            {/* Label */}
+            <div className={`about-label-premium ${isVisible ? 'fade-in-right' : ''}`}>
+              <span className="label-line"></span>
+              <span className="label-text">BUILT FOR PRECISION</span>
+            </div>
+
+            {/* Main Heading */}
+            <h2 className={`about-heading-premium ${isVisible ? 'fade-in-right' : ''}`}>
+              Manufacturing <span className="heading-gold">Excellence</span> Behind Every Print
             </h2>
 
-            <div className="about-hero-text">
-              <p>Since 2009, Inkflow Creative has been India's trusted partner for organizations demanding absolute excellence. We serve 500+ enterprise clients including retail chains, multinational corporations, and government agencies.</p>
+            {/* Description Paragraphs */}
+            <div className={`about-description ${isVisible ? 'fade-in-right' : ''}`}>
+              <p>Powered by state-of-the-art industrial printers and automated production lines, our facility delivers exceptional clarity, color accuracy, and consistency at scale.</p>
               
-              <p>Our ISO-certified processes and cutting-edge technology ensure consistent excellence at scale. From the first spark in our Bengaluru facility to final deployment at IGI Airport, our legacy is built on the pursuit of 100% reliability.</p>
+              <p>From high-volume commercial jobs to specialized custom prints, our technology-driven workflow ensures faster turnaround times, superior material quality, and flawless finishing.</p>
+            </div>
 
-              <div className="about-stats-grid">
-                {legacyStats.map((stat, i) => (
-                  <div key={i} className="about-stat-item">
-                    <span className="about-stat-label">{stat.label}</span>
-                    <span className="about-stat-value">{stat.value}</span>
+            {/* Premium Feature List */}
+            <div className={`about-features-list ${isVisible ? 'features-visible' : ''}`}>
+              {premiumFeatures.map((feature, index) => (
+                <div key={index} className="feature-row" style={{ animationDelay: `${index * 0.12}s` }}>
+                  <div className="feature-icon-wrapper">
+                    {feature.icon}
                   </div>
-                ))}
-              </div>
+                  <div className="feature-content">
+                    <h3>{feature.title}</h3>
+                    <p>{feature.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          </div>
-
-          {/* Right Image */}
-          <div className="about-hero-image">
-            <img 
-              src="/aboutus.png" 
-              alt="Precision Industrial Detail"
-              className="about-image"
-            />
-            <div className="about-image-overlay"></div>
           </div>
         </div>
       </section>
 
-      {/* Values Matrix */}
-      <section className="about-values-section">
-        <div className="about-values-container">
-          {valuesMatrix.map((item, i) => (
-            <div key={i} className="about-value-card">
-              <div className="about-value-icon">
-                {item.icon}
-              </div>
-              <h3 className="about-value-title">{item.title}</h3>
-              <p className="about-value-desc">{item.desc}</p>
-              <div className="about-value-link">
-                <span>View Documentation</span>
-                <ArrowUpRight size={14} />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Core Values Component */}
-      <CoreValues />
-
-      {/* Capabilities Component */}
-      <Capabilities />
-
-      
+  
     </div>
   )
 }

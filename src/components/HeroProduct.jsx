@@ -10,18 +10,10 @@ export default function HeroProduct() {
         {/* Left Side - Product Image with Heading */}
         <div className="hero-product-left">
           <div className="hero-product-left-heading">
-            <TextType
-              text={['Premium Printing Quality', 'Advanced Manufacturing Solutions', 'Enterprise-Grade Products']}
-              typingSpeed={35}
-              pauseDuration={2500}
-              deletingSpeed={20}
-              showCursor={true}
-              cursorCharacter="|"
-              cursorBlinkDuration={0.7}
-            />
+           
           </div>
           <div className="product-image-wrapper">
-            <img src="/Hero-main.png" alt="Advanced Printing Technology" className="product-image" />
+            <img src="/IFC.png" alt="Advanced Printing Technology" className="product-image" />
           </div>
         </div>
 
@@ -30,9 +22,9 @@ export default function HeroProduct() {
           <div className="hero-product-content">
             <p className="hero-product-label">Built for Precision</p>
             
-            <h2 className="hero-product-heading">
-              Manufacturing Excellence Behind Every Print
-            </h2>
+            <h3 className="hero-product-heading">
+            Inkflow Creative
+            </h3>
             
             <p className="hero-product-intro">
               Powered by state-of-the-art industrial printers and automated production lines, our facility delivers exceptional clarity, color accuracy, and consistency at scale.

@@ -56,17 +56,15 @@ export default function FAQSection() {
   }
 
   return (
-    <section className="faq-section scroll-container">
+    <section className="faq-section">
       <div className="faq-wrapper">
         <div className="faq-title">
-          <h2 data-reveal>
+          <h2>
             <span>Frequently Asked Questions</span>
           </h2>
         </div>
 
-        <div className="faq-button-container">
-          <button className="faq-help-button">See Full Help Center →</button>
-        </div>
+      
 
         <div className="faq-content">
           <div className="faq-column">

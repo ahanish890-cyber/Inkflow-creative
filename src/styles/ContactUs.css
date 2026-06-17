@@ -355,16 +355,17 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #ff8c00 0%, #ff9d1a 100%);
+  background: linear-gradient(135deg, rgb(192, 160, 98) 0%, #c9a86e 100%);
   color: #ffffff;
-  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(192, 160, 98, 0.3);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #ff9d1a 0%, #ffb84d 100%);
+  background: linear-gradient(135deg, #c9a86e 0%, #d6b380 100%);
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(255, 140, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(192, 160, 98, 0.4);
 }
+  
 
 .btn-secondary {
   background: transparent;
