@@ -14,11 +14,11 @@
 /* Background Watermark Layer */
 .watermark-bg {
   position: absolute;
-  right: -300px;
+  right: -350px;
   top: 50%;
   transform: translateY(-50%);
-  width: 900px;
-  height: 900px;
+  width: 800px;
+  height: 800px;
   z-index: 1;
   pointer-events: none;
   user-select: none;
@@ -35,22 +35,13 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  opacity: 0.08;
-  filter: blur(1.2px) grayscale(100%) brightness(0.75) contrast(0.95);
+  opacity: 0.04;
+  filter: grayscale(100%) brightness(1.1) contrast(0.9);
 }
 
 /* Watermark Overlay */
 .watermark-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    270deg,
-    rgba(255, 255, 255, 0.5) 0%,
-    rgba(255, 255, 255, 0.3) 40%,
-    rgba(255, 255, 255, 0) 70%
-  );
-  z-index: 2;
-  pointer-events: none;
+  display: none;
 }
 
 @keyframes watermarkFadeIn {
@@ -105,7 +96,7 @@
 
 .about-logo-image {
   width: 100%;
-  height: auto;
+  height: 250px;
   display: block;
   object-fit: contain;
 }

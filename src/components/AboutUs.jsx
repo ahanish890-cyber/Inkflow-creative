@@ -103,12 +103,12 @@ export default function AboutUs() {
             {/* Label */}
             <div className={`about-label-premium ${isVisible ? 'fade-in-right' : ''}`}>
               <span className="label-line"></span>
-              <span className="label-text">BUILT FOR PRECISION</span>
+              <span className="label-text">ABOUT US</span>
             </div>
 
             {/* Main Heading */}
             <h2 className={`about-heading-premium ${isVisible ? 'fade-in-right' : ''}`}>
-              Manufacturing <span className="heading-gold">Excellence</span> Behind Every Print
+              Inkflow<span className="heading-gold"> Creative</span>
             </h2>
 
             {/* Description Paragraphs */}

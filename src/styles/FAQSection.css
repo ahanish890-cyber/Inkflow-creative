@@ -22,6 +22,22 @@
   color: #1d1d1f;
   margin: 0;
   letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.faq-title h2 .faq-heading-gold {
+  color: rgb(192, 160, 98);
+}
+
+/* Decorative line under heading */
+.faq-title h2::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 3px;
+  background: rgb(192, 160, 98);
+  margin-top: 16px;
 }
 
 .faq-button-container {
@@ -81,6 +97,7 @@
   text-align: left;
   letter-spacing: 0.3px;
   line-height: 1.5;
+  outline: none;
 }
 
 .accordion-trigger:hover {
@@ -91,6 +108,14 @@
 .accordion-trigger:active {
   background-color: transparent;
   color: #1d1d1f;
+}
+
+.accordion-trigger:focus {
+  outline: none;
+}
+
+.accordion-trigger:focus-visible {
+  outline: none;
 }
 
 .trigger-text {

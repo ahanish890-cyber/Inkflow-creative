@@ -5,7 +5,7 @@ import { ContainerScrollAnimation } from '../components/ContainerScrollAnimation
 import AboutUs from '../components/AboutUs'
 import TestimonialSection from '../components/TestimonialSection'
 import ManufacturingCapabilities from '../components/ManufacturingCapabilities'
-import PremiumContactForm from '../components/PremiumContactForm'
+import ContactUs from '../components/ContactUs'
 import FAQSection from '../components/FAQSection'
 import ServicesShowcase from '../components/ServicesShowcase'
 import TextType from '../components/TextType'
@@ -122,7 +122,7 @@ export default function Home() {
       <AboutUs />
 
       <ServicesShowcase />
-      <PremiumContactForm />
+      <ContactUs />
 
       <FAQSection />
     </main>

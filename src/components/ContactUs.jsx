@@ -165,34 +165,12 @@ export default function ContactUs() {
   return (
     <div className="contact-us-page">
 
-      {/* Quick Contact Cards */}
-      <section className="contact-section contact-quick">
-        <div className="section-container">
-          <h2 className="section-title">Get in Touch</h2>
-          <div className="contact-info-grid">
-            {contactInfo.map((info, index) => {
-              const IconComponent = info.icon
-              return (
-                <a key={index} href={info.link} className="contact-info-card">
-                  <div className="info-icon">
-                    <IconComponent size={40} />
-                  </div>
-                  <h3>{info.title}</h3>
-                  <p className="info-content">{info.content}</p>
-                  <p className="info-subtitle">{info.subtitle}</p>
-                </a>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Main Contact Form Section */}
       <section className="contact-section contact-form-section">
         <div className="section-container">
           <div className="form-wrapper">
             <div className="form-header">
-              <h2>Tell Us About Your Project</h2>
+              <h2>Get in <span className="contact-heading-gold">Touch</span></h2>
               <p>Fill out the form below with your details and requirements. Our team will review your inquiry and respond within 24 business hours with a customized proposal.</p>
             </div>
 
@@ -338,24 +316,49 @@ export default function ContactUs() {
                 </div>
               </form>
 
-              {/* Benefits Sidebar */}
-              <div className="form-benefits">
-                <h3>Why Work With Us</h3>
-                <div className="benefits-list">
-                  {benefits.map((benefit, index) => {
-                    const IconComponent = benefit.icon
-                    return (
-                      <div key={index} className="benefit-item">
-                        <div className="benefit-icon">
-                          <IconComponent size={24} />
-                        </div>
-                        <div>
-                          <h4>{benefit.title}</h4>
-                          <p>{benefit.description}</p>
-                        </div>
-                      </div>
-                    )
-                  })}
+              {/* Contact Info Sidebar */}
+              <div className="form-benefits contact-info-sidebar">
+                <div className="sidebar-logo">
+                  <img src="/inkflow-logo.jpeg" alt="Inkflow Creative" className="sidebar-logo-img" />
+                </div>
+
+                <div className="sidebar-contact-info">
+                  <div className="contact-block">
+                    <h4 className="contact-label">Phone</h4>
+                    <p className="contact-value">+91 (555) 123-4567</p>
+                    <p className="contact-note">Mon-Fri, 9 AM - 6 PM IST</p>
+                  </div>
+
+                  <div className="contact-block">
+                    <h4 className="contact-label">Email</h4>
+                    <p className="contact-value">hello@inkflowcreative.com</p>
+                    <p className="contact-note">Response within 24 hours</p>
+                  </div>
+
+                  <div className="contact-block">
+                    <h4 className="contact-label">Address</h4>
+                    <p className="contact-value">123 Creative Lane</p>
+                    <p className="contact-note">Design City, India 560001</p>
+                  </div>
+
+                  <div className="contact-block">
+                    <h4 className="contact-label">Business Hours</h4>
+                    <p className="contact-value">Mon - Fri: 9 AM - 6 PM</p>
+                    <p className="contact-note">Sat - Sun: Closed</p>
+                  </div>
+                </div>
+
+                <div className="sidebar-map">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.6718267717255!2d77.60451!3d12.972701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1681c1111111%3A0x1111111111111111!2s123%20Creative%20Lane%2C%20Design%20City!5e0!3m2!1sen!2sin!4v1234567890123"
+                    width="100%" 
+                    height="280" 
+                    style={{ border: 0, borderRadius: '12px' }}
+                    allowFullScreen="" 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Inkflow Creative Location"
+                  />
                 </div>
               </div>
             </div>

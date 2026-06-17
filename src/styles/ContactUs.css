@@ -224,6 +224,22 @@
   letter-spacing: -0.3px;
   margin: 0 0 16px 0;
   color: #1d1d1f;
+  position: relative;
+  display: inline-block;
+}
+
+.form-header h2 .contact-heading-gold {
+  color: rgb(192, 160, 98);
+}
+
+/* Decorative line under heading */
+.form-header h2::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 3px;
+  background: rgb(192, 160, 98);
+  margin-top: 16px;
 }
 
 .form-header p {
@@ -275,11 +291,11 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
   font-size: 15px;
   padding: 14px 16px;
-  border: 1px solid #e5e5e7;
-  border-radius: 10px;
+  border: 1px solid #D5D5D7;
+  border-radius: 12px;
   background-color: #ffffff;
   color: #1d1d1f;
-  transition: all 250ms ease;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   letter-spacing: 0.3px;
 }
 
@@ -292,18 +308,21 @@
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #0071e3;
-  box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.1);
-  background-color: #ffffff;
+  border-color: #C7A86A;
+  box-shadow: 0 0 0 3px rgba(199, 168, 106, 0.1), 0 4px 12px rgba(199, 168, 106, 0.15);
+  background-color: #FAFAFA;
 }
 
 .form-group select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%231d1d1f' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='10' viewBox='0 0 14 10'%3E%3Cpath fill='%23C7A86A' d='M1 2l6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 14px center;
-  padding-right: 40px;
+  background-size: 14px;
+  padding-right: 44px;
   cursor: pointer;
+  font-weight: 500;
+  color: #111111;
 }
 
 .form-group textarea {
@@ -434,6 +453,73 @@
   color: #666666;
   margin: 0;
   line-height: 1.5;
+}
+
+/* Contact Info Sidebar */
+.contact-info-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.sidebar-logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.sidebar-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1d1d1f;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0;
+}
+
+.contact-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin: 0;
+  letter-spacing: -0.2px;
+  line-height: 1.4;
+}
+
+.contact-note {
+  font-size: 13px;
+  color: #888888;
+  margin: 0;
+  letter-spacing: 0.2px;
+  line-height: 1.4;
+}
+
+.sidebar-map {
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e5e7;
+  margin-top: 8px;
 }
 
 /* Stats Section */

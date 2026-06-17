@@ -60,7 +60,7 @@ export default function FAQSection() {
       <div className="faq-wrapper">
         <div className="faq-title">
           <h2>
-            <span>Frequently Asked Questions</span>
+            Frequently Asked <span className="faq-heading-gold">Questions</span>
           </h2>
         </div>
 

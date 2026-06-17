@@ -7,22 +7,16 @@ const PRODUCT_CATEGORIES = [
   {
     id: 'queue-management',
     name: 'Queue Management',
-    description: 'Smart queue solutions for enterprise operations',
-    icon: <Zap size={20} />,
     path: '/products/queue-management'
   },
   {
     id: 'web-printing',
     name: 'Web Printing',
-    description: 'Professional printing services at scale',
-    icon: <Printer size={20} />,
     path: '/products/web-printing'
   },
   {
     id: 'sports-jersey',
     name: 'Sports Jersey',
-    description: 'Premium sports apparel and uniforms',
-    icon: <Shirt size={20} />,
     path: '/products/sports-jersey'
   }
 ]
@@ -56,6 +50,8 @@ function Navbar() {
         <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
           <Link to="/" className="nav-link">Home</Link>
           
+          <Link to="/about" className="nav-link">About Us</Link>
+
           {/* Products Dropdown Menu */}
           <div className="nav-dropdown">
             <button 
@@ -80,14 +76,12 @@ function Navbar() {
                       <div className="category-menu-name">{category.name}</div>
                       <div className="category-menu-desc">{category.description}</div>
                     </div>
-                    <div className="category-menu-arrow">→</div>
                   </button>
                 ))}
               </div>
             )}
           </div>
 
-          <Link to="/about" className="nav-link">About Us</Link>
           <Link to="/contact" className="nav-link">Contact Us</Link>
         </div>
 

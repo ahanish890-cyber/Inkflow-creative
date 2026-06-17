@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { motion, LayoutGroup } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import '../styles/ServicesShowcase.css'
@@ -11,9 +12,9 @@ const SERVICES = [
     description: 'High-quality printing belts designed for queue management systems. Durable, weather-resistant materials.',
     image: '/queue-belt.png',
     products: [
-      { name: 'Standard Queue Belts', desc: 'Durable and cost-effective' },
-      { name: 'Premium Queue Belts', desc: 'Enhanced durability and finish' },
-      { name: 'Retractable Systems', desc: 'Modern crowd management' }
+      { name: 'Inflow Premium Barrier', desc: 'Premium stainless steel queue management system for high-traffic environments.', link: '/products/queue-management#inflow-premium-barrier' },
+      { name: 'Innova Barrier', desc: 'Cost-effective crowd control solution with durable construction.', link: '/products/queue-management#innova-barrier' },
+      { name: 'Ball Head Barrier', desc: 'Luxury rope barrier system for hotels, events and premium venues.', link: '/products/queue-management#ball-head-barrier' }
     ]
   },
   {
@@ -44,6 +45,7 @@ const SERVICES = [
 
 export default function ServicesShowcase() {
   const [hoveredId, setHoveredId] = useState(null)
+  const navigate = useNavigate()
 
   const getFlexValue = (id) => {
     if (!hoveredId) return 1
@@ -51,11 +53,20 @@ export default function ServicesShowcase() {
     return 0.9
   }
 
+  const handleProductClick = (link) => {
+    navigate(link)
+  }
+
+  const handleLearnMore = () => {
+    // Scroll to top immediately
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <section className="services-showcase">
       <div className="services-header">
         <p className="services-label">Our Specialized Solutions</p>
-        <h2>Our Services</h2>
+        <h2>Our <span className="services-heading-gold">Services</span></h2>
       </div>
 
       <LayoutGroup>
@@ -128,6 +139,11 @@ export default function ServicesShowcase() {
                       <motion.div
                         key={idx}
                         className="product-row"
+                        onClick={() => {
+                          if (product.link) {
+                            handleProductClick(product.link)
+                          }
+                        }}
                         initial={{ opacity: 0, y: 10 }}
                         animate={hoveredId === service.id ? {
                           opacity: 1,
@@ -141,6 +157,7 @@ export default function ServicesShowcase() {
                           delay: hoveredId === service.id ? 0.15 + idx * 0.08 : 0,
                           ease: [0.23, 1, 0.32, 1]
                         }}
+                        style={{ cursor: product.link ? 'pointer' : 'default' }}
                       >
                         <div className="product-info">
                           <span className="product-name">{product.name}</span>
@@ -158,9 +175,15 @@ export default function ServicesShowcase() {
                   </div>
 
                   {/* Learn More Button */}
-                  <motion.a
-                    href="#"
+                  <motion.div
+                    onClick={() => {
+                      if (service.id === 1) {
+                        handleLearnMore()
+                        navigate('/products/queue-management')
+                      }
+                    }}
                     className="service-link"
+                    style={{ cursor: 'pointer' }}
                     animate={{
                       opacity: hoveredId === service.id ? 1 : 0.8
                     }}
@@ -169,7 +192,7 @@ export default function ServicesShowcase() {
                   >
                     Learn More
                     <ArrowRight size={14} />
-                  </motion.a>
+                  </motion.div>
                 </div>
               </div>
             </motion.div>

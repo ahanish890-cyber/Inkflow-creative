@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { CheckCircle2 } from 'lucide-react'
+import { useLocation } from 'react-router-dom'
 import PremiumContactForm from '../components/PremiumContactForm'
 import FAQSection from '../components/FAQSection'
 import '../styles/QueueManagementShowcase.css'
@@ -50,7 +51,7 @@ const QUEUE_PRODUCTS = [
   {
     id: 3,
     category: 'ENTERPRISE DISPLAY SYSTEM',
-    name: 'Ball-Head Barrier',
+    name: 'Classic Rope Post',
     description: 'Luxury display technology for mission-critical environments. Premium Display Solutions combine cutting-edge hardware with enterprise software for uncompromised visual performance.',
     description2: 'Built for airports, luxury retail, and corporate headquarters demanding 99.9% reliability. From immersive video walls to precision-engineered kiosks, every solution is crafted for enterprise deployment. Redundant systems, automated failover, and predictive maintenance included.',
     features: ['4K/8K Display Support', 'Redundant Architecture', 'Predictive Maintenance', 'Ambient Light Sensing', 'Failover Systems', 'Climate Control'],
@@ -72,6 +73,7 @@ const QUEUE_PRODUCTS = [
 
 export default function QueueManagement() {
   const [visibleProducts, setVisibleProducts] = useState(new Set())
+  const location = useLocation()
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -92,6 +94,39 @@ export default function QueueManagement() {
     return () => observer.disconnect()
   }, [])
 
+  // Auto-scroll to hash fragment when page loads or hash changes
+  useEffect(() => {
+    const scrollToElement = () => {
+      // Extract hash from location
+      const hash = window.location.hash
+      
+      // Check if there's a hash fragment after the route
+      // Format: #/products/queue-management#inflow-premium-barrier
+      if (hash.includes('#')) {
+        const fragments = hash.split('#')
+        const elementId = fragments[fragments.length - 1]
+        
+        if (elementId) {
+          // Wait a bit for the page to fully render
+          setTimeout(() => {
+            const element = document.getElementById(elementId)
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }
+          }, 100)
+        } else {
+          // If no element ID after the last #, scroll to top
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        }
+      } else {
+        // If no hash at all, scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
+    }
+
+    scrollToElement()
+  }, [location])
+
   return (
     <main>
       {/* Hero Section */}
@@ -108,6 +143,7 @@ export default function QueueManagement() {
         {QUEUE_PRODUCTS.map((product, index) => (
           <div
             key={product.id}
+            id={product.id === 1 ? 'inflow-premium-barrier' : product.id === 2 ? 'innova-barrier' : 'ball-head-barrier'}
             data-product-id={product.id}
             className={`product-showcase ${index % 2 === 0 ? 'image-left' : 'image-right'} ${
               visibleProducts.has(String(product.id)) ? 'visible' : ''

@@ -55,7 +55,7 @@
 }
 
 .nav-link:hover {
-  color: #666666;
+  color: rgb(192, 160, 98);
 }
 
 .nav-cta {
@@ -174,7 +174,15 @@
 }
 
 .dropdown-trigger:hover {
-  color: #666666;
+  color: rgb(192, 160, 98);
+}
+
+.dropdown-trigger:focus {
+  outline: none;
+}
+
+.dropdown-trigger:focus-visible {
+  outline: none;
 }
 
 .dropdown-arrow {
@@ -186,19 +194,20 @@
   top: 100%;
   left: 0;
   background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  padding: 8px 0;
+  border: 1px solid #D5D5D7;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 12px;
   min-width: 500px;
-  margin-top: 8px;
+  margin-top: 12px;
   z-index: 1001;
-  animation: slideDown 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideDown 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  backdrop-filter: blur(10px);
 }
 
 .dropdown-content.premium-categories-menu {
-  min-width: 550px;
-  padding: 12px;
+  min-width: 200px;
+  padding: 8px;
 }
 
 .category-menu-item {
@@ -206,32 +215,20 @@
   align-items: center;
   gap: 16px;
   width: 100%;
-  padding: 16px;
+  padding: 14px 16px;
   background: transparent;
-  border: none;
-  border-radius: 8px;
-  border-left: 3px solid transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   text-align: left;
+  color: #666666;
 }
 
 .category-menu-item:hover {
-  background: #faf7f0;
-  border-left-color: rgb(192, 160, 98);
-  transform: translateX(4px);
-}
-
-.category-menu-icon {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(192, 160, 98, 0.1);
-  border-radius: 8px;
-  color: rgb(192, 160, 98);
-  flex-shrink: 0;
+  background: rgba(199, 168, 106, 0.06);
+  border-color: rgba(199, 168, 106, 0.2);
+  color: #1d1d1f;
 }
 
 .category-menu-info {
@@ -245,25 +242,27 @@
   font-size: 14px;
   font-weight: 600;
   color: #1d1d1f;
+  letter-spacing: -0.3px;
 }
 
 .category-menu-desc {
   font-size: 12px;
-  color: #999999;
-  line-height: 1.4;
+  color: #888888;
+  line-height: 1.5;
+  letter-spacing: -0.2px;
 }
 
 .category-menu-arrow {
-  color: rgb(192, 160, 98);
+  color: #C7A86A;
   font-size: 16px;
   font-weight: 600;
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .category-menu-item:hover .category-menu-arrow {
   opacity: 1;
-  transform: translateX(4px);
+  transform: translateX(6px);
 }
 
 @keyframes slideDown {

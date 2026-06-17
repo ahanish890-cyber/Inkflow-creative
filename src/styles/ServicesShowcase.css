@@ -16,7 +16,7 @@
 
 .services-label {
   font-size: 12px;
-  color: #0071e3;
+  color: rgb(192, 160, 98);
   font-weight: 700;
   margin-bottom: 8px;
   letter-spacing: 1px;
@@ -30,6 +30,22 @@
   line-height: 1.2;
   margin: 0;
   letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.services-header h2 .services-heading-gold {
+  color: rgb(192, 160, 98);
+}
+
+/* Decorative line under heading */
+.services-header h2::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 3px;
+  background: rgb(192, 160, 98);
+  margin-top: 16px;
 }
 
 /* Services Grid Container - Horizontal Flex */
@@ -171,6 +187,8 @@
   border-radius: 10px;
   transition: all 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 .product-row:hover {
@@ -225,6 +243,7 @@
   text-decoration: none;
   transition: all 0.3s ease;
   width: fit-content;
+  cursor: pointer;
 }
 
 .service-link:hover {
